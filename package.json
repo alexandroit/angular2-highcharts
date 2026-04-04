@@ -1,6 +1,6 @@
 {
   "name": "@revivejs/angular2-highcharts",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "Angular wrapper components for Highcharts, Highstock, Highmaps, zAxis, and colorAxis integrations",
   "main": "dist/bundles/revivejs-angular2-highcharts.umd.js",
   "module": "dist/fesm5/revivejs-angular2-highcharts.js",

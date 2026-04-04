@@ -12,7 +12,7 @@
 
 **[Documentation & Live Demos](https://alexandroit.github.io/angular2-highcharts/)** | **[npm](https://www.npmjs.com/package/@revivejs/angular2-highcharts)** | **[Issues](https://github.com/alexandroit/angular2-highcharts/issues)** | **[Repository](https://github.com/alexandroit/angular2-highcharts)**
 
-**Latest version:** `7.0.0`
+**Latest version:** `7.0.1`
 
 ---
 
@@ -64,7 +64,7 @@ The original `angular2-highcharts` package targeted early Angular releases and s
 
 | Package version | Angular version | Highcharts version | TypeScript version | Demo link |
 | :---: | :---: | :---: | :---: | :--- |
-| **7.0.0** | **7.2.x** | **7.2.x** | **3.2.x** | [Angular 7 demo](https://alexandroit.github.io/angular2-highcharts/angular-7/) |
+| **7.0.1** | **7.2.x** | **7.2.x** | **3.2.x** | [Angular 7 demo](https://alexandroit.github.io/angular2-highcharts/angular-7/) |
 | 6.0.x | 6.1.x | 6.x | 2.7.x | [Angular 6 demo](https://alexandroit.github.io/angular2-highcharts/angular-6/) |
 | 5.0.x | 5.x | 6.x | 2.6.x | [Angular 5 demo](https://alexandroit.github.io/angular2-highcharts/angular-5/) |
 | 4.0.x | 4.4.x | 5.0.15 | 2.4.x | [Angular 4 demo](https://alexandroit.github.io/angular2-highcharts/angular-4/) |
@@ -338,6 +338,10 @@ This wrapper is intentionally thin. It uses the initial `options` object to crea
 The package major follows Angular major compatibility, but the wrapper API is intentionally frozen. Existing selectors such as `<chart>`, `<series>`, `<point>`, `<xAxis>`, `<yAxis>`, `<zAxis>`, `<colorAxis>`, the `[options]` input, and `ChartModule.forRoot(Highcharts, ...modules)` remain stable so older Angular applications can keep the same integration code while newer releases adopt updated Angular tooling and newer Highcharts modules.
 
 ## CHANGELOG
+
+### 7.0.1 (Angular 7)
+- Bumped package version to 7.0.1
+- Switched `ChartModule.forRoot(...)` to provide the Highcharts factory via `useFactory`, fixing Angular 7 JIT bootstrap recursion with Highcharts 7
 
 ### 7.0.0 (Angular 7)
 - Bumped package version to 7.0.0

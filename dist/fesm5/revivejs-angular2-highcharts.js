@@ -634,7 +634,7 @@ var ChartModule = /** @class */ (function () {
         return {
             ngModule: ChartModule,
             providers: [
-                { provide: HighchartsStatic, useValue: highchartsStatic }
+                { provide: HighchartsStatic, useFactory: function () { return highchartsStatic; } }
             ]
         };
     };

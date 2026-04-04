@@ -33,7 +33,7 @@ export class ChartModule {
         return {
             ngModule: ChartModule,
             providers: [
-                { provide: HighchartsStatic, useValue: highchartsStatic }
+                { provide: HighchartsStatic, useFactory: () => highchartsStatic }
             ]
         };
     }
