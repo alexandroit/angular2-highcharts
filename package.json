@@ -1,14 +1,16 @@
 {
   "name": "@revivejs/angular2-highcharts",
-  "version": "4.0.0",
-  "description": "Angular 4 wrapper components for Highcharts, Highstock, Highmaps, zAxis, and colorAxis integrations",
+  "version": "5.0.0",
+  "description": "Angular wrapper components for Highcharts, Highstock, Highmaps, zAxis, and colorAxis integrations",
   "scripts": {
     "watch": "tsc -w",
     "build": "rm -rf dist && ngc",
     "test": "karma start karma.conf.js",
     "docs:install:angular-4": "cd docs-src/angular-4 && npm install --ignore-scripts",
     "build:docs:angular-4": "cd docs-src/angular-4 && npm run build",
-    "build:docs": "npm run build:docs:angular-4",
+    "docs:install:angular-5": "cd docs-src/angular-5 && npm install --ignore-scripts",
+    "build:docs:angular-5": "cd docs-src/angular-5 && npm run build",
+    "build:docs": "npm run build:docs:angular-5",
     "serve:docs": "http-server docs -p 8080 -c-1"
   },
   "repository": {
@@ -21,6 +23,7 @@
   "keywords": [
     "angular",
     "angular4",
+    "angular5",
     "angular-library",
     "typescript",
     "charts",
@@ -36,7 +39,13 @@
     "zaxis",
     "revived",
     "maintained",
-    "modernized"
+    "modernized",
+    "gantt",
+    "xrange",
+    "bullet-chart",
+    "windbarb",
+    "streamgraph",
+    "accessibility"
   ],
   "author": "Alexandro Paixao Marques",
   "license": "MIT",
@@ -45,18 +54,18 @@
   },
   "homepage": "https://alexandroit.github.io/angular2-highcharts/",
   "peerDependencies": {
-    "@angular/core": "^4.4.7",
-    "highcharts": "^5.0.15"
+    "@angular/core": ">=4.0.0 <6.0.0",
+    "highcharts": ">=5.0.0"
   },
   "devDependencies": {
-    "@angular/common": "^4.4.7",
-    "@angular/compiler": "^4.4.7",
-    "@angular/compiler-cli": "^4.4.7",
-    "@angular/core": "^4.4.7",
-    "@angular/http": "^4.4.7",
-    "@angular/platform-browser": "^4.4.7",
-    "@angular/platform-browser-dynamic": "^4.4.7",
-    "@angular/platform-server": "^4.4.7",
+    "@angular/common": "^5.2.11",
+    "@angular/compiler": "^5.2.11",
+    "@angular/compiler-cli": "^5.2.11",
+    "@angular/core": "^5.2.11",
+    "@angular/http": "^5.2.11",
+    "@angular/platform-browser": "^5.2.11",
+    "@angular/platform-browser-dynamic": "^5.2.11",
+    "@angular/platform-server": "^5.2.11",
     "core-js": "^2.4.1",
     "jasmine-core": "~2.5.2",
     "karma": "^1.4.1",
@@ -65,11 +74,11 @@
     "http-server": "^14.1.1",
     "reflect-metadata": "^0.1.9",
     "rxjs": "^5.5.12",
-    "typescript": "~2.4.2",
+    "typescript": "~2.6.2",
     "zone.js": "^0.8.29",
     "@types/highcharts": "5.0.44",
     "@types/jasmine": "2.5.42",
-    "highcharts": "^5.0.15"
+    "highcharts": "^6.0.0"
   },
   "dependencies": {}
 }

@@ -1,6 +1,6 @@
 # @revivejs/angular2-highcharts
 
-> A maintained **Angular 4 Highcharts wrapper** with support for standard charts, `StockChart`, `Highmaps`, wrapper event outputs, native chart instance access, and Angular directives for `xAxis`, `yAxis`, `zAxis`, and `colorAxis`.
+> A maintained **Angular Highcharts wrapper** (Angular 4–5) with support for standard charts, `StockChart`, `Highmaps`, wrapper event outputs, native chart instance access, and Angular directives for `xAxis`, `yAxis`, `zAxis`, and `colorAxis`.
 
 [![npm version](https://img.shields.io/npm/v/@revivejs/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular2-highcharts)
 [![npm downloads](https://img.shields.io/npm/dt/@revivejs/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular2-highcharts)
@@ -61,6 +61,7 @@ The original `angular2-highcharts` package targeted early Angular releases and s
 
 | @revivejs/angular2-highcharts | Angular | TypeScript | Highcharts | Node.js |
 | :---: | :---: | :---: | :---: | :---: |
+| **5.0.x** | **5.x** | **2.6.x** | **6.x** | 6.9+ |
 | **4.0.x** | **4.4.x** | **2.4.x** | **5.0.15** | build verified on modern Node |
 | 0.5.x | 2.4.x | 2.1.x | 5.0.7 | historical release line |
 
@@ -330,6 +331,24 @@ This wrapper is intentionally thin. It uses the initial `options` object to crea
 ### Why was Highcharts updated only inside the 5.x line?
 
 For this Angular 4 support line, the safest maintained move is the latest Highcharts 5 patch release (`5.0.15`) together with compatible `@types/highcharts` definitions. Newer Highcharts majors can require a broader compatibility review across the legacy toolchain.
+
+## CHANGELOG
+
+### 5.0.0 (Angular 5)
+- Bumped package version to 5.0.0
+- Updated peerDependencies to `@angular/core >=4.0.0 <6.0.0` and `highcharts >=5.0.0`
+- Updated devDependencies to Angular ^5.2.11, TypeScript ~2.6.2, Highcharts ^6.0.0
+- Added `@angular/cli 1.7.4` for demo app builds
+- Added Highcharts 6 new feature demos: **bullet chart**, **x-range chart**
+- Added keywords: `angular5`, `gantt`, `xrange`, `bullet-chart`, `windbarb`, `streamgraph`, `accessibility`
+- Added `docs-src/angular-5/` demo app (compiled to `docs/angular-5/`)
+- Updated `docs/index.html` to redirect to Angular 5 and list Angular 4 as previous version
+
+### 4.0.0 (Angular 4)
+- Initial release under `@revivejs` scope
+- Angular 4 + Highcharts 5 support
+- Components: `<chart>`, `<series>`, `<point>`, `<xAxis>`, `<yAxis>`, `<zAxis>`, `<colorAxis>`
+- `ChartModule.forRoot(Highcharts, ...modules)` API
 
 ## License
 
