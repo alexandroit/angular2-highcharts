@@ -1,18 +1,18 @@
 # @revivejs/angular2-highcharts
 
-> A maintained **Angular 10 wrapper for Highcharts** with support for standard charts, `StockChart`, `Highmaps`, wrapper event outputs, native chart instance access, and Angular directives for `xAxis`, `yAxis`, `zAxis`, and `colorAxis`.
+> A maintained **Angular 11 wrapper for Highcharts** with support for standard charts, `StockChart`, `Highmaps`, wrapper event outputs, native chart instance access, and Angular directives for `xAxis`, `yAxis`, `zAxis`, and `colorAxis`.
 
 [![npm version](https://img.shields.io/npm/v/@revivejs/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular2-highcharts)
 [![npm downloads](https://img.shields.io/npm/dt/@revivejs/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular2-highcharts)
 [![npm monthly](https://img.shields.io/npm/dm/@revivejs/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular2-highcharts)
 [![license](https://img.shields.io/npm/l/@revivejs/angular2-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular2-highcharts/blob/master/LICENSE)
-[![Angular 10](https://img.shields.io/badge/Angular-10-red?style=flat-square&logo=angular)](https://angular.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3.9-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
+[![Angular 11](https://img.shields.io/badge/Angular-11-red?style=flat-square&logo=angular)](https://angular.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.1-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 [![GitHub stars](https://img.shields.io/github/stars/alexandroit/angular2-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular2-highcharts/stargazers)
 
 **[Documentation & Live Demos](https://alexandroit.github.io/angular2-highcharts/)** | **[npm](https://www.npmjs.com/package/@revivejs/angular2-highcharts)** | **[Issues](https://github.com/alexandroit/angular2-highcharts/issues)** | **[Repository](https://github.com/alexandroit/angular2-highcharts)**
 
-**Latest version:** `10.0.1`
+**Latest version:** `11.0.0`
 
 ---
 
@@ -28,9 +28,9 @@ The original `angular2-highcharts` package targeted early Angular releases and s
 
 | Feature | Supported |
 | :--- | :---: |
-| Angular 10 wrapper release line | ✅ |
-| Backward-compatible with Angular 4, 5, 6, 7, 8, and 9 apps | ✅ |
-| Highcharts 8 maintained major line | ✅ |
+| Angular 11 wrapper release line | ✅ |
+| Backward-compatible with Angular 4, 5, 6, 7, 8, 9, and 10 apps | ✅ |
+| Highcharts 9 maintained major line | ✅ |
 | Standard Highcharts charts | ✅ |
 | `StockChart` wrapper support | ✅ |
 | `Highmaps` module support | ✅ |
@@ -64,6 +64,7 @@ The original `angular2-highcharts` package targeted early Angular releases and s
 
 | Package version | Angular version | Highcharts version | TypeScript version | Demo link |
 | :---: | :---: | :---: | :---: | :--- |
+| **11.0.0** | **11.2.x** | **9.3.x** | **4.1.x** | [Angular 11 demo](https://alexandroit.github.io/angular2-highcharts/angular-11/) |
 | **10.0.1** | **10.2.x** | **8.2.x** | **3.9.x** | [Angular 10 demo](https://alexandroit.github.io/angular2-highcharts/angular-10/) |
 | **9.0.0** | **9.1.x** | **8.2.x** | **3.8.x** | [Angular 9 demo](https://alexandroit.github.io/angular2-highcharts/angular-9/) |
 | **8.0.0** | **8.2.x** | **8.2.x** | **3.5.x** | [Angular 8 demo](https://alexandroit.github.io/angular2-highcharts/angular-8/) |
@@ -341,6 +342,13 @@ This wrapper is intentionally thin. It uses the initial `options` object to crea
 The package major follows Angular major compatibility, but the wrapper API is intentionally frozen. Existing selectors such as `<chart>`, `<series>`, `<point>`, `<xAxis>`, `<yAxis>`, `<zAxis>`, `<colorAxis>`, the `[options]` input, and `ChartModule.forRoot(Highcharts, ...modules)` remain stable so older Angular applications can keep the same integration code while newer releases adopt updated Angular tooling and newer Highcharts modules.
 
 ## CHANGELOG
+
+### 11.0.0 (Angular 11)
+- Bumped package version to 11.0.0
+- Updated peerDependencies to `@angular/core >=4.0.0 <12.0.0` and `highcharts >=5.0.0`
+- Updated devDependencies to Angular `^11.2.14`, Angular CLI `11.2.19`, TypeScript `~4.1.6`, and ng-packagr `^11.2.4`
+- Upgraded Highcharts to `^9.3.3` and added demos for `3d-area`, `single-touch-zoom`, `hlc`, `node-offsets`, and `annotations-crop`
+- Kept the wrapper public API unchanged for Angular 11 and Ivy consumers
 
 ### 10.0.1 (Angular 10)
 - Bumped package version to 10.0.1
