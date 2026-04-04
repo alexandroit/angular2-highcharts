@@ -1,5 +1,5 @@
 /**
  * Generated bundle index. Do not edit.
  */
+/// <amd-module name="@revivejs/angular2-highcharts" />
 export * from './public_api';
-export { HighchartsService as ɵb, HighchartsStatic as ɵa } from './HighchartsService';

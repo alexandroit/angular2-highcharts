@@ -6,6 +6,7 @@ import { ChartZAxisComponent } from './ChartZAxisComponent';
 import { ChartColorAxisComponent } from './ChartColorAxisComponent';
 import { HighchartsService } from './HighchartsService';
 import { ChartEvent } from './ChartEvent';
+import * as i0 from "@angular/core";
 export declare class ChartComponent {
     series: ChartSeriesComponent;
     xAxis: ChartXAxisComponent;
@@ -32,4 +33,6 @@ export declare class ChartComponent {
     private init;
     ngAfterViewInit(): void;
     constructor(element: ElementRef, highchartsService: HighchartsService);
+    static ɵfac: i0.ɵɵFactoryDeclaration<ChartComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChartComponent, "chart", never, { "type": "type"; "options": "options"; }, { "create": "create"; "click": "click"; "addSeries": "addSeries"; "afterPrint": "afterPrint"; "beforePrint": "beforePrint"; "drilldown": "drilldown"; "drillup": "drillup"; "load": "load"; "redraw": "redraw"; "selection": "selection"; }, ["series", "xAxis", "yAxis", "zAxis", "colorAxis"], never>;
 }

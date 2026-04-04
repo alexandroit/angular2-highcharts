@@ -1,0 +1,845 @@
+<div class="shell">
+
+  <!-- ═══ HERO ═══════════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-card hero-main">
+      <span class="badge">Angular 13.4 · Highcharts 12</span>
+      <h1>@revivejs/angular2-highcharts</h1>
+      <p>
+        A thin, unopinionated Angular wrapper for Highcharts, StockChart, 3D charts, heatmaps,
+        drilldowns, renko charts and point-and-figure series.
+        Install the package, register the module, and drop <code>&lt;chart&gt;</code> straight into your template.
+      </p>
+      <div class="feature-grid">
+        <div class="feature">
+          <strong>Zero config</strong>
+          Thin wrapper — the full Highcharts API remains directly accessible.
+        </div>
+        <div class="feature">
+          <strong>Event bridge</strong>
+          Highcharts events become Angular <code>@Output()</code> emitters automatically.
+        </div>
+        <div class="feature">
+          <strong>Native instance</strong>
+          Capture the <code>Highcharts.Chart</code> object via <code>(load)</code>.
+        </div>
+        <div class="feature">
+          <strong>Optional modules</strong>
+          3D, heatmap, stock — register only what you need.
+        </div>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="#demos">See demos</a>
+        <a class="btn secondary" href="https://github.com/alexandroit/angular2-highcharts#readme" target="_blank">README</a>
+      </div>
+    </div>
+
+    <div class="hero-card hero-setup">
+      <h2>Setup in 3 steps</h2>
+
+      <div class="step">
+        <span class="step-num">1</span>
+        <div>
+          <strong>Install</strong>
+          <pre>npm install @revivejs/angular2-highcharts highcharts</pre>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="step-num">2</span>
+        <div>
+          <strong>Register in your NgModule</strong>
+<pre>import &#123; ChartModule &#125; from '@revivejs/angular2-highcharts';
+import * as Highcharts from 'highcharts/highstock';
+declare var require: any;
+const globalScope: any = typeof window !== 'undefined' ? window : globalThis;
+globalScope._Highcharts = Highcharts;
+globalScope.Highcharts = Highcharts;
+const HC3d   = require('highcharts/highcharts-3d');
+const HCHeat = require('highcharts/modules/heatmap');
+const HCPointAndFigure = require('highcharts/modules/pointandfigure');
+const HCRenko = require('highcharts/modules/renko');
+
+&#64;NgModule(&#123;
+  imports: [
+    ChartModule.forRoot(Highcharts, HC3d, HCHeat, HCPointAndFigure, HCRenko)
+  ]
+&#125;)</pre>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="step-num">3</span>
+        <div>
+          <strong>Use in your template</strong>
+          <pre>&lt;chart [options]="myOptions"&gt;&lt;/chart&gt;</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DEMOS ══════════════════════════════════════════════════════════════ -->
+  <section class="layout" id="demos">
+    <div class="panels">
+
+      <!-- ── BLOCK 1: Core ──────────────────────────────────────────────── -->
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Core — basic usage</h2>
+          <p>These two demos cover 90 % of everyday use cases.</p>
+        </div>
+        <div class="demo-grid">
+
+          <!-- Basic chart -->
+          <section class="demo-card">
+            <h3>Basic chart</h3>
+            <p>Pass a standard Highcharts options object to the <code>[options]</code> input.</p>
+            <pre class="code">// component.ts
+options = &#123;
+  title: &#123; text: 'My chart' &#125;,
+  series: [&#123; type: 'line', data: [...] &#125;]
+&#125;;</pre>
+            <pre class="code">&lt;!-- template.html --&gt;
+&lt;chart [options]="options"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="basicOptions"></chart>
+            </div>
+          </section>
+
+          <!-- StockChart -->
+          <section class="demo-card">
+            <h3>StockChart</h3>
+            <p>Set <code>type="StockChart"</code> to use the Highstock constructor.</p>
+            <pre class="code">&lt;chart type="StockChart"
+      [options]="stockOptions"&gt;
+&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart type="StockChart" [options]="stockOptions"></chart>
+            </div>
+          </section>
+
+        </div>
+      </article>
+
+      <!-- ── BLOCK 2: Event bridge ──────────────────────────────────────── -->
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Event bridge</h2>
+          <p>
+            Highcharts events are exposed as <code>@Output()</code> on the child components
+            <code>&lt;series&gt;</code>, <code>&lt;point&gt;</code>, <code>&lt;xAxis&gt;</code> and <code>&lt;yAxis&gt;</code>.
+          </p>
+        </div>
+
+        <div class="demo-grid">
+          <section class="demo-card full">
+            <h3>Chart, series and point events</h3>
+            <p>
+              The <code>(load)</code> output on <code>&lt;chart&gt;</code> delivers the native instance.
+              <code>(selection)</code> fires when the user drags a zoom area.
+              <code>&lt;series&gt;</code> and <code>&lt;point&gt;</code> forward hover and select events into Angular.
+            </p>
+<pre class="code">&lt;chart [options]="eventOptions"
+       (load)="onEventLoad($event)"
+       (selection)="onSelection($event)"&gt;
+
+  &lt;series (mouseOver)="onSeriesHover($event)"&gt;
+    &lt;point (select)="onPointSelect($event)"&gt;&lt;/point&gt;
+  &lt;/series&gt;
+
+  &lt;xAxis (afterSetExtremes)="onXExtremes($event)"&gt;&lt;/xAxis&gt;
+  &lt;yAxis (afterSetExtremes)="onYExtremes($event)"&gt;&lt;/yAxis&gt;
+
+&lt;/chart&gt;</pre>
+            <div class="controls">
+              <button (click)="zoomEventX()">Zoom X</button>
+              <button class="secondary" (click)="zoomEventY()">Zoom Y</button>
+              <button class="ghost" (click)="resetEventAxes()">Reset axes</button>
+            </div>
+            <div class="chart-frame">
+              <chart [options]="eventOptions"
+                     (load)="onEventLoad($event)"
+                     (selection)="onSelection($event)">
+                <series (mouseOver)="onSeriesHover($event)">
+                  <point (select)="onPointSelect($event)"></point>
+                </series>
+                <xAxis (afterSetExtremes)="onXExtremes($event)"></xAxis>
+                <yAxis (afterSetExtremes)="onYExtremes($event)"></yAxis>
+              </chart>
+            </div>
+            <p class="note">
+              Drag over the chart to select a range, hover over a bar, or click a column.
+              Every event appears in the <strong>Event Log</strong> on the right.
+            </p>
+          </section>
+        </div>
+      </article>
+
+      <!-- ── BLOCK 3: Dynamic instance ─────────────────────────────────── -->
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Native instance access</h2>
+          <p>
+            The wrapper is intentionally thin. For imperative mutations, capture the
+            <code>Highcharts.Chart</code> object from <code>(load)</code> and call the native API directly.
+          </p>
+        </div>
+
+        <div class="demo-grid">
+          <section class="demo-card full">
+            <h3>Imperative mutations via the Highcharts API</h3>
+<pre class="code">// component.ts
+onDynamicLoad(e: any) &#123;
+  this.chart = e.context; // native Highcharts.Chart object
+&#125;
+
+addPoint() &#123;
+  this.chart.series[0].addPoint(Math.random() * 20, true, false);
+&#125;
+
+randomize() &#123;
+  this.chart.series[0].setData([...newData], true);
+&#125;
+
+renameChart() &#123;
+  this.chart.setTitle(&#123; text: 'New title' &#125;);
+&#125;</pre>
+<pre class="code">&lt;chart [options]="dynamicOptions"
+       (load)="onDynamicLoad($event)"&gt;&lt;/chart&gt;</pre>
+            <div class="controls">
+              <button (click)="addPoint()">Add point</button>
+              <button class="secondary" (click)="randomize()">Randomise series</button>
+              <button class="secondary" (click)="renameChart()">Rename chart</button>
+              <button class="ghost" (click)="removePoint()">Remove 1st point</button>
+            </div>
+            <div class="chart-frame">
+              <chart [options]="dynamicOptions" (load)="onDynamicLoad($event)"></chart>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <!-- ── BLOCK 4: Axis wrappers ─────────────────────────────────────── -->
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Extra axis wrappers</h2>
+          <p>
+            <code>&lt;zAxis&gt;</code> and <code>&lt;colorAxis&gt;</code> work the same way as the standard axes:
+            <code>(afterSetExtremes)</code> events and programmatic control via the native instance.
+          </p>
+        </div>
+
+        <div class="demo-grid">
+
+          <!-- zAxis -->
+          <section class="demo-card">
+            <h3>&lt;zAxis&gt; wrapper</h3>
+            <p>3D scatter chart — requires <code>highcharts-3d</code> in <code>forRoot</code>.</p>
+<pre class="code">&lt;chart [options]="zAxisOptions"
+       (load)="onZAxisLoad($event)"&gt;
+  &lt;zAxis (afterSetExtremes)="onZExtremes($event)"&gt;
+  &lt;/zAxis&gt;
+&lt;/chart&gt;</pre>
+            <div class="controls">
+              <button class="secondary" (click)="zoomZ()">Clamp Z</button>
+              <button class="ghost" (click)="resetZ()">Reset Z</button>
+            </div>
+            <div class="chart-frame">
+              <chart [options]="zAxisOptions" (load)="onZAxisLoad($event)">
+                <zAxis (afterSetExtremes)="onZExtremes($event)"></zAxis>
+              </chart>
+            </div>
+          </section>
+
+          <!-- colorAxis -->
+          <section class="demo-card">
+            <h3>&lt;colorAxis&gt; wrapper</h3>
+            <p>Heatmap — requires <code>highcharts/modules/heatmap</code> in <code>forRoot</code>.</p>
+<pre class="code">&lt;chart [options]="colorAxisOptions"
+       (load)="onColorAxisLoad($event)"&gt;
+  &lt;colorAxis (afterSetExtremes)="onColorExtremes($event)"&gt;
+  &lt;/colorAxis&gt;
+&lt;/chart&gt;</pre>
+            <div class="controls">
+              <button class="secondary" (click)="zoomColor()">Narrow range</button>
+              <button class="ghost" (click)="resetColor()">Reset colour</button>
+            </div>
+            <div class="chart-frame">
+              <chart [options]="colorAxisOptions" (load)="onColorAxisLoad($event)">
+                <colorAxis (afterSetExtremes)="onColorExtremes($event)"></colorAxis>
+              </chart>
+            </div>
+          </section>
+
+        </div>
+      </article>
+
+      <!-- ── BLOCK 5: Modules ───────────────────────────────────────────── -->
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Optional modules</h2>
+          <p>
+            Pass the modules you need to <code>forRoot</code>. They are applied once at startup.
+            To toggle features at runtime, reassign the options object in your component.
+          </p>
+        </div>
+
+        <div class="demo-grid">
+          <section class="demo-card full">
+            <h3>Toggle 3D at runtime</h3>
+<pre class="code">toggle3d() &#123;
+  this.enabled = !this.enabled;
+  // Reassign the reference so Angular detects the change
+  this.moduleOptions = this.makeModuleOptions(this.enabled);
+&#125;</pre>
+            <div class="controls">
+              <button (click)="toggle3d()">{{ module3dEnabled ? 'Disable 3D' : 'Enable 3D' }}</button>
+            </div>
+            <div class="chart-frame">
+              <chart [options]="moduleOptions"></chart>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <!-- ── BLOCK 6: Highcharts 6 new features ───────────────────────────── -->
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Highcharts 6 — new chart types</h2>
+          <p>
+            Angular 13 keeps full support for the Highcharts 6 modules introduced in the previous release lines, including <strong>bullet</strong>
+            and <strong>x-range</strong> chart types. Register the modules in <code>forRoot</code>
+            and pass options as usual — no API changes required.
+          </p>
+        </div>
+        <div class="demo-grid">
+
+          <!-- Bullet chart -->
+          <section class="demo-card">
+            <h3>Bullet chart</h3>
+            <p>Compares an actual value to a target and shows qualitative performance bands. New in Highcharts 6.</p>
+<pre class="code">// app.module.ts
+const HighchartsBullet = require('highcharts/modules/bullet');
+ChartModule.forRoot(Highcharts, ..., HighchartsBullet)</pre>
+<pre class="code">// component.ts
+bulletOptions = &#123;
+  chart: &#123; type: 'bullet', inverted: true &#125;,
+  series: [&#123; type: 'bullet',
+    data: [&#123; y: 194, target: 200 &#125;, ...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="bulletOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="bulletOptions"></chart>
+            </div>
+          </section>
+
+          <!-- X-Range chart -->
+          <section class="demo-card">
+            <h3>X-Range chart</h3>
+            <p>Horizontal bars spanning a date range — perfect for project timelines. New in Highcharts 6.</p>
+<pre class="code">// app.module.ts
+const HighchartsXRange = require('highcharts/modules/xrange');
+ChartModule.forRoot(Highcharts, ..., HighchartsXRange)</pre>
+<pre class="code">// component.ts
+xrangeOptions = &#123;
+  chart: &#123; type: 'xrange' &#125;,
+  xAxis: &#123; type: 'datetime' &#125;,
+  series: [&#123; type: 'xrange',
+    data: [&#123; x: ..., x2: ..., y: 0 &#125;, ...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="xrangeOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="xrangeOptions"></chart>
+            </div>
+          </section>
+
+        </div>
+      </article>
+
+      <!-- ── BLOCK 7: Highcharts 7 new features ───────────────────────────── -->
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Highcharts 7 — new modules and chart types</h2>
+          <p>
+            Angular 13 still supports the Highcharts 7 modules, which added relationship and storytelling charts
+            such as <strong>timeline</strong>, <strong>venn</strong>, <strong>organization</strong>,
+            and <strong>dependency wheel</strong>.
+          </p>
+        </div>
+        <div class="demo-grid">
+
+          <section class="demo-card">
+            <h3>Timeline chart</h3>
+            <p>Event milestones on a chronological track. Requires <code>highcharts/modules/timeline</code>.</p>
+<pre class="code">// app.module.ts
+const HighchartsTimeline = require('highcharts/modules/timeline');
+ChartModule.forRoot(Highcharts, ..., HighchartsTimeline)</pre>
+<pre class="code">// component.ts
+timelineOptions = &#123;
+  chart: &#123; type: 'timeline' &#125;,
+  series: [&#123; type: 'timeline', data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="timelineOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="timelineOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Venn diagram</h3>
+            <p>Visualises overlap between sets. Requires <code>highcharts/modules/venn</code>.</p>
+<pre class="code">// app.module.ts
+const HighchartsVenn = require('highcharts/modules/venn');
+ChartModule.forRoot(Highcharts, ..., HighchartsVenn)</pre>
+<pre class="code">// component.ts
+vennOptions = &#123;
+  series: [&#123; type: 'venn', data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="vennOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="vennOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Organization chart</h3>
+            <p>Hierarchy charts powered by the sankey engine. Requires <code>sankey</code> and <code>organization</code>.</p>
+<pre class="code">// app.module.ts
+const HighchartsSankey = require('highcharts/modules/sankey');
+const HighchartsOrganization = require('highcharts/modules/organization');</pre>
+<pre class="code">// component.ts
+organizationOptions = &#123;
+  series: [&#123; type: 'organization', data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="organizationOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="organizationOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Dependency wheel</h3>
+            <p>Relationship flows arranged in a circular layout. Requires <code>sankey</code> and <code>dependency-wheel</code>.</p>
+<pre class="code">// app.module.ts
+const HighchartsDependencyWheel = require('highcharts/modules/dependency-wheel');
+ChartModule.forRoot(Highcharts, ..., HighchartsSankey, HighchartsDependencyWheel)</pre>
+<pre class="code">// component.ts
+dependencyWheelOptions = &#123;
+  series: [&#123; type: 'dependencywheel', data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="dependencyWheelOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="dependencyWheelOptions"></chart>
+            </div>
+          </section>
+
+        </div>
+      </article>
+
+      <!-- ── BLOCK 8: API reference ─────────────────────────────────────── -->
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Highcharts 8 — retained capabilities</h2>
+          <p>
+            The Highcharts 8 demos remain available here, including data interaction patterns such as
+            <strong>radial bar</strong>, <strong>data sorting</strong>, and <strong>marker clusters</strong>.
+          </p>
+        </div>
+        <div class="demo-grid">
+
+          <section class="demo-card">
+            <h3>Radial bar chart</h3>
+            <p>A circular bar layout for compact KPI comparisons. New in the Highcharts 8 line.</p>
+<pre class="code">// component.ts
+radialBarOptions = &#123;
+  chart: &#123; polar: true, inverted: true, type: 'column' &#125;,
+  series: [&#123; type: 'column', data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="radialBarOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="radialBarOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Data sorting</h3>
+            <p>Category series can sort themselves declaratively with animated transitions.</p>
+<pre class="code">// component.ts
+sortedBarOptions = &#123;
+  chart: &#123; type: 'bar' &#125;,
+  series: [&#123; type: 'bar', dataSorting: &#123; enabled: true &#125;, data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="sortedBarOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="sortedBarOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Marker clusters</h3>
+            <p>Dense scatter data can be grouped visually with the marker-clusters module.</p>
+<pre class="code">// app.module.ts
+const HighchartsMarkerClusters = require('highcharts/modules/marker-clusters');
+ChartModule.forRoot(Highcharts, ..., HighchartsMarkerClusters)</pre>
+<pre class="code">// component.ts
+markerClusterOptions = &#123;
+  chart: &#123; type: 'scatter' &#125;,
+  plotOptions: &#123; scatter: &#123; cluster: &#123; enabled: true &#125; &#125; &#125;,
+  series: [&#123; type: 'scatter', data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="markerClusterOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="markerClusterOptions"></chart>
+            </div>
+          </section>
+
+        </div>
+      </article>
+
+      <!-- ── BLOCK 9: Highcharts 9 ──────────────────────────────────────── -->
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Highcharts 9 — retained capabilities</h2>
+          <p>
+            Angular 13 keeps the Highcharts 9 capabilities from the previous release line, including <strong>3D area charts</strong>,
+            <strong>single-touch zoom</strong>, <strong>hlc stock series</strong>,
+            <strong>node offsets</strong>, and <strong>annotation crop control</strong>.
+          </p>
+        </div>
+        <div class="demo-grid">
+
+          <section class="demo-card">
+            <h3>3D area chart</h3>
+            <p>Area series can now render inside 3D charts using the existing <code>highcharts-3d</code> module.</p>
+<pre class="code">// component.ts
+area3dOptions = &#123;
+  chart: &#123; type: 'area', options3d: &#123; enabled: true &#125; &#125;,
+  series: [&#123; type: 'area', data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="area3dOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="area3dOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Single-touch zoom</h3>
+            <p>Touch devices can use one finger for selection-like zooming with <code>chart.zoomBySingleTouch</code>.</p>
+<pre class="code">// component.ts
+touchZoomOptions = &#123;
+  chart: &#123; zoomType: 'x', zoomBySingleTouch: true &#125;,
+  series: [&#123; type: 'line', data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="touchZoomOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="touchZoomOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>HLC stock series</h3>
+            <p>The Highstock constructor now supports the <code>hlc</code> series type for high-low-close data.</p>
+<pre class="code">// component.ts
+hlcOptions = &#123;
+  series: [&#123; type: 'hlc', data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart type="StockChart" [options]="hlcOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart type="StockChart" [options]="hlcOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Organization node offsets</h3>
+            <p>Fine tune organization layouts with <code>offsetHorizontal</code> and <code>offsetVertical</code>.</p>
+<pre class="code">// component.ts
+nodeOffsetsOptions = &#123;
+  series: [&#123;
+    type: 'organization',
+    nodes: [&#123; id: 'Frontend', offsetVertical: -18 &#125;]
+  &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="nodeOffsetsOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="nodeOffsetsOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Annotations crop</h3>
+            <p>The annotations module can now control whether labels render outside the plot area.</p>
+<pre class="code">// app.module.ts
+const HCAnnotations = require('highcharts/modules/annotations');
+ChartModule.forRoot(Highcharts, ..., HCAnnotations)</pre>
+<pre class="code">// component.ts
+annotationCropOptions = &#123;
+  annotations: [&#123; crop: false, labels: [...] &#125;],
+  series: [&#123; type: 'line', data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="annotationCropOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="annotationCropOptions"></chart>
+            </div>
+          </section>
+
+        </div>
+      </article>
+
+      <!-- ── BLOCK 10: Highcharts 10 and 11 ─────────────────────────────── -->
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Highcharts 10 and 11 — retained capabilities</h2>
+          <p>
+            Angular 13 keeps the Highcharts 10 and 11 demos from the previous release line, including
+            <strong>drilldown breadcrumbs</strong>, <strong>aligned thresholds</strong>,
+            <strong>organization layout tuning</strong>, <strong>arc diagrams</strong>,
+            <strong>treegraph series</strong>, and <strong>minor ticks per major</strong>.
+          </p>
+        </div>
+        <div class="demo-grid">
+
+          <section class="demo-card">
+            <h3>Drilldown breadcrumbs</h3>
+            <p>Highcharts 10 replaces the old drill-up button flow with breadcrumb navigation for drilldown charts.</p>
+<pre class="code">// app.module.ts
+const HighchartsDrilldown = require('highcharts/modules/drilldown');
+ChartModule.forRoot(Highcharts, ..., HighchartsDrilldown)</pre>
+<pre class="code">// component.ts
+drilldownBreadcrumbsOptions = &#123;
+  drilldown: &#123; breadcrumbs: &#123; ... &#125;, series: [...] &#125;
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="drilldownBreadcrumbsOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="drilldownBreadcrumbsOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Align thresholds</h3>
+            <p>Multiple Y axes can align around different threshold values for easier side-by-side reading.</p>
+<pre class="code">// component.ts
+alignThresholdsOptions = &#123;
+  chart: &#123; alignThresholds: true &#125;,
+  series: [&#123; threshold: 0 &#125;, &#123; threshold: 120, yAxis: 1 &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="alignThresholdsOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="alignThresholdsOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Organization layout controls</h3>
+            <p>Deep organization charts gained <code>hangingIndentTranslation</code> and <code>minNodeLength</code> options.</p>
+<pre class="code">// component.ts
+organizationLayoutOptions = &#123;
+  series: [&#123;
+    type: 'organization',
+    hangingIndentTranslation: 'cumulative',
+    minNodeLength: 20
+  &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="organizationLayoutOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="organizationLayoutOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Arc diagram</h3>
+            <p>Relationship flows can now render as arcs with a dedicated <code>arcdiagram</code> series type.</p>
+<pre class="code">// app.module.ts
+const HighchartsArcDiagram = require('highcharts/modules/arc-diagram');
+ChartModule.forRoot(Highcharts, ..., HighchartsSankey, HighchartsArcDiagram)</pre>
+<pre class="code">// component.ts
+arcDiagramOptions = &#123;
+  series: [&#123; type: 'arcdiagram', data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="arcDiagramOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="arcDiagramOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Treegraph</h3>
+            <p>The new <code>treegraph</code> series renders parent-child structures without relying on sankey layout rules.</p>
+<pre class="code">// app.module.ts
+const HighchartsTreemap = require('highcharts/modules/treemap');
+const HighchartsTreegraph = require('highcharts/modules/treegraph');
+ChartModule.forRoot(Highcharts, ..., HighchartsTreemap, HighchartsTreegraph)</pre>
+<pre class="code">// component.ts
+treegraphOptions = &#123;
+  series: [&#123; type: 'treegraph', data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="treegraphOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="treegraphOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Minor ticks per major</h3>
+            <p>Axes can subdivide each major interval with <code>minorTicksPerMajor</code> for more readable scale guidance.</p>
+<pre class="code">// component.ts
+minorTicksOptions = &#123;
+  yAxis: &#123; tickInterval: 20, minorTicksPerMajor: 4 &#125;,
+  series: [&#123; type: 'line', data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="minorTicksOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="minorTicksOptions"></chart>
+            </div>
+          </section>
+
+        </div>
+      </article>
+
+      <!-- ── BLOCK 11: Highcharts 12 ────────────────────────────────────── -->
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Highcharts 12 — new capabilities</h2>
+          <p>
+            Angular 13 moves to Highcharts 12.5, adding new stock transformations and
+            better built-in date and number handling while preserving the same wrapper selectors,
+            inputs, outputs, and <code>forRoot</code> signature.
+          </p>
+        </div>
+        <div class="demo-grid">
+
+          <section class="demo-card">
+            <h3>Point and figure</h3>
+            <p>Highcharts Stock 12 adds the <code>pointandfigure</code> series for trend-focused price columns.</p>
+<pre class="code">// app.module.ts
+const HCPointAndFigure = require('highcharts/modules/pointandfigure');
+ChartModule.forRoot(Highcharts, ..., HCPointAndFigure)</pre>
+<pre class="code">// component.ts
+pointAndFigureOptions = &#123;
+  series: [&#123; type: 'pointandfigure', data: this.generateTimeSeries() &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart type="StockChart" [options]="pointAndFigureOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart type="StockChart" [options]="pointAndFigureOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Renko</h3>
+            <p>The <code>renko</code> series converts closing prices into bricks sized by price movement, not by time.</p>
+<pre class="code">// app.module.ts
+const HCRenko = require('highcharts/modules/renko');
+ChartModule.forRoot(Highcharts, ..., HCRenko)</pre>
+<pre class="code">// component.ts
+renkoOptions = &#123;
+  series: [&#123; type: 'renko', data: this.generateTimeSeries(), boxSize: 3 &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart type="StockChart" [options]="renkoOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart type="StockChart" [options]="renkoOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Locale-aware formatting</h3>
+            <p>Use <code>lang.locale</code> and locale-aware date tokens to localize labels and tooltips without custom formatters.</p>
+<pre class="code">// component.ts
+localeOptions = &#123;
+  lang: &#123; locale: 'de-DE' &#125;,
+  xAxis: &#123; labels: &#123; format: '&#123;value:%[eb]&#125;' &#125; &#125;,
+  series: [&#123; type: 'line', data: [...] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="localeOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="localeOptions"></chart>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Human-friendly dates</h3>
+            <p>Readable ISO date strings can now be used directly in datetime series data.</p>
+<pre class="code">// component.ts
+humanDatesOptions = &#123;
+  xAxis: &#123; type: 'datetime' &#125;,
+  series: [&#123; data: [['2025-01-06', 3], ['2025-01-13', 5]] &#125;]
+&#125;;</pre>
+<pre class="code">&lt;chart [options]="humanDatesOptions"&gt;&lt;/chart&gt;</pre>
+            <div class="chart-frame">
+              <chart [options]="humanDatesOptions"></chart>
+            </div>
+          </section>
+
+        </div>
+      </article>
+
+      <!-- ── BLOCK 12: API reference ────────────────────────────────────── -->
+      <article class="panel ref-panel">
+        <div class="panel-header">
+          <h2>Quick API reference</h2>
+        </div>
+        <div class="ref-grid">
+          <div class="ref-card">
+            <h4>&lt;chart&gt;</h4>
+            <table class="api-table">
+              <thead><tr><th>Input / Output</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td><code>[options]</code></td><td>Object</td><td>Highcharts options object (required)</td></tr>
+                <tr><td><code>[type]</code></td><td>string</td><td><code>"Chart"</code> (default) or <code>"StockChart"</code></td></tr>
+                <tr><td><code>(load)</code></td><td>ChartEvent</td><td>Native instance available in <code>$event.context</code></td></tr>
+                <tr><td><code>(selection)</code></td><td>ChartEvent</td><td>Range selection / zoom drag</td></tr>
+                <tr><td><code>(click)</code></td><td>ChartEvent</td><td>Click on the chart area</td></tr>
+                <tr><td><code>(redraw)</code></td><td>ChartEvent</td><td>After the chart redraws</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="ref-card">
+            <h4>&lt;series&gt; / &lt;point&gt;</h4>
+            <table class="api-table">
+              <thead><tr><th>Output</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td><code>(mouseOver)</code></td><td>Cursor enters the series</td></tr>
+                <tr><td><code>(mouseOut)</code></td><td>Cursor leaves the series</td></tr>
+                <tr><td><code>(click)</code></td><td>Click on a series / point</td></tr>
+                <tr><td><code>(select)</code></td><td>Point selected</td></tr>
+                <tr><td><code>(hide) / (show)</code></td><td>Series hidden or shown</td></tr>
+                <tr><td><code>(legendItemClick)</code></td><td>Legend item clicked</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="ref-card">
+            <h4>&lt;xAxis&gt; / &lt;yAxis&gt; / &lt;zAxis&gt; / &lt;colorAxis&gt;</h4>
+            <table class="api-table">
+              <thead><tr><th>Output</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td><code>(afterSetExtremes)</code></td><td>Extremes changed (zoom / reset)</td></tr>
+                <tr><td><code>(setExtremes)</code></td><td>Before extremes are applied</td></tr>
+                <tr><td><code>(afterBreaks)</code></td><td>After axis breaks are applied</td></tr>
+                <tr><td><code>(pointBreak)</code></td><td>Point falls in a break interval</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ═══ EVENT LOG (sticky) ══════════════════════════════════════════════ -->
+    <aside class="log-panel">
+      <h2>Event Log</h2>
+      <p>Interact with the demos to see Angular events appear here.</p>
+      <div class="log-controls">
+        <button class="ghost small" (click)="clearLog()">Clear</button>
+      </div>
+      <div class="log-list">
+        <div class="log-entry" *ngFor="let e of logs">{{ e }}</div>
+      </div>
+    </aside>
+  </section>
+
+  <footer class="footer">
+    <p>
+      <strong>@revivejs/angular2-highcharts</strong> — maintained by Alexandro Paixão Marques.
+      Original wrapper by Eugene Gluhotorenko.
+    </p>
+  </footer>
+
+</div>

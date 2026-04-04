@@ -2,13 +2,14 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es2015",
+    "target": "es2020",
     "lib": [
       "dom",
       "es2020"
     ],
-    "module": "commonjs",
+    "module": "es2020",
     "moduleResolution": "node",
+    "useDefineForClassFields": false,
     "types": [
       "jasmine"
     ],
