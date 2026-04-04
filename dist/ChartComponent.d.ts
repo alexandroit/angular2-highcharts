@@ -29,7 +29,7 @@ export declare class ChartComponent {
     private baseOpts;
     type: string;
     options: any;
-    private init();
+    private init;
     ngAfterViewInit(): void;
     constructor(element: ElementRef, highchartsService: HighchartsService);
 }
