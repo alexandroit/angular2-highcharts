@@ -3,10 +3,17 @@ docs
 docs-src
 node_modules
 src
+.claude
 .idea
+.nvmrc
 .travis.yml
 karma.conf.js
 karma-test-shim.js
+index.js
+index.d.ts
+ng-package.json
+tsconfig.json
+tslint.json
 dist/*.spec.d.ts
 dist/*.spec.js
 dist/*.spec.js.map
