@@ -191,7 +191,7 @@ pre.code {
 /* ── Layout principal ──────────────────────────────────────────────────── */
 .layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
+  grid-template-columns: minmax(0, 1fr) 280px;
   gap: 24px;
   align-items: start;
 }
@@ -225,10 +225,12 @@ pre.code {
 }
 
 .demo-card {
+  min-width: 0;
   padding: 18px;
   border-radius: 18px;
   background: linear-gradient(180deg, #fff 0%, #f7fafc 100%);
   border: 1px solid rgba(16, 32, 51, 0.08);
+  overflow: hidden;
 }
 
 .demo-card.full {
@@ -243,6 +245,8 @@ pre.code {
   background: #fff;
   border: 1px solid rgba(16, 32, 51, 0.07);
   min-height: 300px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 /* ── Controls ──────────────────────────────────────────────────────────── */
@@ -339,6 +343,7 @@ button.small {
 .log-panel {
   position: sticky;
   top: 20px;
+  min-width: 0;
   padding: 20px;
   border: 1px solid rgba(16, 32, 51, 0.1);
   border-radius: 22px;
@@ -395,6 +400,20 @@ button.small {
   .log-panel {
     position: static;
     max-height: 360px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 260px;
+  }
+
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-card.full {
+    grid-column: auto;
   }
 }
 
