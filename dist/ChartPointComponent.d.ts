@@ -10,5 +10,5 @@ export declare class ChartPointComponent {
     mouseOut: EventEmitter<ChartEvent>;
     update: EventEmitter<ChartEvent>;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChartPointComponent, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<ChartPointComponent, "point", never, {}, { "click": "click"; "remove": "remove"; "select": "select"; "unselect": "unselect"; "mouseOver": "mouseOver"; "mouseOut": "mouseOut"; "update": "update"; }, never, never, false>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<ChartPointComponent, "point", never, {}, { "click": "click"; "remove": "remove"; "select": "select"; "unselect": "unselect"; "mouseOver": "mouseOver"; "mouseOut": "mouseOut"; "update": "update"; }, never, never, false, never>;
 }

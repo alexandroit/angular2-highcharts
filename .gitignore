@@ -27,3 +27,6 @@ docs-src/angular-13/.angular
 docs-src/angular-14/node_modules
 docs-src/angular-14/package-lock.json
 docs-src/angular-14/.angular
+docs-src/angular-15/node_modules
+docs-src/angular-15/package-lock.json
+docs-src/angular-15/.angular

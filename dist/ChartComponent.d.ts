@@ -34,5 +34,5 @@ export declare class ChartComponent {
     ngAfterViewInit(): void;
     constructor(element: ElementRef, highchartsService: HighchartsService);
     static ɵfac: i0.ɵɵFactoryDeclaration<ChartComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChartComponent, "chart", never, { "type": "type"; "options": "options"; }, { "create": "create"; "click": "click"; "addSeries": "addSeries"; "afterPrint": "afterPrint"; "beforePrint": "beforePrint"; "drilldown": "drilldown"; "drillup": "drillup"; "load": "load"; "redraw": "redraw"; "selection": "selection"; }, ["series", "xAxis", "yAxis", "zAxis", "colorAxis"], never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChartComponent, "chart", never, { "type": "type"; "options": "options"; }, { "create": "create"; "click": "click"; "addSeries": "addSeries"; "afterPrint": "afterPrint"; "beforePrint": "beforePrint"; "drilldown": "drilldown"; "drillup": "drillup"; "load": "load"; "redraw": "redraw"; "selection": "selection"; }, ["series", "xAxis", "yAxis", "zAxis", "colorAxis"], never, false, never>;
 }

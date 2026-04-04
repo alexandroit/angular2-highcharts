@@ -8,5 +8,5 @@ export declare class ChartColorAxisComponent {
     pointInBreak: EventEmitter<ChartEvent>;
     setExtremes: EventEmitter<ChartEvent>;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChartColorAxisComponent, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<ChartColorAxisComponent, "colorAxis", never, {}, { "afterBreaks": "afterBreaks"; "afterSetExtremes": "afterSetExtremes"; "pointBreak": "pointBreak"; "pointInBreak": "pointInBreak"; "setExtremes": "setExtremes"; }, never, never, false>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<ChartColorAxisComponent, "colorAxis", never, {}, { "afterBreaks": "afterBreaks"; "afterSetExtremes": "afterSetExtremes"; "pointBreak": "pointBreak"; "pointInBreak": "pointInBreak"; "setExtremes": "setExtremes"; }, never, never, false, never>;
 }
