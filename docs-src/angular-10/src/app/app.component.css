@@ -130,8 +130,8 @@ pre.code {
 
 /* ── Steps (hero sidebar) ──────────────────────────────────────────────── */
 .hero-setup {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
   gap: 16px;
 }
 
