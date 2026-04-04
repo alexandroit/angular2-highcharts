@@ -12,7 +12,7 @@
 
 **[Documentation & Live Demos](https://alexandroit.github.io/angular2-highcharts/)** | **[npm](https://www.npmjs.com/package/@revivejs/angular2-highcharts)** | **[Issues](https://github.com/alexandroit/angular2-highcharts/issues)** | **[Repository](https://github.com/alexandroit/angular2-highcharts)**
 
-**Latest version:** `10.0.0`
+**Latest version:** `10.0.1`
 
 ---
 
@@ -64,7 +64,7 @@ The original `angular2-highcharts` package targeted early Angular releases and s
 
 | Package version | Angular version | Highcharts version | TypeScript version | Demo link |
 | :---: | :---: | :---: | :---: | :--- |
-| **10.0.0** | **10.2.x** | **8.2.x** | **3.9.x** | Angular 10 demo (coming in this release cycle) |
+| **10.0.1** | **10.2.x** | **8.2.x** | **3.9.x** | [Angular 10 demo](https://alexandroit.github.io/angular2-highcharts/angular-10/) |
 | **9.0.0** | **9.1.x** | **8.2.x** | **3.8.x** | [Angular 9 demo](https://alexandroit.github.io/angular2-highcharts/angular-9/) |
 | **8.0.0** | **8.2.x** | **8.2.x** | **3.5.x** | [Angular 8 demo](https://alexandroit.github.io/angular2-highcharts/angular-8/) |
 | 7.0.x | 7.2.x | 7.2.x | 3.2.x | [Angular 7 demo](https://alexandroit.github.io/angular2-highcharts/angular-7/) |
@@ -341,6 +341,10 @@ This wrapper is intentionally thin. It uses the initial `options` object to crea
 The package major follows Angular major compatibility, but the wrapper API is intentionally frozen. Existing selectors such as `<chart>`, `<series>`, `<point>`, `<xAxis>`, `<yAxis>`, `<zAxis>`, `<colorAxis>`, the `[options]` input, and `ChartModule.forRoot(Highcharts, ...modules)` remain stable so older Angular applications can keep the same integration code while newer releases adopt updated Angular tooling and newer Highcharts modules.
 
 ## CHANGELOG
+
+### 10.0.1 (Angular 10)
+- Bumped package version to 10.0.1
+- Fixed the npm README compatibility table to publish the Angular 10 demo link in the same format as the previous releases
 
 ### 10.0.0 (Angular 10)
 - Bumped package version to 10.0.0
