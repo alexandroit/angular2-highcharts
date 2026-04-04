@@ -26,8 +26,11 @@ const CHART_DIRECTIVES: any[] = [
 export class ChartModule {
     static forRoot(highchartsStatic: HighchartsStatic, ...highchartsModules: Array<Function>): ModuleWithProviders<ChartModule> {
         // Plug highcharts modules
-        highchartsModules.forEach((module) => {
-            module(highchartsStatic)
+        highchartsModules.forEach((loadedModule: any) => {
+            const highchartsModule = loadedModule && loadedModule.default ? loadedModule.default : loadedModule;
+            if (typeof highchartsModule === 'function') {
+                highchartsModule(highchartsStatic);
+            }
         });
 
         return {

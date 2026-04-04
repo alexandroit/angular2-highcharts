@@ -464,8 +464,11 @@ const CHART_DIRECTIVES = [
 class ChartModule {
     static forRoot(highchartsStatic, ...highchartsModules) {
         // Plug highcharts modules
-        highchartsModules.forEach((module) => {
-            module(highchartsStatic);
+        highchartsModules.forEach((loadedModule) => {
+            const highchartsModule = loadedModule && loadedModule.default ? loadedModule.default : loadedModule;
+            if (typeof highchartsModule === 'function') {
+                highchartsModule(highchartsStatic);
+            }
         });
         return {
             ngModule: ChartModule,

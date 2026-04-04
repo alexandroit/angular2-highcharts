@@ -494,8 +494,11 @@
                 highchartsModules[_i - 1] = arguments[_i];
             }
             // Plug highcharts modules
-            highchartsModules.forEach(function (module) {
-                module(highchartsStatic);
+            highchartsModules.forEach(function (loadedModule) {
+                var highchartsModule = loadedModule && loadedModule.default ? loadedModule.default : loadedModule;
+                if (typeof highchartsModule === 'function') {
+                    highchartsModule(highchartsStatic);
+                }
             });
             return {
                 ngModule: ChartModule,
