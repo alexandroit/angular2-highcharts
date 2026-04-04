@@ -5,7 +5,9 @@
   "scripts": {
     "watch": "tsc -w",
     "build": "rm -rf dist && ngc",
-    "test": "karma start karma.conf.js"
+    "test": "karma start karma.conf.js",
+    "build:docs": "npm run build && rm -rf docs && mkdir -p docs && cp docs-src/index.html docs/index.html && webpack --config docs-src/webpack.config.js",
+    "serve:docs": "http-server docs -p 8080 -c-1"
   },
   "repository": {
     "type": "git",
@@ -45,10 +47,13 @@
     "karma": "^1.4.1",
     "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.1.0",
+    "http-server": "^14.1.1",
     "reflect-metadata": "^0.1.9",
     "rxjs": "^5.5.12",
     "systemjs": "0.19.39",
     "typescript": "~2.4.2",
+    "ts-loader": "^3.5.0",
+    "webpack": "^3.12.0",
     "zone.js": "^0.8.29",
     "@types/highcharts": "4.2.47",
     "@types/jasmine": "2.5.42",

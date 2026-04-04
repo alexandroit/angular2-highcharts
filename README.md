@@ -1,79 +1,105 @@
-
 # angular2-highcharts
 
-> Highcharts chart components for Angular 4 apps. 👉 [Live Demo](http://plnkr.co/edit/AJwozFWVR7TkQZnt05dN?p=preview)
+> Highcharts chart components for **Angular 4** applications, with wrapper outputs for chart events, native chart instance access, and support for Highcharts modules through `ChartModule.forRoot(...)`.
 
+[![npm version](https://img.shields.io/npm/v/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/angular2-highcharts)
+[![npm downloads](https://img.shields.io/npm/dt/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/angular2-highcharts)
+[![npm monthly](https://img.shields.io/npm/dm/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/angular2-highcharts)
+[![license](https://img.shields.io/npm/l/angular2-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular2-highcharts/blob/master/LICENSE)
+[![Angular 4](https://img.shields.io/badge/Angular-4-red?style=flat-square&logo=angular)](https://angular.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-2.4-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
+[![GitHub stars](https://img.shields.io/github/stars/alexandroit/angular2-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular2-highcharts/stargazers)
 
-[![npm version](https://badge.fury.io/js/angular2-highcharts.svg)](https://badge.fury.io/js/angular2-highcharts)
-[![npm downloads](https://img.shields.io/npm/dm/angular2-highcharts.svg)](https://www.npmjs.com/package/angular2-highcharts)
+**[npm](https://www.npmjs.com/package/angular2-highcharts)** | **[Changelog / Repository History](https://github.com/alexandroit/angular2-highcharts/commits/master/)** | **[Issues](https://github.com/alexandroit/angular2-highcharts/issues)**
 
-Original project by [Eugene Gluhotorenko](https://github.com/gevgeny). This fork is maintained in [alexandroit/angular2-highcharts](https://github.com/alexandroit/angular2-highcharts) and keeps the original package name.
+---
+
+> **Credits:** Original library by [Eugene Gluhotorenko](https://github.com/gevgeny/angular2-highcharts). Current maintenance, Angular 4 compatibility update, and package metadata refresh by [Alexandro Paixao Marques](https://github.com/alexandroit/angular2-highcharts).
+
+---
+
+## Why this library?
+
+The original `angular2-highcharts` package targeted early Angular releases and had fallen behind. This fork keeps the wrapper usable for the Angular 4 support line while preserving the familiar API: `<chart>`, `<series>`, `<point>`, `<xAxis>`, and `<yAxis>`.
+
+## Features
+
+| Feature | Supported |
+| :--- | :---: |
+| Angular 4 release line | ✅ |
+| Standard Highcharts charts | ✅ |
+| `StockChart` wrapper support | ✅ |
+| Highcharts module registration via `forRoot` | ✅ |
+| Chart event outputs | ✅ |
+| Series event outputs | ✅ |
+| Point event outputs | ✅ |
+| X/Y axis event outputs | ✅ |
+| Native chart instance access | ✅ |
+| Interactive local docs app in repository | ✅ |
 
 ## Table of Contents
- - [Setting Up](#setting-up)
-  - [Install angular2-highcharts](#install-angular2-highcharts)
-  - [Setup App @NgModule](#setup-app-ngmodule)
- - [Usage](#usage)
-  - [Basic Usage](#basic-usage)
-    - [Setup App Module](#setup-app-module)
-    - [Create First Chart Component](#create-first-chart-component)
-  - [Handling Events](#handling-events)
-    - [Chart Events](#chart-events)
-    - [Series Events](#series-events)
-    - [Point Events](#point-events)
-    - [Axis Events](#axis-events)
-  - [Dynamic Interaction with Chart Object](#dynamic-interaction-with-chart-object)
-  - [Highstock](#highstock)
-  - [Highmaps](#highmaps)
-  - [Add Highcharts Modules](#add-highcharts-modules)
-  - [Access to the Highcharts Static API](#access-to-the-highcharts-static-api)
- -  [More Examples](#more-examples) 
- - [FAQ](#faq)
- - [License](#license)
 
-## Setting Up
+1. [Angular Version Compatibility](#angular-version-compatibility)
+2. [Installation](#installation)
+3. [Setup](#setup)
+4. [Basic Usage](#basic-usage)
+5. [Events](#events)
+6. [Dynamic Chart Access](#dynamic-chart-access)
+7. [Highstock](#highstock)
+8. [Highmaps](#highmaps)
+9. [Highcharts Modules](#highcharts-modules)
+10. [Static Highcharts API](#static-highcharts-api)
+11. [Run Locally](#run-locally)
+12. [FAQ](#faq)
+13. [License](#license)
 
-### Install angular2-highcharts
+## Angular Version Compatibility
+
+| angular2-highcharts | Angular | TypeScript | Node.js |
+| :---: | :---: | :---: | :---: |
+| **4.0.x** | **4.4.x** | **2.4.x** | build verified on modern Node, legacy tooling origin |
+| 0.5.x | 2.4.x | 2.1.x | historical release line |
+
+## Installation
+
+```bash
+npm install angular2-highcharts highcharts
 ```
-npm install angular2-highcharts --save
-```
 
-This release line targets Angular 4.x applications and expects `highcharts` to be installed in the consuming app.
+## Setup
 
-### Setup App @NgModule
-```TypeScript
+### 1. Import the module
+
+```ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ChartModule } from 'angular2-highcharts';
-import { App } from './App';
+
+declare var require: any;
 
 @NgModule({
-    imports: [
-      BrowserModule, 
-      ChartModule.forRoot(require('highcharts'))
-    ],
-    declarations: [App],
-    bootstrap: [App]
+  imports: [
+    BrowserModule,
+    ChartModule.forRoot(require('highcharts'))
+  ]
 })
 export class AppModule {}
 ```
 
-### For angular-cli and other Webpack environments
-No any additional setup needed
+### 2. Webpack and Angular CLI usage
 
-### For SystemJS environment
-You should add appropriate mapping to your `systemjs.config.js`
+No extra wrapper configuration is required for Angular CLI or other webpack-based applications beyond installing `highcharts` and passing the Highcharts factory to `ChartModule.forRoot(...)`.
+
+### 3. SystemJS usage
+
+If your application still uses SystemJS, add both `angular2-highcharts` and `highcharts` to the map and packages configuration:
 
 ```js
-...
 map: {
-  ...
   'angular2-highcharts': 'node_modules/angular2-highcharts',
-  'highcharts': 'node_modules/highcharts',
-}
-...
+  'highcharts': 'node_modules/highcharts'
+},
 packages: {
-  ...
   highcharts: {
     main: './highcharts.js',
     defaultExtension: 'js'
@@ -85,240 +111,219 @@ packages: {
 }
 ```
 
-## Usage
+## Basic Usage
 
-### Basic Usage
-
-#### Create First Chart Component
-Main charts functionality provided by the `chart` component and its `options` property.
-
-```TypeScript
+```ts
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'simple-chart-example',
-    template: `
-        <chart [options]="options"></chart>
-    `
+  selector: 'simple-chart-example',
+  template: `
+    <chart [options]="options"></chart>
+  `
 })
-export class App {
-    constructor() {
-        this.options = {
-            title : { text : 'simple chart' },
-            series: [{
-                data: [29.9, 71.5, 106.4, 129.2],
-            }]
-        };
-    }
-    options: Object;
+export class AppComponent {
+  options: Object;
+
+  constructor() {
+    this.options = {
+      title: { text: 'Simple chart' },
+      series: [{
+        data: [29.9, 71.5, 106.4, 129.2]
+      }]
+    };
+  }
 }
 ```
-👉 [Live Demo](http://plnkr.co/edit/IuwjpPB1YQW1T7i4B8SZ?p=preview)
 
-### Handling Events
-Highcharts itself provides bunch of events, and you still can use them with angular2-higcharts via the `options` property of the `chart` component. But it is not an angular way to handle events like this. So that angular2-higcharts provides `EventEmitter<ChartEvent>` wrappers for highcharts events. `ChartEvent` is an angular2-higcharts class which simply wraps original Highcharts events (`chartEvent.originalEvent`) and adds event handler context (`chartEvent.context`) since it differs depending on events.
+## Events
 
-#### Chart Events 
+The wrapper exposes Angular `EventEmitter<ChartEvent>` outputs for several Highcharts event families.
 
-All the events from the [options.chart.events](http://api.highcharts.com/highcharts#chart.events) are available as output properties of the `chart` component.
+### Chart events
 
-```HTML
-<chart [options]="options" (selection)="onChartSelection($event)"> </chart>
+```html
+<chart [options]="options" (selection)="onChartSelection($event)"></chart>
 ```
-```TypeScript
-onChartSelection (e) {
+
+```ts
+onChartSelection(e: any): void {
   this.from = e.originalEvent.xAxis[0].min.toFixed(2);
   this.to = e.originalEvent.xAxis[0].max.toFixed(2);
 }
 ```
-👉 [Live Demo](http://plnkr.co/edit/vdgKVJOymMYhiyqZrPma?p=preview)
 
-#### Series Events 
+### Series events
 
-To use series events the same way you need to add the `series` component as a child of your chart. The only purpose of this auxiliary component is to provide access to [options.plotOptions.series.events](http://api.highcharts.com/highcharts#plotOptions.series.events) API
-
-```HTML
+```html
 <chart [options]="options">
-    <series (mouseOver)="onSeriesMouseOver($event)">
-    </series>
+  <series (mouseOver)="onSeriesMouseOver($event)"></series>
 </chart>
-<p><b>{{serieName}}</b> is hovered<p>
 ```
-```TypeScript
-onSeriesMouseOver (e) {
-  this.serieName = e.context.name;
+
+```ts
+onSeriesMouseOver(e: any): void {
+  this.seriesName = e.context.name;
 }
 ```
-👉 [Live Demo](http://plnkr.co/edit/GkaJlk2UJjbTwsPyGXGC?p=preview)
-#### Point Events 
 
-Similary you can use the `point` to access to [options.plotOptions.series.point.events](http://api.highcharts.com/highcharts#plotOptions.series.point.events) API.
-```HTML
-<chart [options]="options">
-    <series>
-        <point (select)="onPointSelect($event)"></point>
-    </series>
-</chart>
-<p><b>{{point}}</b> is selected<p>
-```
-👉 [Live Demo](http://plnkr.co/edit/TpKoJ60n4vyIDWxHNUkg?p=preview)
-#### Axis Events 
+### Point events
 
-Similary you can use the `xAxis` or `yAxes` to access to [options.xAxis.events](http://api.highcharts.com/highcharts#xAxis.events) or [options.yAxis.events](http://api.highcharts.com/highcharts#yAxis.events) API.
-```HTML
+```html
 <chart [options]="options">
-     <xAxis (afterSetExtremes)="onAfterSetExtremesX($event)"></xAxis>
-     <yAxis (afterSetExtremes)="onAfterSetExtremesY($event)"></yAxis>
+  <series>
+    <point (select)="onPointSelect($event)"></point>
+  </series>
 </chart>
-<p>{{minX}} - {{maxX}}<p>
-<p>{{minY}} - {{maxY}}<p>
 ```
-```TypeScript
-onAfterSetExtremesX (e) {
+
+### Axis events
+
+```html
+<chart [options]="options">
+  <xAxis (afterSetExtremes)="onAfterSetExtremesX($event)"></xAxis>
+  <yAxis (afterSetExtremes)="onAfterSetExtremesY($event)"></yAxis>
+</chart>
+```
+
+```ts
+onAfterSetExtremesX(e: any): void {
   this.minX = e.context.min;
   this.maxX = e.context.max;
 }
-onAfterSetExtremesY (e) {
+
+onAfterSetExtremesY(e: any): void {
   this.minY = e.context.min;
   this.maxY = e.context.max;
 }
 ```
-👉 [Live Demo](http://plnkr.co/edit/c4ojcIRVOOwq7xmk9kfx?p=preview)
-### Dynamic Interaction with Chart Object
 
-angular2-higcharts provides possibility to interact with native `HighchartsChartObject` chart object.
+## Dynamic Chart Access
 
-```TypeScript 
+Use the `load` output to capture the native chart instance and perform runtime mutations directly through the Highcharts API.
+
+```ts
+import { Component } from '@angular/core';
+
 @Component({
-    selector: 'my-app',
-    directives: [CHART_DIRECTIVES],
-    template: `
-      <chart [options]="options" 
-             (load)="saveInstance($event.context)">
-      </chart>
-    `
+  selector: 'dynamic-chart-example',
+  template: `
+    <chart [options]="options" (load)="saveInstance($event.context)"></chart>
+  `
 })
-class AppComponent {
-    constructor() {
-        this.options = {
-          chart: { type: 'spline' },
-          title: { text : 'dynamic data example'}
-          series: [{ data: [2,3,5,8,13] }]
-        };
-        setInterval(() => this.chart.series[0].addPoint(Math.random() * 10), 1000);
-    }
-    chart : Object;
-    options: Object;
-    saveInstance(chartInstance) {
-        this.chart = chartInstance;
-    }
+export class DynamicChartExample {
+  chart: any;
+  options: any;
+
+  constructor() {
+    this.options = {
+      chart: { type: 'spline' },
+      title: { text: 'Dynamic data example' },
+      series: [{ data: [2, 3, 5, 8, 13] }]
+    };
+  }
+
+  saveInstance(chartInstance: any): void {
+    this.chart = chartInstance;
+  }
+
+  addPoint(): void {
+    this.chart.series[0].addPoint(Math.random() * 10);
+  }
 }
 ```
-👉 [Live Demo](http://plnkr.co/edit/OQSFSKisIIWAH0megy4d?p=preview)
 
-### Highstock 
-```
+## Highstock
+
+```html
 <chart type="StockChart" [options]="options"></chart>
 ```
-Also you need to change your `@NgModule` setup.
 
-```diff
-...
-@NgModule({
-    ...
-    imports: [
-      BrowserModule, 
-      ChartModule.forRoot(
--       require('highcharts'),
-+       require('highcharts/highstock')
-      )
-    ]
-})
+Use the Highstock entry when configuring the module:
+
+```ts
+ChartModule.forRoot(require('highcharts/highstock'))
 ```
 
-👉 [Live Demo](http://plnkr.co/edit/2xSewTZ9b213vA0ALmFq?p=preview)
+## Highmaps
 
-### Highmaps
-```
+```html
 <chart type="Map" [options]="options"></chart>
 ```
-Also you need to change your `@NgModule` setup.
 
-```diff
-...
-@NgModule({
-    ...
-    imports: [
-      BrowserModule, 
-      ChartModule.forRoot(
--       require('highcharts'),
-+       require('highcharts/highmaps')
-      )
-    ],
-})
+Use the Highmaps entry when configuring the module:
+
+```ts
+ChartModule.forRoot(require('highcharts/highmaps'))
 ```
 
-👉 [Live Demo](http://plnkr.co/edit/AmDfKwhRhshFn3CPprkk?p=preview)
+## Highcharts Modules
 
+Additional Highcharts modules can be registered through `forRoot(...)` after the base Highcharts factory.
 
-### Add Highcharts Modules
-Any other modules like highcharts-3d, highcharts-exporintg and etc. can be also added in `@NgModule` after main chart module
-
-```diff
-...
-@NgModule({
-    ...
-    imports: [
-      BrowserModule, 
-      ChartModule.forRoot(
-        require('highcharts'),
-+       require('highcharts/highchart-3d'),
-+       require('highcharts/modules/exporting')
-      )
-    ],
-})
+```ts
+ChartModule.forRoot(
+  require('highcharts/highstock'),
+  require('highcharts/highcharts-3d')
+)
 ```
 
-Check out structure of the `node-modules/highcharts` folder to find necessary module.
+This is the same mechanism used by the repository’s local docs application for the 3D chart example.
 
-👉 [Live Demo](http://plnkr.co/edit/sz6OfccvAetQcBX8KFXy?p=preview)
+## Static Highcharts API
 
+You can still configure the global Highcharts object before bootstrapping your Angular module.
 
+```ts
+declare var require: any;
 
-### Access to the Highcharts Static API 
-
-```diff
-...
-const Highcharts = require('highcharts');
+const Highcharts = require('highcharts/highstock');
 
 Highcharts.setOptions({
-  colors: ['#50B432']
+  colors: ['#058DC7', '#50B432', '#ED561B']
 });
 
-@NgModule({
-    ...
-    imports: [
-      BrowserModule, 
-      ChartModule.forRoot(
--       require('highcharts'),
-+       Highcharts
-      )
-    ],
-})
+ChartModule.forRoot(Highcharts)
 ```
 
-👉 [Live Demo](http://plnkr.co/edit/uCtPFUExmZFG0diOvbXS?p=preview)
+## Run Locally
 
-##More Examples
+Install dependencies:
 
-Here are some common charts examples with Webpack integration https://github.com/gevgeny/angular2-highcharts/tree/master/examples/webpack
+```bash
+npm install
+```
 
-##FAQ
+Build the library:
 
-#### Why don't my series, title, axes and etc redraw after I update initial options ?
+```bash
+npm run build
+```
 
-Because `angular-highcharts` is just a thin wrapper of the [Highcharts](http:/ /www.highcharts.com/) library and doesn't bind to initial options. I understand that you expect more angular-way behaviour like data binding with appropriate redrawing. But it is barely possible to implement it without redundant complications and performance decrease because almost all options can be dynamic. So my idea was to avoid any additional logic more than just a sugar (like events for series and options). In the other hand Highcharts has great [API](http://api.highcharts.com/highcharts#Chart) for dynamic manipulations with chart and `angular-highcharts` [provides you access](#dynamic-interaction-with-chart-object) to the original chart object.
+Run the unit tests:
+
+```bash
+npm test
+```
+
+Build the repository-local static docs app:
+
+```bash
+npm run build:docs
+```
+
+Preview the docs app locally:
+
+```bash
+npm run serve:docs
+```
+
+## FAQ
+
+### Why do my series, title, or axes not redraw when I mutate the original options object?
+
+This wrapper is intentionally thin. It uses the initial `options` object to create the chart, but it does not continuously diff every nested Highcharts option after the chart exists. For dynamic updates, capture the native chart instance from the `load` event and use the Highcharts API directly.
 
 ## License
-MIT @ Eugene Gluhotorenko
 
+MIT © Eugene Gluhotorenko
