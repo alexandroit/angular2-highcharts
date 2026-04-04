@@ -13,5 +13,5 @@ export declare class ChartSeriesComponent {
     mouseOut: EventEmitter<ChartEvent>;
     show: EventEmitter<ChartEvent>;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChartSeriesComponent, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<ChartSeriesComponent, "series", never, {}, { "click": "click"; "afterAnimate": "afterAnimate"; "checkboxClick": "checkboxClick"; "hide": "hide"; "legendItemClick": "legendItemClick"; "mouseOver": "mouseOver"; "mouseOut": "mouseOut"; "show": "show"; }, ["point"]>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<ChartSeriesComponent, "series", never, {}, { "click": "click"; "afterAnimate": "afterAnimate"; "checkboxClick": "checkboxClick"; "hide": "hide"; "legendItemClick": "legendItemClick"; "mouseOver": "mouseOver"; "mouseOut": "mouseOut"; "show": "show"; }, ["point"], never, false>;
 }

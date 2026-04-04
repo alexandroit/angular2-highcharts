@@ -8,5 +8,5 @@ export declare class ChartYAxisComponent {
     pointInBreak: EventEmitter<ChartEvent>;
     setExtremes: EventEmitter<ChartEvent>;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChartYAxisComponent, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<ChartYAxisComponent, "yAxis", never, {}, { "afterBreaks": "afterBreaks"; "afterSetExtremes": "afterSetExtremes"; "pointBreak": "pointBreak"; "pointInBreak": "pointInBreak"; "setExtremes": "setExtremes"; }, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<ChartYAxisComponent, "yAxis", never, {}, { "afterBreaks": "afterBreaks"; "afterSetExtremes": "afterSetExtremes"; "pointBreak": "pointBreak"; "pointInBreak": "pointInBreak"; "setExtremes": "setExtremes"; }, never, never, false>;
 }

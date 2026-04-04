@@ -1,6 +1,6 @@
 {
   "name": "@revivejs/angular2-highcharts",
-  "version": "13.0.0",
+  "version": "14.0.0",
   "description": "Angular wrapper components for Highcharts, Highstock, Highmaps, zAxis, and colorAxis integrations",
   "main": "dist/fesm2015/revivejs-angular2-highcharts.mjs",
   "module": "fesm2015/revivejs-angular2-highcharts.mjs",
@@ -8,7 +8,7 @@
   "esm2020": "esm2020/revivejs-angular2-highcharts.mjs",
   "fesm2015": "fesm2015/revivejs-angular2-highcharts.mjs",
   "fesm2020": "fesm2020/revivejs-angular2-highcharts.mjs",
-  "typings": "revivejs-angular2-highcharts.d.ts",
+  "typings": "index.d.ts",
   "sideEffects": false,
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "angular11",
     "angular12",
     "angular13",
+    "angular14",
     "angular-library",
     "typescript",
     "charts",
@@ -93,7 +94,8 @@
     "adaptive-titles",
     "datatable-series",
     "dendrogram",
-    "non-cartesian-zoom"
+    "non-cartesian-zoom",
+    "standalone"
   ],
   "author": "Alexandro Paixao Marques",
   "license": "MIT",
@@ -102,18 +104,18 @@
   },
   "homepage": "https://alexandroit.github.io/angular2-highcharts/",
   "peerDependencies": {
-    "@angular/core": ">=4.0.0 <14.0.0",
+    "@angular/core": ">=4.0.0 <15.0.0",
     "highcharts": ">=5.0.0"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.3.0"
   },
   "exports": {
     "./package.json": {
       "default": "./package.json"
     },
     ".": {
-      "types": "./revivejs-angular2-highcharts.d.ts",
+      "types": "./index.d.ts",
       "esm2020": "./esm2020/revivejs-angular2-highcharts.mjs",
       "es2020": "./fesm2020/revivejs-angular2-highcharts.mjs",
       "es2015": "./fesm2015/revivejs-angular2-highcharts.mjs",

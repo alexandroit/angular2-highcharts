@@ -1,18 +1,18 @@
 # @revivejs/angular2-highcharts
 
-> A maintained **Angular 13 wrapper for Highcharts** with support for standard charts, `StockChart`, `Highmaps`, wrapper event outputs, native chart instance access, and Angular directives for `xAxis`, `yAxis`, `zAxis`, and `colorAxis`.
+> A maintained **Angular 14 wrapper for Highcharts** with support for standard charts, `StockChart`, `Highmaps`, wrapper event outputs, native chart instance access, and Angular directives for `xAxis`, `yAxis`, `zAxis`, and `colorAxis`.
 
 [![npm version](https://img.shields.io/npm/v/@revivejs/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular2-highcharts)
 [![npm downloads](https://img.shields.io/npm/dt/@revivejs/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular2-highcharts)
 [![npm monthly](https://img.shields.io/npm/dm/@revivejs/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular2-highcharts)
 [![license](https://img.shields.io/npm/l/@revivejs/angular2-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular2-highcharts/blob/master/LICENSE)
-[![Angular 13](https://img.shields.io/badge/Angular-13-red?style=flat-square&logo=angular)](https://angular.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-4.6-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
+[![Angular 14](https://img.shields.io/badge/Angular-14-red?style=flat-square&logo=angular)](https://angular.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.8-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 [![GitHub stars](https://img.shields.io/github/stars/alexandroit/angular2-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular2-highcharts/stargazers)
 
 **[Documentation & Live Demos](https://alexandroit.github.io/angular2-highcharts/)** | **[npm](https://www.npmjs.com/package/@revivejs/angular2-highcharts)** | **[Issues](https://github.com/alexandroit/angular2-highcharts/issues)** | **[Repository](https://github.com/alexandroit/angular2-highcharts)**
 
-**Latest version:** `13.0.0`
+**Latest version:** `14.0.0`
 
 ---
 
@@ -28,8 +28,8 @@ The original `angular2-highcharts` package targeted early Angular releases and s
 
 | Feature | Supported |
 | :--- | :---: |
-| Angular 13 wrapper release line | ✅ |
-| Backward-compatible with Angular 4, 5, 6, 7, 8, 9, 10, 11, and 12 apps | ✅ |
+| Angular 14 wrapper release line | ✅ |
+| Backward-compatible with Angular 4, 5, 6, 7, 8, 9, 10, 11, 12, and 13 apps | ✅ |
 | Highcharts 12 maintained major line | ✅ |
 | Standard Highcharts charts | ✅ |
 | `StockChart` wrapper support | ✅ |
@@ -64,6 +64,7 @@ The original `angular2-highcharts` package targeted early Angular releases and s
 
 | Package version | Angular version | Highcharts version | TypeScript version | Demo link |
 | :---: | :---: | :---: | :---: | :--- |
+| **14.0.0** | **14.3.x** | **12.5.x** | **4.8.x** | [Angular 14 demo](https://alexandroit.github.io/angular2-highcharts/angular-14/) |
 | **13.0.0** | **13.4.x** | **12.5.x** | **4.6.x** | [Angular 13 demo](https://alexandroit.github.io/angular2-highcharts/angular-13/) |
 | **12.0.0** | **12.2.x** | **11.4.x** | **4.3.x** | [Angular 12 demo](https://alexandroit.github.io/angular2-highcharts/angular-12/) |
 | **11.0.0** | **11.2.x** | **9.3.x** | **4.1.x** | [Angular 11 demo](https://alexandroit.github.io/angular2-highcharts/angular-11/) |
@@ -363,6 +364,14 @@ This wrapper is intentionally thin. It uses the initial `options` object to crea
 The package major follows Angular major compatibility, but the wrapper API is intentionally frozen. Existing selectors such as `<chart>`, `<series>`, `<point>`, `<xAxis>`, `<yAxis>`, `<zAxis>`, `<colorAxis>`, the `[options]` input, and `ChartModule.forRoot(Highcharts, ...modules)` remain stable so older Angular applications can keep the same integration code while newer releases adopt updated Angular tooling and newer Highcharts modules.
 
 ## CHANGELOG
+
+### 14.0.0 (Angular 14)
+- Bumped package version to 14.0.0
+- Updated peerDependencies to `@angular/core >=4.0.0 <15.0.0` and `highcharts >=5.0.0`
+- Updated devDependencies to Angular `^14.3.0`, Angular CLI `14.2.13`, TypeScript `~4.8.4`, and ng-packagr `^14.2.2`
+- Kept Highcharts at `^12.5.0`, the latest supportable line for the frozen `ChartModule.forRoot(Highcharts, ...modules)` contract
+- Carried forward the Highcharts 12 demos for `point-and-figure`, `renko`, `locale-aware-formatting`, and `human-friendly-dates`
+- Preserved the NgModule installation pattern for backward compatibility while Angular 14 adds optional standalone APIs
 
 ### 13.0.0 (Angular 13)
 - Bumped package version to 13.0.0

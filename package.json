@@ -1,6 +1,6 @@
 {
   "name": "@revivejs/angular2-highcharts",
-  "version": "13.0.0",
+  "version": "14.0.0",
   "description": "Angular wrapper components for Highcharts, Highstock, Highmaps, zAxis, and colorAxis integrations",
   "main": "dist/fesm2015/revivejs-angular2-highcharts.mjs",
   "module": "dist/fesm2015/revivejs-angular2-highcharts.mjs",
@@ -8,7 +8,8 @@
   "esm2020": "dist/esm2020/revivejs-angular2-highcharts.mjs",
   "fesm2015": "dist/fesm2015/revivejs-angular2-highcharts.mjs",
   "fesm2020": "dist/fesm2020/revivejs-angular2-highcharts.mjs",
-  "typings": "dist/revivejs-angular2-highcharts.d.ts",
+  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
     "watch": "tsc -w",
@@ -34,7 +35,9 @@
     "build:docs:angular-12": "cd docs-src/angular-12 && npm run build",
     "docs:install:angular-13": "cd docs-src/angular-13 && npm install --ignore-scripts",
     "build:docs:angular-13": "cd docs-src/angular-13 && npm run build",
-    "build:docs": "npm run build:docs:angular-13",
+    "docs:install:angular-14": "cd docs-src/angular-14 && npm install --ignore-scripts",
+    "build:docs:angular-14": "cd docs-src/angular-14 && npm run build",
+    "build:docs": "npm run build:docs:angular-14",
     "serve:docs": "http-server docs -p 8080 -c-1"
   },
   "repository": {
@@ -56,6 +59,7 @@
     "angular11",
     "angular12",
     "angular13",
+    "angular14",
     "angular-library",
     "typescript",
     "charts",
@@ -120,7 +124,8 @@
     "adaptive-titles",
     "datatable-series",
     "dendrogram",
-    "non-cartesian-zoom"
+    "non-cartesian-zoom",
+    "standalone"
   ],
   "author": "Alexandro Paixao Marques",
   "license": "MIT",
@@ -129,35 +134,35 @@
   },
   "homepage": "https://alexandroit.github.io/angular2-highcharts/",
   "peerDependencies": {
-    "@angular/core": ">=4.0.0 <14.0.0",
+    "@angular/core": ">=4.0.0 <15.0.0",
     "highcharts": ">=5.0.0"
   },
   "devDependencies": {
-    "@angular/common": "^13.4.0",
-    "@angular/compiler": "^13.4.0",
-    "@angular/compiler-cli": "^13.4.0",
-    "@angular/core": "^13.4.0",
-    "@angular/platform-browser": "^13.4.0",
-    "@angular/platform-browser-dynamic": "^13.4.0",
-    "@angular/platform-server": "^13.4.0",
+    "@angular/common": "^14.3.0",
+    "@angular/compiler": "^14.3.0",
+    "@angular/compiler-cli": "^14.3.0",
+    "@angular/core": "^14.3.0",
+    "@angular/platform-browser": "^14.3.0",
+    "@angular/platform-browser-dynamic": "^14.3.0",
+    "@angular/platform-server": "^14.3.0",
     "core-js": "^2.4.1",
     "jasmine-core": "~2.5.2",
     "karma": "^1.4.1",
     "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.1.0",
     "http-server": "^14.1.1",
-    "ng-packagr": "^13.3.1",
+    "ng-packagr": "^14.2.2",
     "reflect-metadata": "^0.1.9",
-    "rxjs": "^7.4.0",
+    "rxjs": "^7.5.0",
     "sass": "1.22.9",
     "tsickle": "0.46.3",
-    "typescript": "~4.6.4",
+    "typescript": "~4.8.4",
     "zone.js": "~0.11.8",
     "@types/jasmine": "2.5.42",
     "@types/node": "12.12.54",
     "highcharts": "^12.5.0"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.3.0"
   }
 }
