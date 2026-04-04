@@ -6,7 +6,7 @@ import { ChartEvent } from './ChartEvent';
     selector: 'series'
 })
 export class ChartSeriesComponent {
-    @ContentChild(ChartPointComponent) point: ChartPointComponent;
+    @ContentChild(ChartPointComponent, { static: false }) point: ChartPointComponent;
     @Output() click = new EventEmitter<ChartEvent>();
     @Output() afterAnimate = new EventEmitter<ChartEvent>();
     @Output() checkboxClick = new EventEmitter<ChartEvent>();

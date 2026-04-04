@@ -1,0 +1,32 @@
+{
+  "name": "@revivejs/angular2-highcharts-docs-angular8",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --output-path ../../docs/angular-8 --base-href /angular2-highcharts/angular-8/ --build-optimizer=false --vendor-chunk=true --named-chunks=true --aot=false"
+  },
+  "dependencies": {
+    "@angular/common": "^8.2.14",
+    "@angular/compiler": "^8.2.14",
+    "@angular/core": "^8.2.14",
+    "@angular/forms": "^8.2.14",
+    "@angular/platform-browser": "^8.2.14",
+    "@angular/platform-browser-dynamic": "^8.2.14",
+    "@revivejs/angular2-highcharts": "^8.0.0",
+    "core-js": "^2.6.12",
+    "highcharts": "^8.2.2",
+    "rxjs": "^6.4.0",
+    "zone.js": "~0.9.1",
+    "tslib": "^1.9.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.803.29",
+    "@angular/cli": "8.3.29",
+    "@angular/compiler-cli": "^8.2.14",
+    "@types/minimatch": "3.0.3",
+    "@types/node": "8.9.4",
+    "typescript": "~3.5.3"
+  }
+}

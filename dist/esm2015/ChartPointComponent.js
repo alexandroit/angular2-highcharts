@@ -1,9 +1,6 @@
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
+import * as tslib_1 from "tslib";
 import { Directive, Output, EventEmitter } from '@angular/core';
-export class ChartPointComponent {
+let ChartPointComponent = class ChartPointComponent {
     constructor() {
         this.click = new EventEmitter();
         this.remove = new EventEmitter();
@@ -13,35 +10,32 @@ export class ChartPointComponent {
         this.mouseOut = new EventEmitter();
         this.update = new EventEmitter();
     }
-}
-ChartPointComponent.decorators = [
-    { type: Directive, args: [{
-                selector: 'point'
-            },] }
-];
-ChartPointComponent.propDecorators = {
-    click: [{ type: Output }],
-    remove: [{ type: Output }],
-    select: [{ type: Output }],
-    unselect: [{ type: Output }],
-    mouseOver: [{ type: Output }],
-    mouseOut: [{ type: Output }],
-    update: [{ type: Output }]
 };
-if (false) {
-    /** @type {?} */
-    ChartPointComponent.prototype.click;
-    /** @type {?} */
-    ChartPointComponent.prototype.remove;
-    /** @type {?} */
-    ChartPointComponent.prototype.select;
-    /** @type {?} */
-    ChartPointComponent.prototype.unselect;
-    /** @type {?} */
-    ChartPointComponent.prototype.mouseOver;
-    /** @type {?} */
-    ChartPointComponent.prototype.mouseOut;
-    /** @type {?} */
-    ChartPointComponent.prototype.update;
-}
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2hhcnRQb2ludENvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0ByZXZpdmVqcy9hbmd1bGFyMi1oaWdoY2hhcnRzLyIsInNvdXJjZXMiOlsiQ2hhcnRQb2ludENvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxNQUFNLEVBQUUsWUFBWSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBTWhFLE1BQU0sT0FBTyxtQkFBbUI7SUFIaEM7UUFJYyxVQUFLLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUN2QyxXQUFNLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUN4QyxXQUFNLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUN4QyxhQUFRLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUMxQyxjQUFTLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUMzQyxhQUFRLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUMxQyxXQUFNLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztJQUN0RCxDQUFDOzs7WUFYQSxTQUFTLFNBQUM7Z0JBQ1AsUUFBUSxFQUFFLE9BQU87YUFDcEI7OztvQkFFSSxNQUFNO3FCQUNOLE1BQU07cUJBQ04sTUFBTTt1QkFDTixNQUFNO3dCQUNOLE1BQU07dUJBQ04sTUFBTTtxQkFDTixNQUFNOzs7O0lBTlAsb0NBQWlEOztJQUNqRCxxQ0FBa0Q7O0lBQ2xELHFDQUFrRDs7SUFDbEQsdUNBQW9EOztJQUNwRCx3Q0FBcUQ7O0lBQ3JELHVDQUFvRDs7SUFDcEQscUNBQWtEIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgRGlyZWN0aXZlLCBPdXRwdXQsIEV2ZW50RW1pdHRlciB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHsgQ2hhcnRFdmVudCB9IGZyb20gJy4vQ2hhcnRFdmVudCc7XG5cbkBEaXJlY3RpdmUoe1xuICAgIHNlbGVjdG9yOiAncG9pbnQnXG59KVxuZXhwb3J0IGNsYXNzIENoYXJ0UG9pbnRDb21wb25lbnQge1xuICAgIEBPdXRwdXQoKSBjbGljayA9IG5ldyBFdmVudEVtaXR0ZXI8Q2hhcnRFdmVudD4oKTtcbiAgICBAT3V0cHV0KCkgcmVtb3ZlID0gbmV3IEV2ZW50RW1pdHRlcjxDaGFydEV2ZW50PigpO1xuICAgIEBPdXRwdXQoKSBzZWxlY3QgPSBuZXcgRXZlbnRFbWl0dGVyPENoYXJ0RXZlbnQ+KCk7XG4gICAgQE91dHB1dCgpIHVuc2VsZWN0ID0gbmV3IEV2ZW50RW1pdHRlcjxDaGFydEV2ZW50PigpO1xuICAgIEBPdXRwdXQoKSBtb3VzZU92ZXIgPSBuZXcgRXZlbnRFbWl0dGVyPENoYXJ0RXZlbnQ+KCk7XG4gICAgQE91dHB1dCgpIG1vdXNlT3V0ID0gbmV3IEV2ZW50RW1pdHRlcjxDaGFydEV2ZW50PigpO1xuICAgIEBPdXRwdXQoKSB1cGRhdGUgPSBuZXcgRXZlbnRFbWl0dGVyPENoYXJ0RXZlbnQ+KCk7XG59Il19
+tslib_1.__decorate([
+    Output()
+], ChartPointComponent.prototype, "click", void 0);
+tslib_1.__decorate([
+    Output()
+], ChartPointComponent.prototype, "remove", void 0);
+tslib_1.__decorate([
+    Output()
+], ChartPointComponent.prototype, "select", void 0);
+tslib_1.__decorate([
+    Output()
+], ChartPointComponent.prototype, "unselect", void 0);
+tslib_1.__decorate([
+    Output()
+], ChartPointComponent.prototype, "mouseOver", void 0);
+tslib_1.__decorate([
+    Output()
+], ChartPointComponent.prototype, "mouseOut", void 0);
+tslib_1.__decorate([
+    Output()
+], ChartPointComponent.prototype, "update", void 0);
+ChartPointComponent = tslib_1.__decorate([
+    Directive({
+        selector: 'point'
+    })
+], ChartPointComponent);
+export { ChartPointComponent };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2hhcnRQb2ludENvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0ByZXZpdmVqcy9hbmd1bGFyMi1oaWdoY2hhcnRzLyIsInNvdXJjZXMiOlsiQ2hhcnRQb2ludENvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxNQUFNLEVBQUUsWUFBWSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBTWhFLElBQWEsbUJBQW1CLEdBQWhDLE1BQWEsbUJBQW1CO0lBSGhDO1FBSWMsVUFBSyxHQUFHLElBQUksWUFBWSxFQUFjLENBQUM7UUFDdkMsV0FBTSxHQUFHLElBQUksWUFBWSxFQUFjLENBQUM7UUFDeEMsV0FBTSxHQUFHLElBQUksWUFBWSxFQUFjLENBQUM7UUFDeEMsYUFBUSxHQUFHLElBQUksWUFBWSxFQUFjLENBQUM7UUFDMUMsY0FBUyxHQUFHLElBQUksWUFBWSxFQUFjLENBQUM7UUFDM0MsYUFBUSxHQUFHLElBQUksWUFBWSxFQUFjLENBQUM7UUFDMUMsV0FBTSxHQUFHLElBQUksWUFBWSxFQUFjLENBQUM7SUFDdEQsQ0FBQztDQUFBLENBQUE7QUFQYTtJQUFULE1BQU0sRUFBRTtrREFBd0M7QUFDdkM7SUFBVCxNQUFNLEVBQUU7bURBQXlDO0FBQ3hDO0lBQVQsTUFBTSxFQUFFO21EQUF5QztBQUN4QztJQUFULE1BQU0sRUFBRTtxREFBMkM7QUFDMUM7SUFBVCxNQUFNLEVBQUU7c0RBQTRDO0FBQzNDO0lBQVQsTUFBTSxFQUFFO3FEQUEyQztBQUMxQztJQUFULE1BQU0sRUFBRTttREFBeUM7QUFQekMsbUJBQW1CO0lBSC9CLFNBQVMsQ0FBQztRQUNQLFFBQVEsRUFBRSxPQUFPO0tBQ3BCLENBQUM7R0FDVyxtQkFBbUIsQ0FRL0I7U0FSWSxtQkFBbUIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBEaXJlY3RpdmUsIE91dHB1dCwgRXZlbnRFbWl0dGVyIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBDaGFydEV2ZW50IH0gZnJvbSAnLi9DaGFydEV2ZW50JztcblxuQERpcmVjdGl2ZSh7XG4gICAgc2VsZWN0b3I6ICdwb2ludCdcbn0pXG5leHBvcnQgY2xhc3MgQ2hhcnRQb2ludENvbXBvbmVudCB7XG4gICAgQE91dHB1dCgpIGNsaWNrID0gbmV3IEV2ZW50RW1pdHRlcjxDaGFydEV2ZW50PigpO1xuICAgIEBPdXRwdXQoKSByZW1vdmUgPSBuZXcgRXZlbnRFbWl0dGVyPENoYXJ0RXZlbnQ+KCk7XG4gICAgQE91dHB1dCgpIHNlbGVjdCA9IG5ldyBFdmVudEVtaXR0ZXI8Q2hhcnRFdmVudD4oKTtcbiAgICBAT3V0cHV0KCkgdW5zZWxlY3QgPSBuZXcgRXZlbnRFbWl0dGVyPENoYXJ0RXZlbnQ+KCk7XG4gICAgQE91dHB1dCgpIG1vdXNlT3ZlciA9IG5ldyBFdmVudEVtaXR0ZXI8Q2hhcnRFdmVudD4oKTtcbiAgICBAT3V0cHV0KCkgbW91c2VPdXQgPSBuZXcgRXZlbnRFbWl0dGVyPENoYXJ0RXZlbnQ+KCk7XG4gICAgQE91dHB1dCgpIHVwZGF0ZSA9IG5ldyBFdmVudEVtaXR0ZXI8Q2hhcnRFdmVudD4oKTtcbn0iXX0=

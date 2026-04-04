@@ -1,10 +1,7 @@
-import { Directive, Output, EventEmitter, ContentChild, Injectable, Input, ElementRef, Component, NgModule } from '@angular/core';
+import { __decorate } from 'tslib';
+import { EventEmitter, Output, Directive, ContentChild, Injectable, ElementRef, Input, Component, NgModule } from '@angular/core';
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-class ChartPointComponent {
+let ChartPointComponent = class ChartPointComponent {
     constructor() {
         this.click = new EventEmitter();
         this.remove = new EventEmitter();
@@ -14,27 +11,35 @@ class ChartPointComponent {
         this.mouseOut = new EventEmitter();
         this.update = new EventEmitter();
     }
-}
-ChartPointComponent.decorators = [
-    { type: Directive, args: [{
-                selector: 'point'
-            },] }
-];
-ChartPointComponent.propDecorators = {
-    click: [{ type: Output }],
-    remove: [{ type: Output }],
-    select: [{ type: Output }],
-    unselect: [{ type: Output }],
-    mouseOver: [{ type: Output }],
-    mouseOut: [{ type: Output }],
-    update: [{ type: Output }]
 };
+__decorate([
+    Output()
+], ChartPointComponent.prototype, "click", void 0);
+__decorate([
+    Output()
+], ChartPointComponent.prototype, "remove", void 0);
+__decorate([
+    Output()
+], ChartPointComponent.prototype, "select", void 0);
+__decorate([
+    Output()
+], ChartPointComponent.prototype, "unselect", void 0);
+__decorate([
+    Output()
+], ChartPointComponent.prototype, "mouseOver", void 0);
+__decorate([
+    Output()
+], ChartPointComponent.prototype, "mouseOut", void 0);
+__decorate([
+    Output()
+], ChartPointComponent.prototype, "update", void 0);
+ChartPointComponent = __decorate([
+    Directive({
+        selector: 'point'
+    })
+], ChartPointComponent);
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-class ChartSeriesComponent {
+let ChartSeriesComponent = class ChartSeriesComponent {
     constructor() {
         this.click = new EventEmitter();
         this.afterAnimate = new EventEmitter();
@@ -45,29 +50,41 @@ class ChartSeriesComponent {
         this.mouseOut = new EventEmitter();
         this.show = new EventEmitter();
     }
-}
-ChartSeriesComponent.decorators = [
-    { type: Directive, args: [{
-                selector: 'series'
-            },] }
-];
-ChartSeriesComponent.propDecorators = {
-    point: [{ type: ContentChild, args: [ChartPointComponent,] }],
-    click: [{ type: Output }],
-    afterAnimate: [{ type: Output }],
-    checkboxClick: [{ type: Output }],
-    hide: [{ type: Output }],
-    legendItemClick: [{ type: Output }],
-    mouseOver: [{ type: Output }],
-    mouseOut: [{ type: Output }],
-    show: [{ type: Output }]
 };
+__decorate([
+    ContentChild(ChartPointComponent, { static: false })
+], ChartSeriesComponent.prototype, "point", void 0);
+__decorate([
+    Output()
+], ChartSeriesComponent.prototype, "click", void 0);
+__decorate([
+    Output()
+], ChartSeriesComponent.prototype, "afterAnimate", void 0);
+__decorate([
+    Output()
+], ChartSeriesComponent.prototype, "checkboxClick", void 0);
+__decorate([
+    Output()
+], ChartSeriesComponent.prototype, "hide", void 0);
+__decorate([
+    Output()
+], ChartSeriesComponent.prototype, "legendItemClick", void 0);
+__decorate([
+    Output()
+], ChartSeriesComponent.prototype, "mouseOver", void 0);
+__decorate([
+    Output()
+], ChartSeriesComponent.prototype, "mouseOut", void 0);
+__decorate([
+    Output()
+], ChartSeriesComponent.prototype, "show", void 0);
+ChartSeriesComponent = __decorate([
+    Directive({
+        selector: 'series'
+    })
+], ChartSeriesComponent);
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-class ChartXAxisComponent {
+let ChartXAxisComponent = class ChartXAxisComponent {
     constructor() {
         this.afterBreaks = new EventEmitter();
         this.afterSetExtremes = new EventEmitter();
@@ -75,25 +92,29 @@ class ChartXAxisComponent {
         this.pointInBreak = new EventEmitter();
         this.setExtremes = new EventEmitter();
     }
-}
-ChartXAxisComponent.decorators = [
-    { type: Directive, args: [{
-                selector: 'xAxis'
-            },] }
-];
-ChartXAxisComponent.propDecorators = {
-    afterBreaks: [{ type: Output }],
-    afterSetExtremes: [{ type: Output }],
-    pointBreak: [{ type: Output }],
-    pointInBreak: [{ type: Output }],
-    setExtremes: [{ type: Output }]
 };
+__decorate([
+    Output()
+], ChartXAxisComponent.prototype, "afterBreaks", void 0);
+__decorate([
+    Output()
+], ChartXAxisComponent.prototype, "afterSetExtremes", void 0);
+__decorate([
+    Output()
+], ChartXAxisComponent.prototype, "pointBreak", void 0);
+__decorate([
+    Output()
+], ChartXAxisComponent.prototype, "pointInBreak", void 0);
+__decorate([
+    Output()
+], ChartXAxisComponent.prototype, "setExtremes", void 0);
+ChartXAxisComponent = __decorate([
+    Directive({
+        selector: 'xAxis'
+    })
+], ChartXAxisComponent);
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-class ChartYAxisComponent {
+let ChartYAxisComponent = class ChartYAxisComponent {
     constructor() {
         this.afterBreaks = new EventEmitter();
         this.afterSetExtremes = new EventEmitter();
@@ -101,25 +122,29 @@ class ChartYAxisComponent {
         this.pointInBreak = new EventEmitter();
         this.setExtremes = new EventEmitter();
     }
-}
-ChartYAxisComponent.decorators = [
-    { type: Directive, args: [{
-                selector: 'yAxis'
-            },] }
-];
-ChartYAxisComponent.propDecorators = {
-    afterBreaks: [{ type: Output }],
-    afterSetExtremes: [{ type: Output }],
-    pointBreak: [{ type: Output }],
-    pointInBreak: [{ type: Output }],
-    setExtremes: [{ type: Output }]
 };
+__decorate([
+    Output()
+], ChartYAxisComponent.prototype, "afterBreaks", void 0);
+__decorate([
+    Output()
+], ChartYAxisComponent.prototype, "afterSetExtremes", void 0);
+__decorate([
+    Output()
+], ChartYAxisComponent.prototype, "pointBreak", void 0);
+__decorate([
+    Output()
+], ChartYAxisComponent.prototype, "pointInBreak", void 0);
+__decorate([
+    Output()
+], ChartYAxisComponent.prototype, "setExtremes", void 0);
+ChartYAxisComponent = __decorate([
+    Directive({
+        selector: 'yAxis'
+    })
+], ChartYAxisComponent);
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-class ChartZAxisComponent {
+let ChartZAxisComponent = class ChartZAxisComponent {
     constructor() {
         this.afterBreaks = new EventEmitter();
         this.afterSetExtremes = new EventEmitter();
@@ -127,25 +152,29 @@ class ChartZAxisComponent {
         this.pointInBreak = new EventEmitter();
         this.setExtremes = new EventEmitter();
     }
-}
-ChartZAxisComponent.decorators = [
-    { type: Directive, args: [{
-                selector: 'zAxis'
-            },] }
-];
-ChartZAxisComponent.propDecorators = {
-    afterBreaks: [{ type: Output }],
-    afterSetExtremes: [{ type: Output }],
-    pointBreak: [{ type: Output }],
-    pointInBreak: [{ type: Output }],
-    setExtremes: [{ type: Output }]
 };
+__decorate([
+    Output()
+], ChartZAxisComponent.prototype, "afterBreaks", void 0);
+__decorate([
+    Output()
+], ChartZAxisComponent.prototype, "afterSetExtremes", void 0);
+__decorate([
+    Output()
+], ChartZAxisComponent.prototype, "pointBreak", void 0);
+__decorate([
+    Output()
+], ChartZAxisComponent.prototype, "pointInBreak", void 0);
+__decorate([
+    Output()
+], ChartZAxisComponent.prototype, "setExtremes", void 0);
+ChartZAxisComponent = __decorate([
+    Directive({
+        selector: 'zAxis'
+    })
+], ChartZAxisComponent);
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-class ChartColorAxisComponent {
+let ChartColorAxisComponent = class ChartColorAxisComponent {
     constructor() {
         this.afterBreaks = new EventEmitter();
         this.afterSetExtremes = new EventEmitter();
@@ -153,81 +182,62 @@ class ChartColorAxisComponent {
         this.pointInBreak = new EventEmitter();
         this.setExtremes = new EventEmitter();
     }
-}
-ChartColorAxisComponent.decorators = [
-    { type: Directive, args: [{
-                selector: 'colorAxis'
-            },] }
-];
-ChartColorAxisComponent.propDecorators = {
-    afterBreaks: [{ type: Output }],
-    afterSetExtremes: [{ type: Output }],
-    pointBreak: [{ type: Output }],
-    pointInBreak: [{ type: Output }],
-    setExtremes: [{ type: Output }]
 };
+__decorate([
+    Output()
+], ChartColorAxisComponent.prototype, "afterBreaks", void 0);
+__decorate([
+    Output()
+], ChartColorAxisComponent.prototype, "afterSetExtremes", void 0);
+__decorate([
+    Output()
+], ChartColorAxisComponent.prototype, "pointBreak", void 0);
+__decorate([
+    Output()
+], ChartColorAxisComponent.prototype, "pointInBreak", void 0);
+__decorate([
+    Output()
+], ChartColorAxisComponent.prototype, "setExtremes", void 0);
+ChartColorAxisComponent = __decorate([
+    Directive({
+        selector: 'colorAxis'
+    })
+], ChartColorAxisComponent);
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-class HighchartsStatic {
-}
-HighchartsStatic.decorators = [
-    { type: Injectable }
-];
-class HighchartsService {
-    /**
-     * @param {?} highchartsStatic
-     */
+let HighchartsStatic = class HighchartsStatic {
+};
+HighchartsStatic = __decorate([
+    Injectable()
+], HighchartsStatic);
+let HighchartsService = class HighchartsService {
     constructor(highchartsStatic) {
         this._highchartsStatice = highchartsStatic;
     }
-    /**
-     * @return {?}
-     */
     getHighchartsStatic() {
         return this._highchartsStatice;
     }
-}
-HighchartsService.decorators = [
-    { type: Injectable }
-];
-/** @nocollapse */
+};
 HighchartsService.ctorParameters = () => [
     { type: HighchartsStatic }
 ];
+HighchartsService = __decorate([
+    Injectable()
+], HighchartsService);
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 var isObj = function (x) {
-    /** @type {?} */
     var type = typeof x;
     return x !== null && (type === 'object' || type === 'function');
 };
-/** @type {?} */
+const ɵ0 = isObj;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
-/**
- * @param {?} val
- * @return {?}
- */
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
 function toObject(val) {
     if (val === null || val === undefined) {
         throw new TypeError('Sources cannot be null or undefined');
     }
     return Object(val);
 }
-/**
- * @param {?} to
- * @param {?} from
- * @param {?} key
- * @return {?}
- */
 function assignKey(to, from, key) {
-    /** @type {?} */
     var val = from[key];
     if (val === undefined || val === null) {
         return;
@@ -244,11 +254,6 @@ function assignKey(to, from, key) {
         to[key] = assign(Object(to[key]), from[key]);
     }
 }
-/**
- * @param {?} to
- * @param {?} from
- * @return {?}
- */
 function assign(to, from) {
     if (to === from) {
         return to;
@@ -270,11 +275,6 @@ function assign(to, from) {
     //}
     return to;
 }
-/**
- * @param {?} target
- * @param {...?} args
- * @return {?}
- */
 function deepAssign(target, ...args) {
     target = toObject(target);
     for (var s = 0; s < args.length; s++) {
@@ -283,19 +283,7 @@ function deepAssign(target, ...args) {
     return target;
 }
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * @param {?} highchartsService
- * @param {?} userOpts
- * @param {?} baseOpts
- * @param {?} type
- * @return {?}
- */
 function initChart(highchartsService, userOpts, baseOpts, type) {
-    /** @type {?} */
     const Highcharts = highchartsService.getHighchartsStatic();
     if (!Highcharts) {
         throw new Error('Base Highcharts module should be set via ChartModule.forRoot');
@@ -316,31 +304,17 @@ function initChart(highchartsService, userOpts, baseOpts, type) {
     if (Array.isArray(userOpts.colorAxis)) {
         baseOpts.colorAxis = [baseOpts.colorAxis];
     }
-    /** @type {?} */
     const opts = deepAssign({}, baseOpts, userOpts);
     return new Highcharts[type](opts);
 }
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 class ChartEvent {
-    /**
-     * @param {?} event
-     * @param {?} context
-     */
     constructor(event, context) {
         this.originalEvent = event;
         this.context = context;
     }
 }
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const chartEvents = [
     //'click', works by default as a native DOM click
     'addSeries',
@@ -352,7 +326,6 @@ const chartEvents = [
     'redraw',
     'selection'
 ];
-/** @type {?} */
 const seriesEvents = [
     'click',
     'afterAnimate',
@@ -363,7 +336,6 @@ const seriesEvents = [
     'mouseOver',
     'show'
 ];
-/** @type {?} */
 const pointEvents = [
     'click',
     'remove',
@@ -373,7 +345,6 @@ const pointEvents = [
     'mouseOver',
     'update'
 ];
-/** @type {?} */
 const xAxisEvents = [
     'afterBreaks',
     'afterSetExtremes',
@@ -381,7 +352,6 @@ const xAxisEvents = [
     'pointInBreak',
     'setExtremes'
 ];
-/** @type {?} */
 const yAxisEvents = [
     'afterBreaks',
     'afterSetExtremes',
@@ -389,7 +359,6 @@ const yAxisEvents = [
     'pointInBreak',
     'setExtremes'
 ];
-/** @type {?} */
 const zAxisEvents = [
     'afterBreaks',
     'afterSetExtremes',
@@ -397,7 +366,6 @@ const zAxisEvents = [
     'pointInBreak',
     'setExtremes'
 ];
-/** @type {?} */
 const colorAxisEvents = [
     'afterBreaks',
     'afterSetExtremes',
@@ -405,19 +373,7 @@ const colorAxisEvents = [
     'pointInBreak',
     'setExtremes'
 ];
-/**
- * @param {?} chartCmp
- * @param {?} seriesCmp
- * @param {?} pointCmp
- * @param {?} xAxisCmp
- * @param {?} yAxisCmp
- * @param {?} zAxisCmp
- * @param {?} colorAxisCmp
- * @param {?} element
- * @return {?}
- */
 function createBaseOpts(chartCmp, seriesCmp, pointCmp, xAxisCmp, yAxisCmp, zAxisCmp, colorAxisCmp, element) {
-    /** @type {?} */
     let opts = {
         chart: {
             renderTo: element,
@@ -494,15 +450,7 @@ function createBaseOpts(chartCmp, seriesCmp, pointCmp, xAxisCmp, yAxisCmp, zAxis
     return opts;
 }
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-class ChartComponent {
-    /**
-     * @param {?} element
-     * @param {?} highchartsService
-     */
+let ChartComponent = class ChartComponent {
     constructor(element, highchartsService) {
         this.create = new EventEmitter();
         this.click = new EventEmitter();
@@ -518,70 +466,86 @@ class ChartComponent {
         this.element = element;
         this.highchartsService = highchartsService;
     }
-    /**
-     * @param {?} opts
-     * @return {?}
-     */
     set options(opts) {
         this.userOpts = opts;
         this.init();
     }
     ;
-    /**
-     * @private
-     * @return {?}
-     */
     init() {
         if (this.userOpts && this.baseOpts) {
             this.chart = initChart(this.highchartsService, this.userOpts, this.baseOpts, this.type);
             this.create.emit(this.chart);
         }
     }
-    /**
-     * @return {?}
-     */
     ngAfterViewInit() {
         this.baseOpts = createBaseOpts(this, this.series, this.series ? this.series.point : null, this.xAxis, this.yAxis, this.zAxis, this.colorAxis, this.element.nativeElement);
         this.init();
     }
-}
-ChartComponent.decorators = [
-    { type: Component, args: [{
-                selector: 'chart',
-                template: '&nbsp;',
-                providers: [HighchartsService]
-            }] }
-];
-/** @nocollapse */
+};
 ChartComponent.ctorParameters = () => [
     { type: ElementRef },
     { type: HighchartsService }
 ];
-ChartComponent.propDecorators = {
-    series: [{ type: ContentChild, args: [ChartSeriesComponent,] }],
-    xAxis: [{ type: ContentChild, args: [ChartXAxisComponent,] }],
-    yAxis: [{ type: ContentChild, args: [ChartYAxisComponent,] }],
-    zAxis: [{ type: ContentChild, args: [ChartZAxisComponent,] }],
-    colorAxis: [{ type: ContentChild, args: [ChartColorAxisComponent,] }],
-    create: [{ type: Output }],
-    click: [{ type: Output }],
-    addSeries: [{ type: Output }],
-    afterPrint: [{ type: Output }],
-    beforePrint: [{ type: Output }],
-    drilldown: [{ type: Output }],
-    drillup: [{ type: Output }],
-    load: [{ type: Output }],
-    redraw: [{ type: Output }],
-    selection: [{ type: Output }],
-    type: [{ type: Input }],
-    options: [{ type: Input }]
-};
+__decorate([
+    ContentChild(ChartSeriesComponent, { static: false })
+], ChartComponent.prototype, "series", void 0);
+__decorate([
+    ContentChild(ChartXAxisComponent, { static: false })
+], ChartComponent.prototype, "xAxis", void 0);
+__decorate([
+    ContentChild(ChartYAxisComponent, { static: false })
+], ChartComponent.prototype, "yAxis", void 0);
+__decorate([
+    ContentChild(ChartZAxisComponent, { static: false })
+], ChartComponent.prototype, "zAxis", void 0);
+__decorate([
+    ContentChild(ChartColorAxisComponent, { static: false })
+], ChartComponent.prototype, "colorAxis", void 0);
+__decorate([
+    Output()
+], ChartComponent.prototype, "create", void 0);
+__decorate([
+    Output()
+], ChartComponent.prototype, "click", void 0);
+__decorate([
+    Output()
+], ChartComponent.prototype, "addSeries", void 0);
+__decorate([
+    Output()
+], ChartComponent.prototype, "afterPrint", void 0);
+__decorate([
+    Output()
+], ChartComponent.prototype, "beforePrint", void 0);
+__decorate([
+    Output()
+], ChartComponent.prototype, "drilldown", void 0);
+__decorate([
+    Output()
+], ChartComponent.prototype, "drillup", void 0);
+__decorate([
+    Output()
+], ChartComponent.prototype, "load", void 0);
+__decorate([
+    Output()
+], ChartComponent.prototype, "redraw", void 0);
+__decorate([
+    Output()
+], ChartComponent.prototype, "selection", void 0);
+__decorate([
+    Input()
+], ChartComponent.prototype, "type", void 0);
+__decorate([
+    Input()
+], ChartComponent.prototype, "options", null);
+ChartComponent = __decorate([
+    Component({
+        selector: 'chart',
+        template: '&nbsp;',
+        providers: [HighchartsService]
+    })
+], ChartComponent);
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
+var ChartModule_1;
 const CHART_DIRECTIVES = [
     ChartComponent,
     ChartSeriesComponent,
@@ -591,37 +555,30 @@ const CHART_DIRECTIVES = [
     ChartZAxisComponent,
     ChartColorAxisComponent
 ];
-class ChartModule {
-    /**
-     * @param {?} highchartsStatic
-     * @param {...?} highchartsModules
-     * @return {?}
-     */
+let ChartModule = ChartModule_1 = class ChartModule {
     static forRoot(highchartsStatic, ...highchartsModules) {
         // Plug highcharts modules
         highchartsModules.forEach((module) => {
             module(highchartsStatic);
         });
         return {
-            ngModule: ChartModule,
+            ngModule: ChartModule_1,
             providers: [
                 { provide: HighchartsStatic, useFactory: () => highchartsStatic }
             ]
         };
     }
-}
-ChartModule.decorators = [
-    { type: NgModule, args: [{
-                declarations: CHART_DIRECTIVES,
-                exports: CHART_DIRECTIVES
-            },] }
-];
+};
+ChartModule = ChartModule_1 = __decorate([
+    NgModule({
+        declarations: CHART_DIRECTIVES,
+        exports: CHART_DIRECTIVES
+    })
+], ChartModule);
 
 /**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * Generated bundle index. Do not edit.
  */
 
-export { ChartModule, ChartComponent, ChartSeriesComponent, ChartPointComponent, ChartXAxisComponent, ChartYAxisComponent, ChartZAxisComponent, ChartColorAxisComponent, HighchartsService as ɵb, HighchartsStatic as ɵa };
-
+export { ChartColorAxisComponent, ChartComponent, ChartModule, ChartPointComponent, ChartSeriesComponent, ChartXAxisComponent, ChartYAxisComponent, ChartZAxisComponent, HighchartsStatic as ɵa, HighchartsService as ɵb };
 //# sourceMappingURL=revivejs-angular2-highcharts.js.map

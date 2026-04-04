@@ -1,7 +1,4 @@
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
+import * as tslib_1 from "tslib";
 import { Directive, Output, EventEmitter } from '@angular/core';
 var ChartPointComponent = /** @class */ (function () {
     function ChartPointComponent() {
@@ -13,37 +10,33 @@ var ChartPointComponent = /** @class */ (function () {
         this.mouseOut = new EventEmitter();
         this.update = new EventEmitter();
     }
-    ChartPointComponent.decorators = [
-        { type: Directive, args: [{
-                    selector: 'point'
-                },] }
-    ];
-    ChartPointComponent.propDecorators = {
-        click: [{ type: Output }],
-        remove: [{ type: Output }],
-        select: [{ type: Output }],
-        unselect: [{ type: Output }],
-        mouseOver: [{ type: Output }],
-        mouseOut: [{ type: Output }],
-        update: [{ type: Output }]
-    };
+    tslib_1.__decorate([
+        Output()
+    ], ChartPointComponent.prototype, "click", void 0);
+    tslib_1.__decorate([
+        Output()
+    ], ChartPointComponent.prototype, "remove", void 0);
+    tslib_1.__decorate([
+        Output()
+    ], ChartPointComponent.prototype, "select", void 0);
+    tslib_1.__decorate([
+        Output()
+    ], ChartPointComponent.prototype, "unselect", void 0);
+    tslib_1.__decorate([
+        Output()
+    ], ChartPointComponent.prototype, "mouseOver", void 0);
+    tslib_1.__decorate([
+        Output()
+    ], ChartPointComponent.prototype, "mouseOut", void 0);
+    tslib_1.__decorate([
+        Output()
+    ], ChartPointComponent.prototype, "update", void 0);
+    ChartPointComponent = tslib_1.__decorate([
+        Directive({
+            selector: 'point'
+        })
+    ], ChartPointComponent);
     return ChartPointComponent;
 }());
 export { ChartPointComponent };
-if (false) {
-    /** @type {?} */
-    ChartPointComponent.prototype.click;
-    /** @type {?} */
-    ChartPointComponent.prototype.remove;
-    /** @type {?} */
-    ChartPointComponent.prototype.select;
-    /** @type {?} */
-    ChartPointComponent.prototype.unselect;
-    /** @type {?} */
-    ChartPointComponent.prototype.mouseOver;
-    /** @type {?} */
-    ChartPointComponent.prototype.mouseOut;
-    /** @type {?} */
-    ChartPointComponent.prototype.update;
-}
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2hhcnRQb2ludENvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0ByZXZpdmVqcy9hbmd1bGFyMi1oaWdoY2hhcnRzLyIsInNvdXJjZXMiOlsiQ2hhcnRQb2ludENvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxNQUFNLEVBQUUsWUFBWSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBR2hFO0lBQUE7UUFJYyxVQUFLLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUN2QyxXQUFNLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUN4QyxXQUFNLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUN4QyxhQUFRLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUMxQyxjQUFTLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUMzQyxhQUFRLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUMxQyxXQUFNLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztJQUN0RCxDQUFDOztnQkFYQSxTQUFTLFNBQUM7b0JBQ1AsUUFBUSxFQUFFLE9BQU87aUJBQ3BCOzs7d0JBRUksTUFBTTt5QkFDTixNQUFNO3lCQUNOLE1BQU07MkJBQ04sTUFBTTs0QkFDTixNQUFNOzJCQUNOLE1BQU07eUJBQ04sTUFBTTs7SUFDWCwwQkFBQztDQUFBLEFBWEQsSUFXQztTQVJZLG1CQUFtQjs7O0lBQzVCLG9DQUFpRDs7SUFDakQscUNBQWtEOztJQUNsRCxxQ0FBa0Q7O0lBQ2xELHVDQUFvRDs7SUFDcEQsd0NBQXFEOztJQUNyRCx1Q0FBb0Q7O0lBQ3BELHFDQUFrRCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IERpcmVjdGl2ZSwgT3V0cHV0LCBFdmVudEVtaXR0ZXIgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IENoYXJ0RXZlbnQgfSBmcm9tICcuL0NoYXJ0RXZlbnQnO1xuXG5ARGlyZWN0aXZlKHtcbiAgICBzZWxlY3RvcjogJ3BvaW50J1xufSlcbmV4cG9ydCBjbGFzcyBDaGFydFBvaW50Q29tcG9uZW50IHtcbiAgICBAT3V0cHV0KCkgY2xpY2sgPSBuZXcgRXZlbnRFbWl0dGVyPENoYXJ0RXZlbnQ+KCk7XG4gICAgQE91dHB1dCgpIHJlbW92ZSA9IG5ldyBFdmVudEVtaXR0ZXI8Q2hhcnRFdmVudD4oKTtcbiAgICBAT3V0cHV0KCkgc2VsZWN0ID0gbmV3IEV2ZW50RW1pdHRlcjxDaGFydEV2ZW50PigpO1xuICAgIEBPdXRwdXQoKSB1bnNlbGVjdCA9IG5ldyBFdmVudEVtaXR0ZXI8Q2hhcnRFdmVudD4oKTtcbiAgICBAT3V0cHV0KCkgbW91c2VPdmVyID0gbmV3IEV2ZW50RW1pdHRlcjxDaGFydEV2ZW50PigpO1xuICAgIEBPdXRwdXQoKSBtb3VzZU91dCA9IG5ldyBFdmVudEVtaXR0ZXI8Q2hhcnRFdmVudD4oKTtcbiAgICBAT3V0cHV0KCkgdXBkYXRlID0gbmV3IEV2ZW50RW1pdHRlcjxDaGFydEV2ZW50PigpO1xufSJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2hhcnRQb2ludENvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0ByZXZpdmVqcy9hbmd1bGFyMi1oaWdoY2hhcnRzLyIsInNvdXJjZXMiOlsiQ2hhcnRQb2ludENvbXBvbmVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsT0FBTyxFQUFFLFNBQVMsRUFBRSxNQUFNLEVBQUUsWUFBWSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBTWhFO0lBSEE7UUFJYyxVQUFLLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUN2QyxXQUFNLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUN4QyxXQUFNLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUN4QyxhQUFRLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUMxQyxjQUFTLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUMzQyxhQUFRLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztRQUMxQyxXQUFNLEdBQUcsSUFBSSxZQUFZLEVBQWMsQ0FBQztJQUN0RCxDQUFDO0lBUGE7UUFBVCxNQUFNLEVBQUU7c0RBQXdDO0lBQ3ZDO1FBQVQsTUFBTSxFQUFFO3VEQUF5QztJQUN4QztRQUFULE1BQU0sRUFBRTt1REFBeUM7SUFDeEM7UUFBVCxNQUFNLEVBQUU7eURBQTJDO0lBQzFDO1FBQVQsTUFBTSxFQUFFOzBEQUE0QztJQUMzQztRQUFULE1BQU0sRUFBRTt5REFBMkM7SUFDMUM7UUFBVCxNQUFNLEVBQUU7dURBQXlDO0lBUHpDLG1CQUFtQjtRQUgvQixTQUFTLENBQUM7WUFDUCxRQUFRLEVBQUUsT0FBTztTQUNwQixDQUFDO09BQ1csbUJBQW1CLENBUS9CO0lBQUQsMEJBQUM7Q0FBQSxBQVJELElBUUM7U0FSWSxtQkFBbUIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBEaXJlY3RpdmUsIE91dHB1dCwgRXZlbnRFbWl0dGVyIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBDaGFydEV2ZW50IH0gZnJvbSAnLi9DaGFydEV2ZW50JztcblxuQERpcmVjdGl2ZSh7XG4gICAgc2VsZWN0b3I6ICdwb2ludCdcbn0pXG5leHBvcnQgY2xhc3MgQ2hhcnRQb2ludENvbXBvbmVudCB7XG4gICAgQE91dHB1dCgpIGNsaWNrID0gbmV3IEV2ZW50RW1pdHRlcjxDaGFydEV2ZW50PigpO1xuICAgIEBPdXRwdXQoKSByZW1vdmUgPSBuZXcgRXZlbnRFbWl0dGVyPENoYXJ0RXZlbnQ+KCk7XG4gICAgQE91dHB1dCgpIHNlbGVjdCA9IG5ldyBFdmVudEVtaXR0ZXI8Q2hhcnRFdmVudD4oKTtcbiAgICBAT3V0cHV0KCkgdW5zZWxlY3QgPSBuZXcgRXZlbnRFbWl0dGVyPENoYXJ0RXZlbnQ+KCk7XG4gICAgQE91dHB1dCgpIG1vdXNlT3ZlciA9IG5ldyBFdmVudEVtaXR0ZXI8Q2hhcnRFdmVudD4oKTtcbiAgICBAT3V0cHV0KCkgbW91c2VPdXQgPSBuZXcgRXZlbnRFbWl0dGVyPENoYXJ0RXZlbnQ+KCk7XG4gICAgQE91dHB1dCgpIHVwZGF0ZSA9IG5ldyBFdmVudEVtaXR0ZXI8Q2hhcnRFdmVudD4oKTtcbn0iXX0=

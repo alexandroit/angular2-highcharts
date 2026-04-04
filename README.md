@@ -1,18 +1,18 @@
 # @revivejs/angular2-highcharts
 
-> A maintained **Angular 7 wrapper for Highcharts** with support for standard charts, `StockChart`, `Highmaps`, wrapper event outputs, native chart instance access, and Angular directives for `xAxis`, `yAxis`, `zAxis`, and `colorAxis`.
+> A maintained **Angular 8 wrapper for Highcharts** with support for standard charts, `StockChart`, `Highmaps`, wrapper event outputs, native chart instance access, and Angular directives for `xAxis`, `yAxis`, `zAxis`, and `colorAxis`.
 
 [![npm version](https://img.shields.io/npm/v/@revivejs/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular2-highcharts)
 [![npm downloads](https://img.shields.io/npm/dt/@revivejs/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular2-highcharts)
 [![npm monthly](https://img.shields.io/npm/dm/@revivejs/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular2-highcharts)
 [![license](https://img.shields.io/npm/l/@revivejs/angular2-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular2-highcharts/blob/master/LICENSE)
-[![Angular 7](https://img.shields.io/badge/Angular-7-red?style=flat-square&logo=angular)](https://angular.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3.2-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
+[![Angular 8](https://img.shields.io/badge/Angular-8-red?style=flat-square&logo=angular)](https://angular.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3.5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 [![GitHub stars](https://img.shields.io/github/stars/alexandroit/angular2-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular2-highcharts/stargazers)
 
 **[Documentation & Live Demos](https://alexandroit.github.io/angular2-highcharts/)** | **[npm](https://www.npmjs.com/package/@revivejs/angular2-highcharts)** | **[Issues](https://github.com/alexandroit/angular2-highcharts/issues)** | **[Repository](https://github.com/alexandroit/angular2-highcharts)**
 
-**Latest version:** `7.0.1`
+**Latest version:** `8.0.0`
 
 ---
 
@@ -28,9 +28,9 @@ The original `angular2-highcharts` package targeted early Angular releases and s
 
 | Feature | Supported |
 | :--- | :---: |
-| Angular 7 wrapper release line | ✅ |
-| Backward-compatible with Angular 4, 5, and 6 apps | ✅ |
-| Highcharts 7 maintained major line | ✅ |
+| Angular 8 wrapper release line | ✅ |
+| Backward-compatible with Angular 4, 5, 6, and 7 apps | ✅ |
+| Highcharts 8 maintained major line | ✅ |
 | Standard Highcharts charts | ✅ |
 | `StockChart` wrapper support | ✅ |
 | `Highmaps` module support | ✅ |
@@ -64,7 +64,8 @@ The original `angular2-highcharts` package targeted early Angular releases and s
 
 | Package version | Angular version | Highcharts version | TypeScript version | Demo link |
 | :---: | :---: | :---: | :---: | :--- |
-| **7.0.1** | **7.2.x** | **7.2.x** | **3.2.x** | [Angular 7 demo](https://alexandroit.github.io/angular2-highcharts/angular-7/) |
+| **8.0.0** | **8.2.x** | **8.2.x** | **3.5.x** | [Angular 8 demo](https://alexandroit.github.io/angular2-highcharts/angular-8/) |
+| 7.0.x | 7.2.x | 7.2.x | 3.2.x | [Angular 7 demo](https://alexandroit.github.io/angular2-highcharts/angular-7/) |
 | 6.0.x | 6.1.x | 6.x | 2.7.x | [Angular 6 demo](https://alexandroit.github.io/angular2-highcharts/angular-6/) |
 | 5.0.x | 5.x | 6.x | 2.6.x | [Angular 5 demo](https://alexandroit.github.io/angular2-highcharts/angular-5/) |
 | 4.0.x | 4.4.x | 5.0.15 | 2.4.x | [Angular 4 demo](https://alexandroit.github.io/angular2-highcharts/angular-4/) |
@@ -338,6 +339,15 @@ This wrapper is intentionally thin. It uses the initial `options` object to crea
 The package major follows Angular major compatibility, but the wrapper API is intentionally frozen. Existing selectors such as `<chart>`, `<series>`, `<point>`, `<xAxis>`, `<yAxis>`, `<zAxis>`, `<colorAxis>`, the `[options]` input, and `ChartModule.forRoot(Highcharts, ...modules)` remain stable so older Angular applications can keep the same integration code while newer releases adopt updated Angular tooling and newer Highcharts modules.
 
 ## CHANGELOG
+
+### 8.0.0 (Angular 8)
+- Bumped package version to 8.0.0
+- Updated peerDependencies to `@angular/core >=4.0.0 <9.0.0` and `highcharts >=5.0.0`
+- Updated devDependencies to Angular ^8.2.14 and TypeScript ~3.5.3
+- Updated the library to use Highcharts ^8.2.2 with bundled TypeScript definitions
+- Added Angular 8 compatibility by marking `@ContentChild(...)` queries with `{ static: false }`
+- Added Highcharts 8 feature keywords including arc diagram, pictorial chart, marker clusters, and data sorting
+- Added Angular 8 demo coverage for radial bar, data sorting, and marker clusters
 
 ### 7.0.1 (Angular 7)
 - Bumped package version to 7.0.1

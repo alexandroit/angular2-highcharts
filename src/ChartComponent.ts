@@ -16,11 +16,11 @@ import { createBaseOpts } from './createBaseOpts';
     providers: [HighchartsService],
 })
 export class ChartComponent {
-    @ContentChild(ChartSeriesComponent) series: ChartSeriesComponent;
-    @ContentChild(ChartXAxisComponent) xAxis: ChartXAxisComponent;
-    @ContentChild(ChartYAxisComponent) yAxis: ChartYAxisComponent;
-    @ContentChild(ChartZAxisComponent) zAxis: ChartZAxisComponent;
-    @ContentChild(ChartColorAxisComponent) colorAxis: ChartColorAxisComponent;
+    @ContentChild(ChartSeriesComponent, { static: false }) series: ChartSeriesComponent;
+    @ContentChild(ChartXAxisComponent, { static: false }) xAxis: ChartXAxisComponent;
+    @ContentChild(ChartYAxisComponent, { static: false }) yAxis: ChartYAxisComponent;
+    @ContentChild(ChartZAxisComponent, { static: false }) zAxis: ChartZAxisComponent;
+    @ContentChild(ChartColorAxisComponent, { static: false }) colorAxis: ChartColorAxisComponent;
     @Output() create = new EventEmitter<any>();
     @Output() click = new EventEmitter<ChartEvent>();
     @Output() addSeries = new EventEmitter<ChartEvent>();
