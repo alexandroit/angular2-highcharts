@@ -16,13 +16,13 @@
 
 ---
 
-> **Credits:** Original library by [Eugene Gluhotorenko](https://github.com/gevgeny/angular-highcharts). Current maintenance, Angular 4 compatibility work, package publishing, and repository stewardship by [Alexandro Paixao Marques](https://github.com/alexandroit/angular-highcharts).
+> **Credits:** Original library by [Eugene Gluhotorenko](https://github.com/gevgeny/angular2-highcharts). Current maintenance, Angular 4 compatibility work, package publishing, and repository stewardship by [Alexandro Paixao Marques](https://github.com/alexandroit/angular-highcharts).
 
 ---
 
 ## Why this library?
 
-The original `angular-highcharts` package targeted early Angular releases and stopped evolving. This fork keeps the wrapper API backward-compatible, updates the maintained publication metadata, and expands the wrapper surface for more Highcharts features such as `zAxis`, `colorAxis`, and optional module-driven chart types.
+The original `angular2-highcharts` package targeted early Angular releases and stopped evolving. This fork keeps the wrapper API backward-compatible, updates the maintained publication metadata, and expands the wrapper surface for more Highcharts features such as `zAxis`, `colorAxis`, and optional module-driven chart types.
 
 ## Features
 
