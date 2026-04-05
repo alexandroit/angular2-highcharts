@@ -1,6 +1,6 @@
 {
   "name": "@revivejs/angular-highcharts",
-  "version": "21.0.0",
+  "version": "21.0.1",
   "description": "Angular wrapper components for Highcharts, Highstock, Highmaps, zAxis, and colorAxis integrations",
   "main": "dist/fesm2022/revivejs-angular-highcharts.mjs",
   "module": "dist/fesm2022/revivejs-angular-highcharts.mjs",

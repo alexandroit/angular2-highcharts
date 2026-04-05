@@ -12,7 +12,7 @@
 
 **[Documentation & Live Demos](https://alexandroit.github.io/angular-highcharts/)** | **[npm](https://www.npmjs.com/package/@revivejs/angular-highcharts)** | **[Issues](https://github.com/alexandroit/angular-highcharts/issues)** | **[Repository](https://github.com/alexandroit/angular-highcharts)**
 
-**Latest version:** `21.0.0`
+**Latest version:** `21.0.1`
 
 ---
 
@@ -64,7 +64,7 @@ The original `angular2-highcharts` package targeted early Angular releases and s
 
 | Package version | Angular version | Highcharts version | TypeScript version | Demo link |
 | :---: | :---: | :---: | :---: | :--- |
-| **21.0.0** | **21.2.x** | **12.5.x** | **5.9.x** | [Angular 21 demo](https://alexandroit.github.io/angular-highcharts/angular-21/) |
+| **21.0.1** | **21.2.x** | **12.5.x** | **5.9.x** | [Angular 21 demo](https://alexandroit.github.io/angular-highcharts/angular-21/) |
 | **20.0.0** | **20.3.x** | **12.5.x** | **5.9.x** | [Angular 20 demo](https://alexandroit.github.io/angular-highcharts/angular-20/) |
 | **19.0.0** | **19.2.x** | **12.5.x** | **5.8.x** | [Angular 19 demo](https://alexandroit.github.io/angular-highcharts/angular-19/) |
 | **18.0.0** | **18.2.x** | **12.5.x** | **5.5.x** | [Angular 18 demo](https://alexandroit.github.io/angular-highcharts/angular-18/) |
@@ -371,6 +371,11 @@ This wrapper is intentionally thin. It uses the initial `options` object to crea
 The package major follows Angular major compatibility, but the wrapper API is intentionally frozen. Existing selectors such as `<chart>`, `<series>`, `<point>`, `<xAxis>`, `<yAxis>`, `<zAxis>`, `<colorAxis>`, the `[options]` input, and `ChartModule.forRoot(Highcharts, ...modules)` remain stable so older Angular applications can keep the same integration code while newer releases adopt updated Angular tooling and newer Highcharts modules.
 
 ## CHANGELOG
+
+### 21.0.1 (Angular 21)
+- Bumped package version to 21.0.1
+- Backfilled the renamed npm package history so `@revivejs/angular-highcharts` now mirrors the historical release tree from `4.0.0` through `21.0.0`
+- Kept `21.0.1` as the current latest release for the renamed package line
 
 ### 21.0.0 (Angular 21)
 - Bumped package version to 21.0.0
