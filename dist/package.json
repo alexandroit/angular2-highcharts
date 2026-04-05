@@ -1,6 +1,6 @@
 {
   "name": "@revivejs/angular2-highcharts",
-  "version": "17.0.0",
+  "version": "18.0.0",
   "description": "Angular wrapper components for Highcharts, Highstock, Highmaps, zAxis, and colorAxis integrations",
   "main": "dist/fesm2022/revivejs-angular2-highcharts.mjs",
   "module": "fesm2022/revivejs-angular2-highcharts.mjs",
@@ -33,6 +33,7 @@
     "angular15",
     "angular16",
     "angular17",
+    "angular18",
     "angular-library",
     "typescript",
     "charts",
@@ -108,7 +109,7 @@
   },
   "homepage": "https://alexandroit.github.io/angular2-highcharts/",
   "peerDependencies": {
-    "@angular/core": ">=4.0.0 <18.0.0",
+    "@angular/core": ">=4.0.0 <19.0.0",
     "highcharts": ">=5.0.0"
   },
   "dependencies": {
