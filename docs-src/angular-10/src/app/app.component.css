@@ -261,6 +261,25 @@ pre.code {
   overflow: hidden;
 }
 
+.chart-frame chart {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.chart-frame chart,
+.chart-frame chart > div,
+.chart-frame chart .highcharts-container,
+.chart-frame chart .highcharts-root,
+.chart-frame chart svg {
+  max-width: 100% !important;
+}
+
+.chart-frame chart > div,
+.chart-frame chart .highcharts-container {
+  width: 100% !important;
+}
+
 /* ── Controls ──────────────────────────────────────────────────────────── */
 .controls {
   display: flex;
@@ -444,6 +463,11 @@ button.small {
     grid-column: auto;
   }
 
+  .chart-frame {
+    padding: 4px;
+    min-height: 240px;
+  }
+
   h1 { font-size: 34px; }
 
   .feature-grid {
@@ -459,5 +483,9 @@ button.small {
   .hero-card, .panel, .log-panel {
     padding: 16px;
     border-radius: 16px;
+  }
+
+  .chart-frame {
+    min-height: 220px;
   }
 }
