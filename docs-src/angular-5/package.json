@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --target=development --environment=dev --output-path ../../docs/angular-5 --base-href /angular-highcharts/angular-5/"
+    "build": "ng build --target=development --environment=dev --output-path ../../docs/angular-5 --base-href ./"
   },
   "dependencies": {
     "@angular/common": "^5.2.11",
