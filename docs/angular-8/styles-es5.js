@@ -282,7 +282,7 @@
   /*! no static exports found */
   /***/
   function _(module, exports, __webpack_require__) {
-    module.exports = __webpack_require__(/*! /storage/data/github/revivejs/angular-highcharts/angular-highcharts/docs-src/angular-8/src/styles.css */"./src/styles.css");
+    module.exports = __webpack_require__(/*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-8/src/styles.css */"./src/styles.css");
 
     /***/
   })

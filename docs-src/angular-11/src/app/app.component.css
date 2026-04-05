@@ -403,18 +403,6 @@ button.small {
 }
 
 /* ── Responsive ────────────────────────────────────────────────────────── */
-@media (max-width: 1100px) {
-  .hero,
-  .layout {
-    grid-template-columns: 1fr;
-  }
-
-  .log-panel {
-    position: static;
-    max-height: 360px;
-  }
-}
-
 @media (max-width: 1280px) {
   .layout {
     grid-template-columns: minmax(0, 1fr) 260px;
@@ -422,6 +410,28 @@ button.small {
 
   .demo-card.full {
     grid-column: auto;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero,
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .layout {
+    gap: 18px;
+  }
+
+  .panels,
+  .log-panel {
+    min-width: 0;
+  }
+
+  .log-panel {
+    order: 2;
+    position: static;
+    max-height: min(360px, 50vh);
   }
 }
 

@@ -190,8 +190,8 @@ module.exports = function (done, value) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /storage/data/github/revivejs/angular-highcharts/angular-highcharts/docs-src/angular-11/src/polyfills.ts */"hN/g");
-module.exports = __webpack_require__(/*! /storage/data/github/revivejs/angular-highcharts/angular-highcharts/docs-src/angular-11/node_modules/@angular-devkit/build-angular/src/webpack/jit-polyfills.js */"rZy+");
+__webpack_require__(/*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-11/src/polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-11/node_modules/@angular-devkit/build-angular/src/webpack/jit-polyfills.js */"rZy+");
 
 
 /***/ }),

@@ -450,7 +450,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       __webpack_require__(
-      /*! /storage/data/github/revivejs/angular-highcharts/angular-highcharts/docs-src/angular-10/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
+      /*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-10/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
       "mRIq");
 
       __webpack_require__(
@@ -458,15 +458,15 @@
       "R0gw");
 
       __webpack_require__(
-      /*! /storage/data/github/revivejs/angular-highcharts/angular-highcharts/docs-src/angular-10/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js */
+      /*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-10/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js */
       "LEsg");
 
       __webpack_require__(
-      /*! /storage/data/github/revivejs/angular-highcharts/angular-highcharts/docs-src/angular-10/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js */
+      /*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-10/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-jit-polyfills.js */
       "YJXN");
 
       module.exports = __webpack_require__(
-      /*! /storage/data/github/revivejs/angular-highcharts/angular-highcharts/docs-src/angular-10/src/polyfills.ts */
+      /*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-10/src/polyfills.ts */
       "hN/g");
       /***/
     },
