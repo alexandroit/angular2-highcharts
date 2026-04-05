@@ -69158,9 +69158,9 @@ const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('7.2.1
 
 /***/ }),
 
-/***/ "./node_modules/@revivejs/angular2-highcharts/dist/fesm2015/revivejs-angular2-highcharts.js":
+/***/ "./node_modules/@revivejs/angular-highcharts/dist/fesm2015/revivejs-angular-highcharts.js":
 /*!**************************************************************************************************!*\
-  !*** ./node_modules/@revivejs/angular2-highcharts/dist/fesm2015/revivejs-angular2-highcharts.js ***!
+  !*** ./node_modules/@revivejs/angular-highcharts/dist/fesm2015/revivejs-angular-highcharts.js ***!
   \**************************************************************************************************/
 /*! exports provided: ChartModule, ChartComponent, ChartSeriesComponent, ChartPointComponent, ChartXAxisComponent, ChartYAxisComponent, ChartZAxisComponent, ChartColorAxisComponent, ɵb, ɵa */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -69804,7 +69804,7 @@ ChartModule.decorators = [
 
 
 
-//# sourceMappingURL=revivejs-angular2-highcharts.js.map
+//# sourceMappingURL=revivejs-angular-highcharts.js.map
 
 /***/ }),
 

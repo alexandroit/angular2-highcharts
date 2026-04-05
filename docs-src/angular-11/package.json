@@ -1,11 +1,11 @@
 {
-  "name": "@revivejs/angular2-highcharts-docs-angular11",
+  "name": "@revivejs/angular-highcharts-docs-angular11",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --output-path ../../docs/angular-11 --base-href /angular2-highcharts/angular-11/ --build-optimizer=false --vendor-chunk=true --named-chunks=true --aot=false"
+    "build": "ng build --output-path ../../docs/angular-11 --base-href /angular-highcharts/angular-11/ --build-optimizer=false --vendor-chunk=true --named-chunks=true --aot=false"
   },
   "dependencies": {
     "@angular/common": "^11.2.14",
@@ -14,7 +14,7 @@
     "@angular/forms": "^11.2.14",
     "@angular/platform-browser": "^11.2.14",
     "@angular/platform-browser-dynamic": "^11.2.14",
-    "@revivejs/angular2-highcharts": "^11.0.0",
+    "@revivejs/angular-highcharts": "^11.0.0",
     "core-js": "^2.6.12",
     "highcharts": "^9.3.3",
     "rxjs": "^6.6.7",

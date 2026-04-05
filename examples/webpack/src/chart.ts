@@ -16,7 +16,7 @@
 //    selector: 'app',
 //    directives: [CHART_DIRECTIVES],
 //    template: `
-//        <h2>angular2-highcharts examples</h2>
+//        <h2>angular-highcharts examples</h2>
 //        <h3>chart</h3>
 //        <div>
 //            <chart type="Chart"

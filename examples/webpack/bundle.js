@@ -73,7 +73,7 @@
 	    App = __decorate([
 	        core_1.Component({
 	            selector: 'app',
-	            template: "\n        <h2>angular2-highcharts examples</h2>\n        <simple-chart-example></simple-chart-example>\n        <chart-events-example></chart-events-example>\n        <stock-chart-example></stock-chart-example>\n        <dynamic-chart-example></dynamic-chart-example>\n        <combo-multi-axes-example></combo-multi-axes-example>\n        <highcharts-module-example></highcharts-module-example>\n    "
+	            template: "\n        <h2>angular-highcharts examples</h2>\n        <simple-chart-example></simple-chart-example>\n        <chart-events-example></chart-events-example>\n        <stock-chart-example></stock-chart-example>\n        <dynamic-chart-example></dynamic-chart-example>\n        <combo-multi-axes-example></combo-multi-axes-example>\n        <highcharts-module-example></highcharts-module-example>\n    "
 	        }), 
 	        __metadata('design:paramtypes', [])
 	    ], App);

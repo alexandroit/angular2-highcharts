@@ -1,6 +1,6 @@
 webpackJsonp(["vendor"],{
 
-/***/ "../../../../@revivejs/angular2-highcharts/dist/ChartColorAxisComponent.js":
+/***/ "../../../../@revivejs/angular-highcharts/dist/ChartColorAxisComponent.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35,21 +35,21 @@ exports.ChartColorAxisComponent = ChartColorAxisComponent;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular2-highcharts/dist/ChartComponent.js":
+/***/ "../../../../@revivejs/angular-highcharts/dist/ChartComponent.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var ChartSeriesComponent_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/ChartSeriesComponent.js");
-var ChartXAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/ChartXAxisComponent.js");
-var ChartYAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/ChartYAxisComponent.js");
-var ChartZAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/ChartZAxisComponent.js");
-var ChartColorAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/ChartColorAxisComponent.js");
-var HighchartsService_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/HighchartsService.js");
-var initChart_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/initChart.js");
-var createBaseOpts_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/createBaseOpts.js");
+var ChartSeriesComponent_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/ChartSeriesComponent.js");
+var ChartXAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/ChartXAxisComponent.js");
+var ChartYAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/ChartYAxisComponent.js");
+var ChartZAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/ChartZAxisComponent.js");
+var ChartColorAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/ChartColorAxisComponent.js");
+var HighchartsService_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/HighchartsService.js");
+var initChart_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/initChart.js");
+var createBaseOpts_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/createBaseOpts.js");
 var ChartComponent = (function () {
     function ChartComponent(element, highchartsService) {
         this.create = new core_1.EventEmitter();
@@ -122,7 +122,7 @@ exports.ChartComponent = ChartComponent;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular2-highcharts/dist/ChartEvent.js":
+/***/ "../../../../@revivejs/angular-highcharts/dist/ChartEvent.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -140,7 +140,7 @@ exports.ChartEvent = ChartEvent;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular2-highcharts/dist/ChartPointComponent.js":
+/***/ "../../../../@revivejs/angular-highcharts/dist/ChartPointComponent.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -179,14 +179,14 @@ exports.ChartPointComponent = ChartPointComponent;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular2-highcharts/dist/ChartSeriesComponent.js":
+/***/ "../../../../@revivejs/angular-highcharts/dist/ChartSeriesComponent.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var ChartPointComponent_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/ChartPointComponent.js");
+var ChartPointComponent_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/ChartPointComponent.js");
 var ChartSeriesComponent = (function () {
     function ChartSeriesComponent() {
         this.click = new core_1.EventEmitter();
@@ -222,7 +222,7 @@ exports.ChartSeriesComponent = ChartSeriesComponent;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular2-highcharts/dist/ChartXAxisComponent.js":
+/***/ "../../../../@revivejs/angular-highcharts/dist/ChartXAxisComponent.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -257,7 +257,7 @@ exports.ChartXAxisComponent = ChartXAxisComponent;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular2-highcharts/dist/ChartYAxisComponent.js":
+/***/ "../../../../@revivejs/angular-highcharts/dist/ChartYAxisComponent.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -292,7 +292,7 @@ exports.ChartYAxisComponent = ChartYAxisComponent;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular2-highcharts/dist/ChartZAxisComponent.js":
+/***/ "../../../../@revivejs/angular-highcharts/dist/ChartZAxisComponent.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -327,7 +327,7 @@ exports.ChartZAxisComponent = ChartZAxisComponent;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular2-highcharts/dist/HighchartsService.js":
+/***/ "../../../../@revivejs/angular-highcharts/dist/HighchartsService.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -364,13 +364,13 @@ exports.HighchartsService = HighchartsService;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular2-highcharts/dist/createBaseOpts.js":
+/***/ "../../../../@revivejs/angular-highcharts/dist/createBaseOpts.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var ChartEvent_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/ChartEvent.js");
+var ChartEvent_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/ChartEvent.js");
 var chartEvents = [
     'addSeries',
     'afterPrint',
@@ -509,7 +509,7 @@ exports.createBaseOpts = createBaseOpts;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular2-highcharts/dist/deepAssign.js":
+/***/ "../../../../@revivejs/angular-highcharts/dist/deepAssign.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -572,28 +572,28 @@ exports.deepAssign = deepAssign;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular2-highcharts/dist/index.js":
+/***/ "../../../../@revivejs/angular-highcharts/dist/index.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var ChartComponent_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/ChartComponent.js");
+var ChartComponent_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/ChartComponent.js");
 exports.ChartComponent = ChartComponent_1.ChartComponent;
-var ChartSeriesComponent_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/ChartSeriesComponent.js");
+var ChartSeriesComponent_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/ChartSeriesComponent.js");
 exports.ChartSeriesComponent = ChartSeriesComponent_1.ChartSeriesComponent;
-var ChartPointComponent_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/ChartPointComponent.js");
+var ChartPointComponent_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/ChartPointComponent.js");
 exports.ChartPointComponent = ChartPointComponent_1.ChartPointComponent;
-var ChartXAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/ChartXAxisComponent.js");
+var ChartXAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/ChartXAxisComponent.js");
 exports.ChartXAxisComponent = ChartXAxisComponent_1.ChartXAxisComponent;
-var ChartYAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/ChartYAxisComponent.js");
+var ChartYAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/ChartYAxisComponent.js");
 exports.ChartYAxisComponent = ChartYAxisComponent_1.ChartYAxisComponent;
-var ChartZAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/ChartZAxisComponent.js");
+var ChartZAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/ChartZAxisComponent.js");
 exports.ChartZAxisComponent = ChartZAxisComponent_1.ChartZAxisComponent;
-var ChartColorAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/ChartColorAxisComponent.js");
+var ChartColorAxisComponent_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/ChartColorAxisComponent.js");
 exports.ChartColorAxisComponent = ChartColorAxisComponent_1.ChartColorAxisComponent;
-var HighchartsService_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/HighchartsService.js");
+var HighchartsService_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/HighchartsService.js");
 var CHART_DIRECTIVES = [
     ChartComponent_1.ChartComponent,
     ChartSeriesComponent_1.ChartSeriesComponent,
@@ -635,13 +635,13 @@ exports.ChartModule = ChartModule;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular2-highcharts/dist/initChart.js":
+/***/ "../../../../@revivejs/angular-highcharts/dist/initChart.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var deepAssign_1 = __webpack_require__("../../../../@revivejs/angular2-highcharts/dist/deepAssign.js");
+var deepAssign_1 = __webpack_require__("../../../../@revivejs/angular-highcharts/dist/deepAssign.js");
 function initChart(highchartsService, userOpts, baseOpts, type) {
     var Highcharts = highchartsService.getHighchartsStatic();
     if (!Highcharts) {
@@ -670,13 +670,13 @@ exports.initChart = initChart;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular2-highcharts/index.js":
+/***/ "../../../../@revivejs/angular-highcharts/index.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(__webpack_require__("../../../../@revivejs/angular2-highcharts/dist/index.js"));
+__export(__webpack_require__("../../../../@revivejs/angular-highcharts/dist/index.js"));
 
 /***/ }),
 

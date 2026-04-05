@@ -1,11 +1,11 @@
 {
-  "name": "@revivejs/angular2-highcharts-docs-angular9",
+  "name": "@revivejs/angular-highcharts-docs-angular9",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --output-path ../../docs/angular-9 --base-href /angular2-highcharts/angular-9/ --build-optimizer=false --vendor-chunk=true --named-chunks=true --aot=false"
+    "build": "ng build --output-path ../../docs/angular-9 --base-href /angular-highcharts/angular-9/ --build-optimizer=false --vendor-chunk=true --named-chunks=true --aot=false"
   },
   "dependencies": {
     "@angular/common": "^9.1.13",
@@ -14,7 +14,7 @@
     "@angular/forms": "^9.1.13",
     "@angular/platform-browser": "^9.1.13",
     "@angular/platform-browser-dynamic": "^9.1.13",
-    "@revivejs/angular2-highcharts": "^9.0.0",
+    "@revivejs/angular-highcharts": "^9.0.0",
     "core-js": "^2.6.12",
     "highcharts": "^8.2.2",
     "rxjs": "^6.5.3",

@@ -1,14 +1,14 @@
 {
-  "name": "@revivejs/angular2-highcharts",
+  "name": "@revivejs/angular-highcharts",
   "version": "21.0.0",
   "description": "Angular wrapper components for Highcharts, Highstock, Highmaps, zAxis, and colorAxis integrations",
-  "main": "dist/fesm2022/revivejs-angular2-highcharts.mjs",
-  "module": "dist/fesm2022/revivejs-angular2-highcharts.mjs",
-  "es2022": "dist/fesm2022/revivejs-angular2-highcharts.mjs",
-  "esm2022": "dist/fesm2022/revivejs-angular2-highcharts.mjs",
-  "fesm2022": "dist/fesm2022/revivejs-angular2-highcharts.mjs",
-  "typings": "dist/types/revivejs-angular2-highcharts.d.ts",
-  "types": "dist/types/revivejs-angular2-highcharts.d.ts",
+  "main": "dist/fesm2022/revivejs-angular-highcharts.mjs",
+  "module": "dist/fesm2022/revivejs-angular-highcharts.mjs",
+  "es2022": "dist/fesm2022/revivejs-angular-highcharts.mjs",
+  "esm2022": "dist/fesm2022/revivejs-angular-highcharts.mjs",
+  "fesm2022": "dist/fesm2022/revivejs-angular-highcharts.mjs",
+  "typings": "dist/types/revivejs-angular-highcharts.d.ts",
+  "types": "dist/types/revivejs-angular-highcharts.d.ts",
   "sideEffects": false,
   "scripts": {
     "watch": "tsc -w",
@@ -55,7 +55,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexandroit/angular2-highcharts.git"
+    "url": "https://github.com/alexandroit/angular-highcharts.git"
   },
   "publishConfig": {
     "access": "public"
@@ -151,9 +151,9 @@
   "author": "Alexandro Paixao Marques",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexandroit/angular2-highcharts/issues"
+    "url": "https://github.com/alexandroit/angular-highcharts/issues"
   },
-  "homepage": "https://alexandroit.github.io/angular2-highcharts/",
+  "homepage": "https://alexandroit.github.io/angular-highcharts/",
   "peerDependencies": {
     "@angular/core": ">=4.0.0 <22.0.0",
     "highcharts": ">=5.0.0"

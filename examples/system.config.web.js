@@ -50,7 +50,7 @@
       'ts':                         'npm:plugin-typescript@4.0.10/lib/plugin.js',
       'typescript':                 'npm:typescript@2.0.2/lib/typescript.js',
 
-      '@revivejs/angular2-highcharts': 'https://unpkg.com/@revivejs/angular2-highcharts',
+      '@revivejs/angular-highcharts': 'https://unpkg.com/@revivejs/angular-highcharts',
       'highcharts':                 'https://cdn.rawgit.com/highcharts/highcharts-dist/v5.0.7'
 
     },
@@ -71,7 +71,7 @@
         main: './highcharts.js',
         defaultExtension: 'js'
       },
-      '@revivejs/angular2-highcharts': {
+      '@revivejs/angular-highcharts': {
         main: './index.js',
         defaultExtension: 'js'
       }

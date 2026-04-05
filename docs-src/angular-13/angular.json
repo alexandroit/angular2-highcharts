@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular2-highcharts-docs-angular13": {
+    "angular-highcharts-docs-angular13": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -52,16 +52,16 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular2-highcharts-docs-angular13:build"
+            "browserTarget": "angular-highcharts-docs-angular13:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular2-highcharts-docs-angular13:build:production"
+              "browserTarget": "angular-highcharts-docs-angular13:build:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular2-highcharts-docs-angular13"
+  "defaultProject": "angular-highcharts-docs-angular13"
 }

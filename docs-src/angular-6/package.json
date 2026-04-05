@@ -1,11 +1,11 @@
 {
-  "name": "@revivejs/angular2-highcharts-docs-angular6",
+  "name": "@revivejs/angular-highcharts-docs-angular6",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --output-path ../../docs/angular-6 --base-href /angular2-highcharts/angular-6/ --build-optimizer=false --vendor-chunk=true --named-chunks=true --aot=false"
+    "build": "ng build --output-path ../../docs/angular-6 --base-href /angular-highcharts/angular-6/ --build-optimizer=false --vendor-chunk=true --named-chunks=true --aot=false"
   },
   "dependencies": {
     "@angular/common": "^6.1.10",
@@ -15,7 +15,7 @@
     "@angular/http": "^6.1.10",
     "@angular/platform-browser": "^6.1.10",
     "@angular/platform-browser-dynamic": "^6.1.10",
-    "@revivejs/angular2-highcharts": "^6.0.4",
+    "@revivejs/angular-highcharts": "^6.0.4",
     "core-js": "^2.4.1",
     "highcharts": "^6.0.0",
     "rxjs": "6.2.2",

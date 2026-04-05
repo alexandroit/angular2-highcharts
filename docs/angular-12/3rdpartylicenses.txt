@@ -38,7 +38,7 @@ MIT
 @angular/platform-browser-dynamic
 MIT
 
-@revivejs/angular2-highcharts
+@revivejs/angular-highcharts
 MIT
 The MIT License (MIT)
 

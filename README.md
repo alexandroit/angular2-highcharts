@@ -1,28 +1,28 @@
-# @revivejs/angular2-highcharts
+# @revivejs/angular-highcharts
 
 > A maintained **Angular 21 wrapper for Highcharts** with support for standard charts, `StockChart`, `Highmaps`, wrapper event outputs, native chart instance access, and Angular directives for `xAxis`, `yAxis`, `zAxis`, and `colorAxis`.
 
-[![npm version](https://img.shields.io/npm/v/@revivejs/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular2-highcharts)
-[![npm downloads](https://img.shields.io/npm/dt/@revivejs/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular2-highcharts)
-[![npm monthly](https://img.shields.io/npm/dm/@revivejs/angular2-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular2-highcharts)
-[![license](https://img.shields.io/npm/l/@revivejs/angular2-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular2-highcharts/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@revivejs/angular-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular-highcharts)
+[![npm downloads](https://img.shields.io/npm/dt/@revivejs/angular-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular-highcharts)
+[![npm monthly](https://img.shields.io/npm/dm/@revivejs/angular-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular-highcharts)
+[![license](https://img.shields.io/npm/l/@revivejs/angular-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular-highcharts/blob/master/LICENSE)
 [![Angular 21](https://img.shields.io/badge/Angular-21-red?style=flat-square&logo=angular)](https://angular.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
-[![GitHub stars](https://img.shields.io/github/stars/alexandroit/angular2-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular2-highcharts/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/alexandroit/angular-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular-highcharts/stargazers)
 
-**[Documentation & Live Demos](https://alexandroit.github.io/angular2-highcharts/)** | **[npm](https://www.npmjs.com/package/@revivejs/angular2-highcharts)** | **[Issues](https://github.com/alexandroit/angular2-highcharts/issues)** | **[Repository](https://github.com/alexandroit/angular2-highcharts)**
+**[Documentation & Live Demos](https://alexandroit.github.io/angular-highcharts/)** | **[npm](https://www.npmjs.com/package/@revivejs/angular-highcharts)** | **[Issues](https://github.com/alexandroit/angular-highcharts/issues)** | **[Repository](https://github.com/alexandroit/angular-highcharts)**
 
 **Latest version:** `21.0.0`
 
 ---
 
-> **Credits:** Original library by [Eugene Gluhotorenko](https://github.com/gevgeny/angular2-highcharts). Current maintenance, Angular 4 compatibility work, package publishing, and repository stewardship by [Alexandro Paixao Marques](https://github.com/alexandroit/angular2-highcharts).
+> **Credits:** Original library by [Eugene Gluhotorenko](https://github.com/gevgeny/angular-highcharts). Current maintenance, Angular 4 compatibility work, package publishing, and repository stewardship by [Alexandro Paixao Marques](https://github.com/alexandroit/angular-highcharts).
 
 ---
 
 ## Why this library?
 
-The original `angular2-highcharts` package targeted early Angular releases and stopped evolving. This fork keeps the wrapper API backward-compatible, updates the maintained publication metadata, and expands the wrapper surface for more Highcharts features such as `zAxis`, `colorAxis`, and optional module-driven chart types.
+The original `angular-highcharts` package targeted early Angular releases and stopped evolving. This fork keeps the wrapper API backward-compatible, updates the maintained publication metadata, and expands the wrapper surface for more Highcharts features such as `zAxis`, `colorAxis`, and optional module-driven chart types.
 
 ## Features
 
@@ -64,30 +64,30 @@ The original `angular2-highcharts` package targeted early Angular releases and s
 
 | Package version | Angular version | Highcharts version | TypeScript version | Demo link |
 | :---: | :---: | :---: | :---: | :--- |
-| **21.0.0** | **21.2.x** | **12.5.x** | **5.9.x** | [Angular 21 demo](https://alexandroit.github.io/angular2-highcharts/angular-21/) |
-| **20.0.0** | **20.3.x** | **12.5.x** | **5.9.x** | [Angular 20 demo](https://alexandroit.github.io/angular2-highcharts/angular-20/) |
-| **19.0.0** | **19.2.x** | **12.5.x** | **5.8.x** | [Angular 19 demo](https://alexandroit.github.io/angular2-highcharts/angular-19/) |
-| **18.0.0** | **18.2.x** | **12.5.x** | **5.5.x** | [Angular 18 demo](https://alexandroit.github.io/angular2-highcharts/angular-18/) |
-| **17.0.0** | **17.3.x** | **12.5.x** | **5.4.x** | [Angular 17 demo](https://alexandroit.github.io/angular2-highcharts/angular-17/) |
-| **16.0.0** | **16.2.x** | **12.5.x** | **5.1.x** | [Angular 16 demo](https://alexandroit.github.io/angular2-highcharts/angular-16/) |
-| **15.0.0** | **15.2.x** | **12.5.x** | **4.9.x** | [Angular 15 demo](https://alexandroit.github.io/angular2-highcharts/angular-15/) |
-| **14.0.0** | **14.3.x** | **12.5.x** | **4.8.x** | [Angular 14 demo](https://alexandroit.github.io/angular2-highcharts/angular-14/) |
-| **13.0.0** | **13.4.x** | **12.5.x** | **4.6.x** | [Angular 13 demo](https://alexandroit.github.io/angular2-highcharts/angular-13/) |
-| **12.0.0** | **12.2.x** | **11.4.x** | **4.3.x** | [Angular 12 demo](https://alexandroit.github.io/angular2-highcharts/angular-12/) |
-| **11.0.0** | **11.2.x** | **9.3.x** | **4.1.x** | [Angular 11 demo](https://alexandroit.github.io/angular2-highcharts/angular-11/) |
-| **10.0.1** | **10.2.x** | **8.2.x** | **3.9.x** | [Angular 10 demo](https://alexandroit.github.io/angular2-highcharts/angular-10/) |
-| **9.0.0** | **9.1.x** | **8.2.x** | **3.8.x** | [Angular 9 demo](https://alexandroit.github.io/angular2-highcharts/angular-9/) |
-| **8.0.0** | **8.2.x** | **8.2.x** | **3.5.x** | [Angular 8 demo](https://alexandroit.github.io/angular2-highcharts/angular-8/) |
-| 7.0.x | 7.2.x | 7.2.x | 3.2.x | [Angular 7 demo](https://alexandroit.github.io/angular2-highcharts/angular-7/) |
-| 6.0.x | 6.1.x | 6.x | 2.7.x | [Angular 6 demo](https://alexandroit.github.io/angular2-highcharts/angular-6/) |
-| 5.0.x | 5.x | 6.x | 2.6.x | [Angular 5 demo](https://alexandroit.github.io/angular2-highcharts/angular-5/) |
-| 4.0.x | 4.4.x | 5.0.15 | 2.4.x | [Angular 4 demo](https://alexandroit.github.io/angular2-highcharts/angular-4/) |
+| **21.0.0** | **21.2.x** | **12.5.x** | **5.9.x** | [Angular 21 demo](https://alexandroit.github.io/angular-highcharts/angular-21/) |
+| **20.0.0** | **20.3.x** | **12.5.x** | **5.9.x** | [Angular 20 demo](https://alexandroit.github.io/angular-highcharts/angular-20/) |
+| **19.0.0** | **19.2.x** | **12.5.x** | **5.8.x** | [Angular 19 demo](https://alexandroit.github.io/angular-highcharts/angular-19/) |
+| **18.0.0** | **18.2.x** | **12.5.x** | **5.5.x** | [Angular 18 demo](https://alexandroit.github.io/angular-highcharts/angular-18/) |
+| **17.0.0** | **17.3.x** | **12.5.x** | **5.4.x** | [Angular 17 demo](https://alexandroit.github.io/angular-highcharts/angular-17/) |
+| **16.0.0** | **16.2.x** | **12.5.x** | **5.1.x** | [Angular 16 demo](https://alexandroit.github.io/angular-highcharts/angular-16/) |
+| **15.0.0** | **15.2.x** | **12.5.x** | **4.9.x** | [Angular 15 demo](https://alexandroit.github.io/angular-highcharts/angular-15/) |
+| **14.0.0** | **14.3.x** | **12.5.x** | **4.8.x** | [Angular 14 demo](https://alexandroit.github.io/angular-highcharts/angular-14/) |
+| **13.0.0** | **13.4.x** | **12.5.x** | **4.6.x** | [Angular 13 demo](https://alexandroit.github.io/angular-highcharts/angular-13/) |
+| **12.0.0** | **12.2.x** | **11.4.x** | **4.3.x** | [Angular 12 demo](https://alexandroit.github.io/angular-highcharts/angular-12/) |
+| **11.0.0** | **11.2.x** | **9.3.x** | **4.1.x** | [Angular 11 demo](https://alexandroit.github.io/angular-highcharts/angular-11/) |
+| **10.0.1** | **10.2.x** | **8.2.x** | **3.9.x** | [Angular 10 demo](https://alexandroit.github.io/angular-highcharts/angular-10/) |
+| **9.0.0** | **9.1.x** | **8.2.x** | **3.8.x** | [Angular 9 demo](https://alexandroit.github.io/angular-highcharts/angular-9/) |
+| **8.0.0** | **8.2.x** | **8.2.x** | **3.5.x** | [Angular 8 demo](https://alexandroit.github.io/angular-highcharts/angular-8/) |
+| 7.0.x | 7.2.x | 7.2.x | 3.2.x | [Angular 7 demo](https://alexandroit.github.io/angular-highcharts/angular-7/) |
+| 6.0.x | 6.1.x | 6.x | 2.7.x | [Angular 6 demo](https://alexandroit.github.io/angular-highcharts/angular-6/) |
+| 5.0.x | 5.x | 6.x | 2.6.x | [Angular 5 demo](https://alexandroit.github.io/angular-highcharts/angular-5/) |
+| 4.0.x | 4.4.x | 5.0.15 | 2.4.x | [Angular 4 demo](https://alexandroit.github.io/angular-highcharts/angular-4/) |
 | 0.5.x | 2.4.x | 5.0.7 | 2.1.x | historical release line |
 
 ## Installation
 
 ```bash
-npm install @revivejs/angular2-highcharts highcharts
+npm install @revivejs/angular-highcharts highcharts
 ```
 
 ## Setup
@@ -97,7 +97,7 @@ npm install @revivejs/angular2-highcharts highcharts
 ```ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ChartModule } from '@revivejs/angular2-highcharts';
+import { ChartModule } from '@revivejs/angular-highcharts';
 
 declare var require: any;
 
@@ -120,7 +120,7 @@ If your application still uses SystemJS, add both packages to the map and packag
 
 ```js
 map: {
-  '@revivejs/angular2-highcharts': 'node_modules/@revivejs/angular2-highcharts',
+  '@revivejs/angular-highcharts': 'node_modules/@revivejs/angular-highcharts',
   'highcharts': 'node_modules/highcharts'
 },
 packages: {
@@ -128,7 +128,7 @@ packages: {
     main: './highcharts.js',
     defaultExtension: 'js'
   },
-  '@revivejs/angular2-highcharts': {
+  '@revivejs/angular-highcharts': {
     main: './index.js',
     defaultExtension: 'js'
   }

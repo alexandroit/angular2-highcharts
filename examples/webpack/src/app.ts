@@ -19,7 +19,7 @@ import { ChartModule } from '../../../index';
     selector: 'app',
 
     template: `
-        <h2>angular2-highcharts examples</h2>
+        <h2>angular-highcharts examples</h2>
         <simple-chart-example></simple-chart-example>
         <chart-events-example></chart-events-example>
         <stock-chart-example></stock-chart-example>
