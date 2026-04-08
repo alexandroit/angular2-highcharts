@@ -87,7 +87,7 @@ MIT
 MIT
 MIT
 
-@revivejs/angular-highcharts@6.0.4
+@stackline/angular-highcharts@6.0.4
 MIT
 The MIT License (MIT)
 
