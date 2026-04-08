@@ -1,5 +1,5 @@
 {
-  "name": "@revivejs/angular-highcharts-docs-angular6",
+  "name": "@stackline/angular-highcharts-docs-angular6",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -15,7 +15,7 @@
     "@angular/http": "^6.1.10",
     "@angular/platform-browser": "^6.1.10",
     "@angular/platform-browser-dynamic": "^6.1.10",
-    "@revivejs/angular-highcharts": "^6.0.4",
+    "@stackline/angular-highcharts": "^6.0.4",
     "core-js": "^2.4.1",
     "highcharts": "^6.0.0",
     "rxjs": "6.2.2",

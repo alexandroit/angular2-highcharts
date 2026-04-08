@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-import { ChartModule } from '@revivejs/angular-highcharts';
+import { ChartModule } from '@stackline/angular-highcharts';
 
 @NgModule({
   declarations: [

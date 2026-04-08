@@ -1,5 +1,5 @@
 {
-  "name": "@revivejs/angular-highcharts-docs-angular13",
+  "name": "@stackline/angular-highcharts-docs-angular13",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "@angular/forms": "^13.4.0",
     "@angular/platform-browser": "^13.4.0",
     "@angular/platform-browser-dynamic": "^13.4.0",
-    "@revivejs/angular-highcharts": "^13.0.0",
+    "@stackline/angular-highcharts": "^13.0.0",
     "core-js": "^2.6.12",
     "highcharts": "^12.5.0",
     "rxjs": "^7.4.0",

@@ -1,5 +1,5 @@
 {
-  "name": "@revivejs/angular-highcharts",
+  "name": "@stackline/angular-highcharts",
   "version": "21.0.1",
   "description": "Angular wrapper components for Highcharts, Highstock, Highmaps, zAxis, and colorAxis integrations",
   "main": "dist/fesm2022/revivejs-angular-highcharts.mjs",
@@ -155,7 +155,7 @@
   },
   "homepage": "https://alexandroit.github.io/angular-highcharts/",
   "peerDependencies": {
-    "@angular/core": ">=4.0.0 <22.0.0",
+    "@angular/core": ">=21.0.0 <22.0.0",
     "highcharts": ">=5.0.0"
   },
   "devDependencies": {

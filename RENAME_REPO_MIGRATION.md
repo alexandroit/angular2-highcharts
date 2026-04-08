@@ -4,15 +4,15 @@ This branch and npm package are ready for the renamed line:
 
 - Branch: `replay/angular-highcharts`
 - Latest commit: `d0149e0`
-- Published package: `@revivejs/angular-highcharts@21.0.0`
+- Published package: `@stackline/angular-highcharts@21.0.0`
 
 ## Current Status
 
 What is already done:
 
 - Full replay from the Angular 4 baseline through Angular 21 on a dedicated branch
-- Global package rename from `@revivejs/angular2-highcharts` to `@revivejs/angular-highcharts`
-- Published npm package `@revivejs/angular-highcharts@21.0.0`
+- Global package rename from `@stackline/angular2-highcharts` to `@stackline/angular-highcharts`
+- Published npm package `@stackline/angular-highcharts@21.0.0`
 - All versioned demos under `docs-src/angular-4` through `docs-src/angular-21` now reference the renamed package
 - Generated docs under `docs/angular-4` through `docs/angular-21` now use the renamed package and GitHub Pages base path
 
@@ -43,7 +43,7 @@ Do not treat the migration as fully complete until the repository and Pages site
 5. Re-check `README.md`, badges, issue links, and live demo links after Pages is live.
 6. Recreate semantic release tags in the new repository for the replayed history.
 7. Decide whether the old `angular2-highcharts` repository should stay active, redirect, or be archived.
-8. Optionally deprecate `@revivejs/angular2-highcharts` on npm with a message pointing to `@revivejs/angular-highcharts`.
+8. Optionally deprecate `@stackline/angular2-highcharts` on npm with a message pointing to `@stackline/angular-highcharts`.
 
 ## Suggested Git Commands
 

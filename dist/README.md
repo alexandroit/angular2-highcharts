@@ -1,16 +1,16 @@
-# @revivejs/angular-highcharts
+# @stackline/angular-highcharts
 
 > A maintained **Angular 21 wrapper for Highcharts** with support for standard charts, `StockChart`, `Highmaps`, wrapper event outputs, native chart instance access, and Angular directives for `xAxis`, `yAxis`, `zAxis`, and `colorAxis`.
 
-[![npm version](https://img.shields.io/npm/v/@revivejs/angular-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular-highcharts)
-[![npm downloads](https://img.shields.io/npm/dt/@revivejs/angular-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular-highcharts)
-[![npm monthly](https://img.shields.io/npm/dm/@revivejs/angular-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular-highcharts)
-[![license](https://img.shields.io/npm/l/@revivejs/angular-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular-highcharts/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@stackline/angular-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/angular-highcharts)
+[![npm downloads](https://img.shields.io/npm/dt/@stackline/angular-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/angular-highcharts)
+[![npm monthly](https://img.shields.io/npm/dm/@stackline/angular-highcharts.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/angular-highcharts)
+[![license](https://img.shields.io/npm/l/@stackline/angular-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular-highcharts/blob/master/LICENSE)
 [![Angular 21](https://img.shields.io/badge/Angular-21-red?style=flat-square&logo=angular)](https://angular.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 [![GitHub stars](https://img.shields.io/github/stars/alexandroit/angular-highcharts.svg?style=flat-square)](https://github.com/alexandroit/angular-highcharts/stargazers)
 
-**[Documentation & Live Demos](https://alexandroit.github.io/angular-highcharts/)** | **[npm](https://www.npmjs.com/package/@revivejs/angular-highcharts)** | **[Issues](https://github.com/alexandroit/angular-highcharts/issues)** | **[Repository](https://github.com/alexandroit/angular-highcharts)**
+**[Documentation & Live Demos](https://alexandroit.github.io/angular-highcharts/)** | **[npm](https://www.npmjs.com/package/@stackline/angular-highcharts)** | **[Issues](https://github.com/alexandroit/angular-highcharts/issues)** | **[Repository](https://github.com/alexandroit/angular-highcharts)**
 
 **Latest version:** `21.0.1`
 
@@ -62,33 +62,37 @@ The original `angular2-highcharts` package targeted early Angular releases and s
 
 ## Angular Version Compatibility
 
-| Package version | Angular version | Highcharts version | TypeScript version | Demo link |
+Each package family only installs on its matching Angular family. Framework major and package major are not always the same package number, so use the package family column below.
+
+| Package family | Framework family | Peer range | Tested release window | Demo link |
 | :---: | :---: | :---: | :---: | :--- |
-| **21.0.1** | **21.2.x** | **12.5.x** | **5.9.x** | [Angular 21 demo](https://alexandroit.github.io/angular-highcharts/angular-21/) |
-| **20.0.0** | **20.3.x** | **12.5.x** | **5.9.x** | [Angular 20 demo](https://alexandroit.github.io/angular-highcharts/angular-20/) |
-| **19.0.0** | **19.2.x** | **12.5.x** | **5.8.x** | [Angular 19 demo](https://alexandroit.github.io/angular-highcharts/angular-19/) |
-| **18.0.0** | **18.2.x** | **12.5.x** | **5.5.x** | [Angular 18 demo](https://alexandroit.github.io/angular-highcharts/angular-18/) |
-| **17.0.0** | **17.3.x** | **12.5.x** | **5.4.x** | [Angular 17 demo](https://alexandroit.github.io/angular-highcharts/angular-17/) |
-| **16.0.0** | **16.2.x** | **12.5.x** | **5.1.x** | [Angular 16 demo](https://alexandroit.github.io/angular-highcharts/angular-16/) |
-| **15.0.0** | **15.2.x** | **12.5.x** | **4.9.x** | [Angular 15 demo](https://alexandroit.github.io/angular-highcharts/angular-15/) |
-| **14.0.0** | **14.3.x** | **12.5.x** | **4.8.x** | [Angular 14 demo](https://alexandroit.github.io/angular-highcharts/angular-14/) |
-| **13.0.0** | **13.4.x** | **12.5.x** | **4.6.x** | [Angular 13 demo](https://alexandroit.github.io/angular-highcharts/angular-13/) |
-| **12.0.0** | **12.2.x** | **11.4.x** | **4.3.x** | [Angular 12 demo](https://alexandroit.github.io/angular-highcharts/angular-12/) |
-| **11.0.0** | **11.2.x** | **9.3.x** | **4.1.x** | [Angular 11 demo](https://alexandroit.github.io/angular-highcharts/angular-11/) |
-| **10.0.1** | **10.2.x** | **8.2.x** | **3.9.x** | [Angular 10 demo](https://alexandroit.github.io/angular-highcharts/angular-10/) |
-| **9.0.0** | **9.1.x** | **8.2.x** | **3.8.x** | [Angular 9 demo](https://alexandroit.github.io/angular-highcharts/angular-9/) |
-| **8.0.0** | **8.2.x** | **8.2.x** | **3.5.x** | [Angular 8 demo](https://alexandroit.github.io/angular-highcharts/angular-8/) |
-| 7.0.x | 7.2.x | 7.2.x | 3.2.x | [Angular 7 demo](https://alexandroit.github.io/angular-highcharts/angular-7/) |
-| 6.0.x | 6.1.x | 6.x | 2.7.x | [Angular 6 demo](https://alexandroit.github.io/angular-highcharts/angular-6/) |
-| 5.0.x | 5.x | 6.x | 2.6.x | [Angular 5 demo](https://alexandroit.github.io/angular-highcharts/angular-5/) |
-| 4.0.x | 4.4.x | 5.0.15 | 2.4.x | [Angular 4 demo](https://alexandroit.github.io/angular-highcharts/angular-4/) |
-| 0.5.x | 2.4.x | 5.0.7 | 2.1.x | historical release line |
+| **21.x** | **Angular 21 only** | **`>=21.0.0 <22.0.0`** | **21.0.0 -> 21.2.8** | [Angular 21 family docs](https://alexandroit.github.io/angular-highcharts/angular-21/) |
+| **20.x** | **Angular 20 only** | **`>=20.0.0 <21.0.0`** | **20.0.0 -> 20.3.18** | [Angular 20 family docs](https://alexandroit.github.io/angular-highcharts/angular-20/) |
+| **19.x** | **Angular 19 only** | **`>=19.0.0 <20.0.0`** | **19.0.0 -> 19.2.20** | [Angular 19 family docs](https://alexandroit.github.io/angular-highcharts/angular-19/) |
+| **18.x** | **Angular 18 only** | **`>=18.0.0 <19.0.0`** | **18.0.0 -> 18.2.14** | [Angular 18 family docs](https://alexandroit.github.io/angular-highcharts/angular-18/) |
+| **17.x** | **Angular 17 only** | **`>=17.0.0 <18.0.0`** | **17.0.0 -> 17.3.12** | [Angular 17 family docs](https://alexandroit.github.io/angular-highcharts/angular-17/) |
+| **16.x** | **Angular 16 only** | **`>=16.0.0 <17.0.0`** | **16.0.0 -> 16.2.12** | [Angular 16 family docs](https://alexandroit.github.io/angular-highcharts/angular-16/) |
+| **15.x** | **Angular 15 only** | **`>=15.0.0 <16.0.0`** | **15.0.0 -> 15.2.10** | [Angular 15 family docs](https://alexandroit.github.io/angular-highcharts/angular-15/) |
+| **14.x** | **Angular 14 only** | **`>=14.0.0 <15.0.0`** | **14.0.0 -> 14.3.0** | [Angular 14 family docs](https://alexandroit.github.io/angular-highcharts/angular-14/) |
+| **13.x** | **Angular 13 only** | **`>=13.0.0 <14.0.0`** | **13.0.0 -> 13.4.0** | [Angular 13 family docs](https://alexandroit.github.io/angular-highcharts/angular-13/) |
+| **12.x** | **Angular 12 only** | **`>=12.0.0 <13.0.0`** | **12.0.0 -> 12.2.17** | [Angular 12 family docs](https://alexandroit.github.io/angular-highcharts/angular-12/) |
+| **11.x** | **Angular 11 only** | **`>=11.0.0 <12.0.0`** | **11.0.0 -> 11.2.14** | [Angular 11 family docs](https://alexandroit.github.io/angular-highcharts/angular-11/) |
+| **10.x** | **Angular 10 only** | **`>=10.0.0 <11.0.0`** | **10.0.0 -> 10.2.5** | [Angular 10 family docs](https://alexandroit.github.io/angular-highcharts/angular-10/) |
+| **9.x** | **Angular 9 only** | **`>=9.0.0 <10.0.0`** | **9.0.0 -> 9.1.13** | [Angular 9 family docs](https://alexandroit.github.io/angular-highcharts/angular-9/) |
+| **8.x** | **Angular 8 only** | **`>=8.0.0 <9.0.0`** | **8.0.0 -> 8.2.14** | [Angular 8 family docs](https://alexandroit.github.io/angular-highcharts/angular-8/) |
+| **7.x** | **Angular 7 only** | **`>=7.0.0 <8.0.0`** | **7.0.0 -> 7.2.16** | [Angular 7 family docs](https://alexandroit.github.io/angular-highcharts/angular-7/) |
+| **6.x** | **Angular 6 only** | **`>=6.0.0 <7.0.0`** | **6.0.0 -> 6.1.10** | [Angular 6 family docs](https://alexandroit.github.io/angular-highcharts/angular-6/) |
+| **5.x** | **Angular 5 only** | **`>=5.0.0 <6.0.0`** | **5.0.0 -> 5.2.11** | [Angular 5 family docs](https://alexandroit.github.io/angular-highcharts/angular-5/) |
+| **4.x** | **Angular 4 only** | **`>=4.0.0 <5.0.0`** | **4.0.0 -> 4.4.7** | [Angular 4 family docs](https://alexandroit.github.io/angular-highcharts/angular-4/) |
+
 
 ## Installation
 
 ```bash
-npm install @revivejs/angular-highcharts highcharts
+npm install @stackline/angular-highcharts highcharts
 ```
+
+Choose the package family from the compatibility table above. Each published family is locked to one framework major only.
 
 ## Setup
 
@@ -97,7 +101,7 @@ npm install @revivejs/angular-highcharts highcharts
 ```ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ChartModule } from '@revivejs/angular-highcharts';
+import { ChartModule } from '@stackline/angular-highcharts';
 
 declare var require: any;
 
@@ -120,7 +124,7 @@ If your application still uses SystemJS, add both packages to the map and packag
 
 ```js
 map: {
-  '@revivejs/angular-highcharts': 'node_modules/@revivejs/angular-highcharts',
+  '@stackline/angular-highcharts': 'node_modules/@stackline/angular-highcharts',
   'highcharts': 'node_modules/highcharts'
 },
 packages: {
@@ -128,7 +132,7 @@ packages: {
     main: './highcharts.js',
     defaultExtension: 'js'
   },
-  '@revivejs/angular-highcharts': {
+  '@stackline/angular-highcharts': {
     main: './index.js',
     defaultExtension: 'js'
   }
@@ -374,12 +378,12 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 21.0.1 (Angular 21)
 - Bumped package version to 21.0.1
-- Backfilled the renamed npm package history so `@revivejs/angular-highcharts` now mirrors the historical release tree from `4.0.0` through `21.0.0`
+- Backfilled the renamed npm package history so `@stackline/angular-highcharts` now mirrors the historical release tree from `4.0.0` through `21.0.0`
 - Kept `21.0.1` as the current latest release for the renamed package line
 
 ### 21.0.0 (Angular 21)
 - Bumped package version to 21.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <22.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=21.0.0 <22.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular `^21.2.7`, Angular CLI `21.2.6`, TypeScript `~5.9.3`, zone.js `~0.16.1`, and ng-packagr `^21.2.2`
 - Kept Highcharts at `^12.5.0`, the latest supportable line for the frozen `ChartModule.forRoot(Highcharts, ...modules)` contract
 - Carried forward the Highcharts 12 demos for `point-and-figure`, `renko`, `locale-aware-formatting`, and `human-friendly-dates`
@@ -388,7 +392,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 20.0.0 (Angular 20)
 - Bumped package version to 20.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <21.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=20.0.0 <21.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular `^20.3.18`, Angular CLI `20.3.22`, TypeScript `~5.9.3`, and ng-packagr `^20.3.2`
 - Kept Highcharts at `^12.5.0`, the latest supportable line for the frozen `ChartModule.forRoot(Highcharts, ...modules)` contract
 - Carried forward the Highcharts 12 demos for `point-and-figure`, `renko`, `locale-aware-formatting`, and `human-friendly-dates`
@@ -397,7 +401,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 19.0.0 (Angular 19)
 - Bumped package version to 19.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <20.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=19.0.0 <20.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular `^19.2.20`, Angular CLI `19.2.23`, TypeScript `~5.8.3`, and ng-packagr `^19.2.2`
 - Kept Highcharts at `^12.5.0`, the latest supportable line for the frozen `ChartModule.forRoot(Highcharts, ...modules)` contract
 - Carried forward the Highcharts 12 demos for `point-and-figure`, `renko`, `locale-aware-formatting`, and `human-friendly-dates`
@@ -406,7 +410,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 18.0.0 (Angular 18)
 - Bumped package version to 18.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <19.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=18.0.0 <19.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular `^18.2.14`, Angular CLI `18.2.21`, TypeScript `~5.5.4`, and ng-packagr `^18.2.1`
 - Kept Highcharts at `^12.5.0`, the latest supportable line for the frozen `ChartModule.forRoot(Highcharts, ...modules)` contract
 - Carried forward the Highcharts 12 demos for `point-and-figure`, `renko`, `locale-aware-formatting`, and `human-friendly-dates`
@@ -414,7 +418,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 17.0.0 (Angular 17)
 - Bumped package version to 17.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <18.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=17.0.0 <18.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular `^17.3.12`, Angular CLI `17.3.17`, TypeScript `~5.4.5`, and ng-packagr `^17.3.0`
 - Kept Highcharts at `^12.5.0`, the latest supportable line for the frozen `ChartModule.forRoot(Highcharts, ...modules)` contract
 - Carried forward the Highcharts 12 demos for `point-and-figure`, `renko`, `locale-aware-formatting`, and `human-friendly-dates`
@@ -422,7 +426,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 16.0.0 (Angular 16)
 - Bumped package version to 16.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <17.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=16.0.0 <17.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular `^16.2.12`, Angular CLI `16.2.16`, TypeScript `~5.1.6`, and ng-packagr `^16.2.3`
 - Kept Highcharts at `^12.5.0`, the latest supportable line for the frozen `ChartModule.forRoot(Highcharts, ...modules)` contract
 - Carried forward the Highcharts 12 demos for `point-and-figure`, `renko`, `locale-aware-formatting`, and `human-friendly-dates`
@@ -430,7 +434,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 15.0.0 (Angular 15)
 - Bumped package version to 15.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <16.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=15.0.0 <16.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular `^15.2.10`, Angular CLI `15.2.11`, TypeScript `~4.9.5`, and ng-packagr `^15.2.2`
 - Kept Highcharts at `^12.5.0`, the latest supportable line for the frozen `ChartModule.forRoot(Highcharts, ...modules)` contract
 - Carried forward the Highcharts 12 demos for `point-and-figure`, `renko`, `locale-aware-formatting`, and `human-friendly-dates`
@@ -438,7 +442,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 14.0.0 (Angular 14)
 - Bumped package version to 14.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <15.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=14.0.0 <15.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular `^14.3.0`, Angular CLI `14.2.13`, TypeScript `~4.8.4`, and ng-packagr `^14.2.2`
 - Kept Highcharts at `^12.5.0`, the latest supportable line for the frozen `ChartModule.forRoot(Highcharts, ...modules)` contract
 - Carried forward the Highcharts 12 demos for `point-and-figure`, `renko`, `locale-aware-formatting`, and `human-friendly-dates`
@@ -446,7 +450,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 13.0.0 (Angular 13)
 - Bumped package version to 13.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <14.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=13.0.0 <14.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular `^13.4.0`, Angular CLI `13.3.11`, TypeScript `~4.6.4`, and ng-packagr `^13.3.1`
 - Upgraded Highcharts to `^12.5.0`, the latest supportable line for the frozen `ChartModule.forRoot(Highcharts, ...modules)` contract
 - Added demos for `point-and-figure`, `renko`, `locale-aware-formatting`, and `human-friendly-dates`
@@ -454,7 +458,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 12.0.0 (Angular 12)
 - Bumped package version to 12.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <13.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=12.0.0 <13.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular `^12.2.17`, Angular CLI `12.2.18`, TypeScript `~4.3.5`, and ng-packagr `^12.2.7`
 - Upgraded Highcharts to `^11.4.8`, the latest supportable line that keeps the frozen `ChartModule.forRoot(Highcharts, ...modules)` module-factory contract intact
 - Added demos for `breadcrumbs`, `align-thresholds`, `organization-layout`, `arc-diagram`, `treegraph`, and `minor-ticks-per-major`
@@ -462,7 +466,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 11.0.0 (Angular 11)
 - Bumped package version to 11.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <12.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=11.0.0 <12.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular `^11.2.14`, Angular CLI `11.2.19`, TypeScript `~4.1.6`, and ng-packagr `^11.2.4`
 - Upgraded Highcharts to `^9.3.3` and added demos for `3d-area`, `single-touch-zoom`, `hlc`, `node-offsets`, and `annotations-crop`
 - Kept the wrapper public API unchanged for Angular 11 and Ivy consumers
@@ -473,14 +477,14 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 10.0.0 (Angular 10)
 - Bumped package version to 10.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <11.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=10.0.0 <11.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular ^10.2.5 and TypeScript ~3.9.7
 - Kept the library on Highcharts ^8.2.2 because it remains the latest supportable Highcharts line for this Angular 10 cycle
 - No wrapper API changes were required; the frozen selectors, inputs, outputs, and `ChartModule.forRoot(...)` signature remain unchanged
 
 ### 9.0.0 (Angular 9)
 - Bumped package version to 9.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <10.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=9.0.0 <10.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular ^9.1.13 and TypeScript ~3.8.3
 - Added Angular 9 Ivy compatibility by typing `ModuleWithProviders<ChartModule>`
 - Kept the library on Highcharts ^8.2.2 because it remains the latest supportable Highcharts line for this Angular 9 cycle
@@ -488,7 +492,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 8.0.0 (Angular 8)
 - Bumped package version to 8.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <9.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=8.0.0 <9.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular ^8.2.14 and TypeScript ~3.5.3
 - Updated the library to use Highcharts ^8.2.2 with bundled TypeScript definitions
 - Added Angular 8 compatibility by marking `@ContentChild(...)` queries with `{ static: false }`
@@ -501,7 +505,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 7.0.0 (Angular 7)
 - Bumped package version to 7.0.0
-- Updated peerDependencies to `@angular/core >=4.0.0 <8.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=7.0.0 <8.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular ^7.2.16 and TypeScript ~3.2.4
 - Updated the library to use Highcharts ^7.2.2 with bundled typings
 - Removed `@types/highcharts` because Highcharts 7 ships its own TypeScript definitions
@@ -528,7 +532,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 6.0.1 (Angular 6)
 - Bumped package version to 6.0.1
-- Updated peerDependencies to `@angular/core >=4.0.0 <7.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=6.0.0 <7.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular ^6.1.10 and TypeScript ~2.7.2
 - Migrated the library build to `ng-packagr` for Angular Package Format output
 - Added Highcharts 6 demos for **bullet chart** and **x-range chart**
@@ -537,7 +541,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 
 ### 5.0.2 (Angular 5)
 - Bumped package version to 5.0.2
-- Updated peerDependencies to `@angular/core >=4.0.0 <6.0.0` and `highcharts >=5.0.0`
+- Updated peerDependencies to `@angular/core >=5.0.0 <6.0.0` and `highcharts >=5.0.0`
 - Updated devDependencies to Angular ^5.2.11, TypeScript ~2.6.2, Highcharts ^6.0.0
 - Added `@angular/cli 1.7.4` for demo app builds
 - Added Highcharts 6 new feature demos: **bullet chart**, **x-range chart**
@@ -546,7 +550,7 @@ The package major follows Angular major compatibility, but the wrapper API is in
 - Updated `docs/index.html` to redirect to Angular 5 and list Angular 4 as previous version
 
 ### 4.0.0 (Angular 4)
-- Initial release under `@revivejs` scope
+- Initial release under `@stackline` scope
 - Angular 4 + Highcharts 5 support
 - Components: `<chart>`, `<series>`, `<point>`, `<xAxis>`, `<yAxis>`, `<zAxis>`, `<colorAxis>`
 - `ChartModule.forRoot(Highcharts, ...modules)` API

@@ -1,0 +1,25 @@
+{
+  "name": "@stackline/angular-highcharts-docs-angular4-4-2-0",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "validate": "node ./stackline-validate.mjs"
+  },
+  "dependencies": {
+    "@angular/common": "4.2.0",
+    "@angular/compiler": "4.2.0",
+    "@angular/core": "4.2.0",
+    "@angular/forms": "4.2.0",
+    "@angular/http": "4.2.0",
+    "@angular/platform-browser": "4.2.0",
+    "@angular/platform-browser-dynamic": "4.2.0",
+    "@stackline/angular-highcharts": "file:../../../dist",
+    "core-js": "^2.4.1",
+    "highcharts": "^5.0.15",
+    "rxjs": "5.5.12",
+    "zone.js": "0.8.29"
+  },
+  "devDependencies": {
+    "typescript": "2.9.2"
+  }
+}

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 // Step 1: import ChartModule from the installed npm package
-import { ChartModule } from '@revivejs/angular-highcharts';
+import { ChartModule } from '@stackline/angular-highcharts';
 
 // Step 2: import Highcharts (highstock bundle includes Chart + StockChart)
 import * as Highcharts from 'highcharts/highstock';

@@ -1,5 +1,5 @@
 {
-  "name": "@revivejs/angular-highcharts-docs-angular9",
+  "name": "@stackline/angular-highcharts-docs-angular9",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "@angular/forms": "^9.1.13",
     "@angular/platform-browser": "^9.1.13",
     "@angular/platform-browser-dynamic": "^9.1.13",
-    "@revivejs/angular-highcharts": "^9.0.0",
+    "@stackline/angular-highcharts": "^9.0.0",
     "core-js": "^2.6.12",
     "highcharts": "^8.2.2",
     "rxjs": "^6.5.3",
