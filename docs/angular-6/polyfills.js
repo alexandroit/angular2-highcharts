@@ -6251,10 +6251,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-6/src/polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! /storage/data/github/stackline/angular2-highcharts/angular2-highcharts/docs-src/angular-6/src/polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })
 
 },[[1,"runtime"]]]);
-//# sourceMappingURL=polyfills.js.map

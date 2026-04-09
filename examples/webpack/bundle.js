@@ -3290,7 +3290,7 @@
 	        typeof self !== "undefined" ? self :
 	            Function("return this;")());
 	})(Reflect || (Reflect = {}));
-	//# sourceMappingURL=Reflect.js.map
+	
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
@@ -16097,7 +16097,7 @@
 	}
 	exports.getSymbolObservable = getSymbolObservable;
 	exports.$$observable = getSymbolObservable(root_1.root);
-	//# sourceMappingURL=observable.js.map
+	
 
 /***/ },
 /* 6 */
@@ -16115,7 +16115,7 @@
 	if (!exports.root) {
 	    throw new Error('RxJS could not find any global context (window, self, global)');
 	}
-	//# sourceMappingURL=root.js.map
+	
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
@@ -16289,7 +16289,7 @@
 	    return AnonymousSubject;
 	}(Subject));
 	exports.AnonymousSubject = AnonymousSubject;
-	//# sourceMappingURL=Subject.js.map
+	
 
 /***/ },
 /* 8 */
@@ -16433,7 +16433,7 @@
 	    return Observable;
 	}());
 	exports.Observable = Observable;
-	//# sourceMappingURL=Observable.js.map
+	
 
 /***/ },
 /* 9 */
@@ -16458,7 +16458,7 @@
 	    return new Subscriber_1.Subscriber(nextOrObserver, error, complete);
 	}
 	exports.toSubscriber = toSubscriber;
-	//# sourceMappingURL=toSubscriber.js.map
+	
 
 /***/ },
 /* 10 */
@@ -16712,7 +16712,7 @@
 	    };
 	    return SafeSubscriber;
 	}(Subscriber));
-	//# sourceMappingURL=Subscriber.js.map
+	
 
 /***/ },
 /* 11 */
@@ -16723,7 +16723,7 @@
 	    return typeof x === 'function';
 	}
 	exports.isFunction = isFunction;
-	//# sourceMappingURL=isFunction.js.map
+	
 
 /***/ },
 /* 12 */
@@ -16906,7 +16906,7 @@
 	function flattenUnsubscriptionErrors(errors) {
 	    return errors.reduce(function (errs, err) { return errs.concat((err instanceof UnsubscriptionError_1.UnsubscriptionError) ? err.errors : err); }, []);
 	}
-	//# sourceMappingURL=Subscription.js.map
+	
 
 /***/ },
 /* 13 */
@@ -16914,7 +16914,7 @@
 
 	"use strict";
 	exports.isArray = Array.isArray || (function (x) { return x && typeof x.length === 'number'; });
-	//# sourceMappingURL=isArray.js.map
+	
 
 /***/ },
 /* 14 */
@@ -16925,7 +16925,7 @@
 	    return x != null && typeof x === 'object';
 	}
 	exports.isObject = isObject;
-	//# sourceMappingURL=isObject.js.map
+	
 
 /***/ },
 /* 15 */
@@ -16949,7 +16949,7 @@
 	}
 	exports.tryCatch = tryCatch;
 	;
-	//# sourceMappingURL=tryCatch.js.map
+	
 
 /***/ },
 /* 16 */
@@ -16958,7 +16958,7 @@
 	"use strict";
 	// typeof any so that it we don't have to cast when comparing a result to the error object
 	exports.errorObject = { e: {} };
-	//# sourceMappingURL=errorObject.js.map
+	
 
 /***/ },
 /* 17 */
@@ -16988,7 +16988,7 @@
 	    return UnsubscriptionError;
 	}(Error));
 	exports.UnsubscriptionError = UnsubscriptionError;
-	//# sourceMappingURL=UnsubscriptionError.js.map
+	
 
 /***/ },
 /* 18 */
@@ -17001,7 +17001,7 @@
 	    error: function (err) { throw err; },
 	    complete: function () { }
 	};
-	//# sourceMappingURL=Observer.js.map
+	
 
 /***/ },
 /* 19 */
@@ -17012,7 +17012,7 @@
 	var Symbol = root_1.root.Symbol;
 	exports.$$rxSubscriber = (typeof Symbol === 'function' && typeof Symbol.for === 'function') ?
 	    Symbol.for('rxSubscriber') : '@@rxSubscriber';
-	//# sourceMappingURL=rxSubscriber.js.map
+	
 
 /***/ },
 /* 20 */
@@ -17044,7 +17044,7 @@
 	    return ObjectUnsubscribedError;
 	}(Error));
 	exports.ObjectUnsubscribedError = ObjectUnsubscribedError;
-	//# sourceMappingURL=ObjectUnsubscribedError.js.map
+	
 
 /***/ },
 /* 21 */
@@ -17089,7 +17089,7 @@
 	    return SubjectSubscription;
 	}(Subscription_1.Subscription));
 	exports.SubjectSubscription = SubjectSubscription;
-	//# sourceMappingURL=SubjectSubscription.js.map
+	
 
 /***/ },
 /* 22 */
@@ -86227,7 +86227,7 @@
 	], ChartModule);
 	exports.ChartModule = ChartModule;
 	var ChartModule_1;
-	//# sourceMappingURL=index.js.map
+	
 
 /***/ },
 /* 37 */
@@ -86358,7 +86358,7 @@
 	    __metadata("design:paramtypes", [core_1.ElementRef, HighchartsService_1.HighchartsService])
 	], ChartComponent);
 	exports.ChartComponent = ChartComponent;
-	//# sourceMappingURL=ChartComponent.js.map
+	
 
 /***/ },
 /* 38 */
@@ -86431,7 +86431,7 @@
 	    })
 	], ChartSeriesComponent);
 	exports.ChartSeriesComponent = ChartSeriesComponent;
-	//# sourceMappingURL=ChartSeriesComponent.js.map
+	
 
 /***/ },
 /* 39 */
@@ -86494,7 +86494,7 @@
 	    })
 	], ChartPointComponent);
 	exports.ChartPointComponent = ChartPointComponent;
-	//# sourceMappingURL=ChartPointComponent.js.map
+	
 
 /***/ },
 /* 40 */
@@ -86547,7 +86547,7 @@
 	    })
 	], ChartXAxisComponent);
 	exports.ChartXAxisComponent = ChartXAxisComponent;
-	//# sourceMappingURL=ChartXAxisComponent.js.map
+	
 
 /***/ },
 /* 41 */
@@ -86600,7 +86600,7 @@
 	    })
 	], ChartYAxisComponent);
 	exports.ChartYAxisComponent = ChartYAxisComponent;
-	//# sourceMappingURL=ChartYAxisComponent.js.map
+	
 
 /***/ },
 /* 42 */
@@ -86627,7 +86627,7 @@
 	    core_1.Injectable()
 	], HighchartsService);
 	exports.HighchartsService = HighchartsService;
-	//# sourceMappingURL=HighchartsService.js.map
+	
 
 /***/ },
 /* 43 */
@@ -86653,7 +86653,7 @@
 	    return new Highcharts[type](opts);
 	}
 	exports.initChart = initChart;
-	//# sourceMappingURL=initChart.js.map
+	
 
 /***/ },
 /* 44 */
@@ -86713,7 +86713,7 @@
 	    return target;
 	}
 	exports.deepAssign = deepAssign;
-	//# sourceMappingURL=deepAssign.js.map
+	
 
 /***/ },
 /* 45 */
@@ -86821,7 +86821,7 @@
 	    return opts;
 	}
 	exports.createBaseOpts = createBaseOpts;
-	//# sourceMappingURL=createBaseOpts.js.map
+	
 
 /***/ },
 /* 46 */
@@ -86836,7 +86836,7 @@
 	    return ChartEvent;
 	}());
 	exports.ChartEvent = ChartEvent;
-	//# sourceMappingURL=ChartEvent.js.map
+	
 
 /***/ },
 /* 47 */

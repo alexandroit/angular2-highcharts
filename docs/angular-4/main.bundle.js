@@ -292,7 +292,6 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 
-//# sourceMappingURL=app.component.js.map
 
 /***/ }),
 
@@ -303,8 +302,8 @@ var AppComponent = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__revivejs_angular_highcharts__ = __webpack_require__("../../../../@stackline/angular-highcharts/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__revivejs_angular_highcharts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__revivejs_angular_highcharts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stackline_angular_highcharts__ = __webpack_require__("../../../../@stackline/angular-highcharts/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stackline_angular_highcharts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__stackline_angular_highcharts__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_highcharts_highstock__ = __webpack_require__("../../../../highcharts/highstock.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_highcharts_highstock___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_highcharts_highstock__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
@@ -332,7 +331,7 @@ var AppModule = (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 // Step 4: register ChartModule with forRoot, passing Highcharts and any extra modules
-                __WEBPACK_IMPORTED_MODULE_2__revivejs_angular_highcharts__["ChartModule"].forRoot(__WEBPACK_IMPORTED_MODULE_3_highcharts_highstock__, Highcharts3d, HighchartsHeatmap)
+                __WEBPACK_IMPORTED_MODULE_2__stackline_angular_highcharts__["ChartModule"].forRoot(__WEBPACK_IMPORTED_MODULE_3_highcharts_highstock__, Highcharts3d, HighchartsHeatmap)
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
         })
@@ -340,7 +339,6 @@ var AppModule = (function () {
     return AppModule;
 }());
 
-//# sourceMappingURL=app.module.js.map
 
 /***/ }),
 
@@ -352,7 +350,6 @@ var AppModule = (function () {
 var environment = {
     production: false
 };
-//# sourceMappingURL=environment.js.map
 
 /***/ }),
 
@@ -373,7 +370,6 @@ if (__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment *
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["enableProdMode"])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_3__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=main.js.map
 
 /***/ }),
 
@@ -386,4 +382,3 @@ module.exports = __webpack_require__("../../../../../src/main.ts");
 /***/ })
 
 },[0]);
-//# sourceMappingURL=main.bundle.js.map

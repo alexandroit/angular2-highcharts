@@ -1,14 +1,14 @@
 {
   "name": "@stackline/angular-highcharts",
-  "version": "21.0.0",
+  "version": "21.0.1",
   "description": "Angular wrapper components for Highcharts, Highstock, Highmaps, zAxis, and colorAxis integrations",
-  "main": "dist/fesm2022/revivejs-angular-highcharts.mjs",
-  "module": "fesm2022/revivejs-angular-highcharts.mjs",
-  "es2022": "dist/fesm2022/revivejs-angular-highcharts.mjs",
-  "esm2022": "dist/fesm2022/revivejs-angular-highcharts.mjs",
-  "fesm2022": "dist/fesm2022/revivejs-angular-highcharts.mjs",
-  "typings": "types/revivejs-angular-highcharts.d.ts",
-  "types": "dist/types/revivejs-angular-highcharts.d.ts",
+  "main": "dist/fesm2022/stackline-angular-highcharts.mjs",
+  "module": "fesm2022/stackline-angular-highcharts.mjs",
+  "es2022": "dist/fesm2022/stackline-angular-highcharts.mjs",
+  "esm2022": "dist/fesm2022/stackline-angular-highcharts.mjs",
+  "fesm2022": "dist/fesm2022/stackline-angular-highcharts.mjs",
+  "typings": "types/stackline-angular-highcharts.d.ts",
+  "types": "dist/types/stackline-angular-highcharts.d.ts",
   "sideEffects": false,
   "repository": {
     "type": "git",
@@ -112,7 +112,7 @@
   },
   "homepage": "https://alexandroit.github.io/angular-highcharts/",
   "peerDependencies": {
-    "@angular/core": ">=4.0.0 <22.0.0",
+    "@angular/core": ">=21.0.0 <22.0.0",
     "highcharts": ">=5.0.0"
   },
   "dependencies": {
@@ -123,8 +123,8 @@
       "default": "./package.json"
     },
     ".": {
-      "types": "./types/revivejs-angular-highcharts.d.ts",
-      "default": "./fesm2022/revivejs-angular-highcharts.mjs"
+      "types": "./types/stackline-angular-highcharts.d.ts",
+      "default": "./fesm2022/stackline-angular-highcharts.mjs"
     }
   },
   "type": "module"

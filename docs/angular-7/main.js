@@ -482,7 +482,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _revivejs_angular_highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @stackline/angular-highcharts */ "./node_modules/@stackline/angular-highcharts/dist/fesm2015/revivejs-angular-highcharts.js");
+/* harmony import */ var _stackline_angular_highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @stackline/angular-highcharts */ "./node_modules/@stackline/angular-highcharts/dist/fesm2015/stackline-angular-highcharts.js");
 /* harmony import */ var highcharts_highstock__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! highcharts/highstock */ "./node_modules/highcharts/highstock.js");
 /* harmony import */ var highcharts_highstock__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_highstock__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
@@ -518,7 +518,7 @@ AppModule = __decorate([
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
             // Step 4: register ChartModule with forRoot, passing Highcharts and any extra modules
-            _revivejs_angular_highcharts__WEBPACK_IMPORTED_MODULE_2__["ChartModule"].forRoot(highcharts_highstock__WEBPACK_IMPORTED_MODULE_3__, Highcharts3d, HighchartsHeatmap, HighchartsBullet, HighchartsXRange, HighchartsSankey, HighchartsOrganization, HighchartsDependencyWheel, HighchartsVenn, HighchartsTimeline)
+            _stackline_angular_highcharts__WEBPACK_IMPORTED_MODULE_2__["ChartModule"].forRoot(highcharts_highstock__WEBPACK_IMPORTED_MODULE_3__, Highcharts3d, HighchartsHeatmap, HighchartsBullet, HighchartsXRange, HighchartsSankey, HighchartsOrganization, HighchartsDependencyWheel, HighchartsVenn, HighchartsTimeline)
         ],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
     })
@@ -577,10 +577,9 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_0__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-7/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /storage/data/github/stackline/angular2-highcharts/angular2-highcharts/docs-src/angular-7/src/main.ts */"./src/main.ts");
 
 
 /***/ })
 
 },[[0,"runtime","vendor"]]]);
-//# sourceMappingURL=main.js.map

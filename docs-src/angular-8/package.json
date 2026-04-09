@@ -14,7 +14,7 @@
     "@angular/forms": "^8.2.14",
     "@angular/platform-browser": "^8.2.14",
     "@angular/platform-browser-dynamic": "^8.2.14",
-    "@stackline/angular-highcharts": "^8.0.0",
+    "@stackline/angular-highcharts": "file:../..",
     "core-js": "^2.6.12",
     "highcharts": "^8.2.2",
     "rxjs": "^6.4.0",

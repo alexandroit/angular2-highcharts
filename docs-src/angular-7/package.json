@@ -15,7 +15,7 @@
     "@angular/http": "^7.2.16",
     "@angular/platform-browser": "^7.2.16",
     "@angular/platform-browser-dynamic": "^7.2.16",
-    "@stackline/angular-highcharts": "^7.0.1",
+    "@stackline/angular-highcharts": "file:../..",
     "core-js": "^2.4.1",
     "highcharts": "^7.2.2",
     "rxjs": "6.6.7",

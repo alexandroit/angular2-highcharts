@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-10/src/styles.css */"OmL/");
+module.exports = __webpack_require__(/*! /storage/data/github/stackline/angular2-highcharts/angular2-highcharts/docs-src/angular-10/src/styles.css */"OmL/");
 
 
 /***/ }),
@@ -449,4 +449,3 @@ ___CSS_LOADER_EXPORT___.push([module.i, "html, body {\n  margin: 0;\n  min-heigh
 /***/ })
 
 },[[3,"runtime"]]]);
-//# sourceMappingURL=styles-es2015.js.map

@@ -190,8 +190,8 @@ module.exports = function (done, value) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-10/src/polyfills.ts */"hN/g");
-module.exports = __webpack_require__(/*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-10/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js */"LEsg");
+__webpack_require__(/*! /storage/data/github/stackline/angular2-highcharts/angular2-highcharts/docs-src/angular-10/src/polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! /storage/data/github/stackline/angular2-highcharts/angular2-highcharts/docs-src/angular-10/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js */"LEsg");
 
 
 /***/ }),
@@ -8950,4 +8950,3 @@ metadata.exp({ deleteMetadata: function deleteMetadata(metadataKey, target /* , 
 /***/ })
 
 },[[2,"runtime"]]]);
-//# sourceMappingURL=polyfills-es2015.js.map

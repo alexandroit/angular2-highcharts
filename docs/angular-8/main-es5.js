@@ -1010,7 +1010,7 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
     /* harmony import */
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-    var _revivejs_angular_highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @stackline/angular-highcharts */"./node_modules/@stackline/angular-highcharts/dist/fesm2015/revivejs-angular-highcharts.js");
+    var _stackline_angular_highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @stackline/angular-highcharts */"./node_modules/@stackline/angular-highcharts/dist/fesm2015/stackline-angular-highcharts.js");
     /* harmony import */
     var highcharts_highstock__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! highcharts/highstock */"./node_modules/highcharts/highstock.js");
     /* harmony import */
@@ -1054,7 +1054,7 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
       declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
       // Step 4: register ChartModule with forRoot, passing Highcharts and any extra modules
-      _revivejs_angular_highcharts__WEBPACK_IMPORTED_MODULE_2__["ChartModule"].forRoot(highcharts_highstock__WEBPACK_IMPORTED_MODULE_3__, Highcharts3d, HighchartsHeatmap, HighchartsBullet, HighchartsXRange, HighchartsSankey, HighchartsOrganization, HighchartsDependencyWheel, HighchartsVenn, HighchartsTimeline, HighchartsMarkerClusters)],
+      _stackline_angular_highcharts__WEBPACK_IMPORTED_MODULE_2__["ChartModule"].forRoot(highcharts_highstock__WEBPACK_IMPORTED_MODULE_3__, Highcharts3d, HighchartsHeatmap, HighchartsBullet, HighchartsXRange, HighchartsSankey, HighchartsOrganization, HighchartsDependencyWheel, HighchartsVenn, HighchartsTimeline, HighchartsMarkerClusters)],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
     })], AppModule);
 
@@ -1122,9 +1122,8 @@ function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = 
   /*! no static exports found */
   /***/
   function _(module, exports, __webpack_require__) {
-    module.exports = __webpack_require__(/*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-8/src/main.ts */"./src/main.ts");
+    module.exports = __webpack_require__(/*! /storage/data/github/stackline/angular2-highcharts/angular2-highcharts/docs-src/angular-8/src/main.ts */"./src/main.ts");
 
     /***/
   })
 }, [[0, "runtime", "vendor"]]]);
-//# sourceMappingURL=main-es5.js.map

@@ -464,9 +464,8 @@
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-9/src/styles.css */
+    /*! /storage/data/github/stackline/angular2-highcharts/angular2-highcharts/docs-src/angular-9/src/styles.css */
     "./src/styles.css");
     /***/
   }
 }, [[3, "runtime"]]]);
-//# sourceMappingURL=styles-es5.js.map

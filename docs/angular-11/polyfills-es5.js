@@ -450,7 +450,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       __webpack_require__(
-      /*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-11/node_modules/@angular-devkit/build-angular/src/webpack/es5-polyfills.js */
+      /*! /storage/data/github/stackline/angular2-highcharts/angular2-highcharts/docs-src/angular-11/node_modules/@angular-devkit/build-angular/src/webpack/es5-polyfills.js */
       "voQr");
 
       __webpack_require__(
@@ -458,15 +458,15 @@
       "R0gw");
 
       __webpack_require__(
-      /*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-11/node_modules/@angular-devkit/build-angular/src/webpack/jit-polyfills.js */
+      /*! /storage/data/github/stackline/angular2-highcharts/angular2-highcharts/docs-src/angular-11/node_modules/@angular-devkit/build-angular/src/webpack/jit-polyfills.js */
       "rZy+");
 
       __webpack_require__(
-      /*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-11/node_modules/@angular-devkit/build-angular/src/webpack/es5-jit-polyfills.js */
+      /*! /storage/data/github/stackline/angular2-highcharts/angular2-highcharts/docs-src/angular-11/node_modules/@angular-devkit/build-angular/src/webpack/es5-jit-polyfills.js */
       "aYjs");
 
       module.exports = __webpack_require__(
-      /*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-11/src/polyfills.ts */
+      /*! /storage/data/github/stackline/angular2-highcharts/angular2-highcharts/docs-src/angular-11/src/polyfills.ts */
       "hN/g");
       /***/
     },
@@ -25273,4 +25273,3 @@
     }
   }, [[1, "runtime"]]]);
 })();
-//# sourceMappingURL=polyfills-es5.js.map

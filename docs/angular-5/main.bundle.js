@@ -360,8 +360,8 @@ var AppComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__revivejs_angular_highcharts__ = __webpack_require__("./node_modules/@stackline/angular-highcharts/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__revivejs_angular_highcharts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__revivejs_angular_highcharts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stackline_angular_highcharts__ = __webpack_require__("./node_modules/@stackline/angular-highcharts/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stackline_angular_highcharts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__stackline_angular_highcharts__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_highcharts_highstock__ = __webpack_require__("./node_modules/highcharts/highstock.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_highcharts_highstock___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_highcharts_highstock__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("./src/app/app.component.ts");
@@ -392,7 +392,7 @@ var AppModule = /** @class */ (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 // Step 4: register ChartModule with forRoot, passing Highcharts and any extra modules
-                __WEBPACK_IMPORTED_MODULE_2__revivejs_angular_highcharts__["ChartModule"].forRoot(__WEBPACK_IMPORTED_MODULE_3_highcharts_highstock__, Highcharts3d, HighchartsHeatmap, HighchartsBullet, HighchartsXRange)
+                __WEBPACK_IMPORTED_MODULE_2__stackline_angular_highcharts__["ChartModule"].forRoot(__WEBPACK_IMPORTED_MODULE_3_highcharts_highstock__, Highcharts3d, HighchartsHeatmap, HighchartsBullet, HighchartsXRange)
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
         })
@@ -446,4 +446,3 @@ module.exports = __webpack_require__("./src/main.ts");
 /***/ })
 
 },[0]);
-//# sourceMappingURL=main.bundle.js.map

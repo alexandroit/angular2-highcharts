@@ -539,10 +539,9 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /storage/data/github/revivejs/angular2-highcharts/angular2-highcharts/docs-src/angular-6/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /storage/data/github/stackline/angular2-highcharts/angular2-highcharts/docs-src/angular-6/src/styles.css */"./src/styles.css");
 
 
 /***/ })
 
 },[[2,"runtime"]]]);
-//# sourceMappingURL=styles.js.map
