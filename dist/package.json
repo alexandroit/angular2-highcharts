@@ -110,7 +110,7 @@
   "bugs": {
     "url": "https://github.com/alexandroit/angular-highcharts/issues"
   },
-  "homepage": "https://alexandroit.github.io/angular-highcharts/",
+  "homepage": "https://alexandro.net/docs/angular/angular-highcharts/",
   "peerDependencies": {
     "@angular/core": ">=21.0.0 <22.0.0",
     "highcharts": ">=5.0.0"

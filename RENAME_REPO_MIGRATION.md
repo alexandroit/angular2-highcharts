@@ -19,7 +19,7 @@ What is already done:
 What is still external to this repository:
 
 - The GitHub repository `alexandroit/angular-highcharts` does not exist yet
-- GitHub Pages for `https://alexandroit.github.io/angular-highcharts/` is not configured yet
+- GitHub Pages for `https://alexandro.net/docs/angular/angular-highcharts/` is not configured yet
 - Release tags for the replayed history do not exist in a dedicated `angular-highcharts` repository yet
 
 ## Important Warning
